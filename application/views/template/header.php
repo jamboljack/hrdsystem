@@ -25,6 +25,13 @@ if (empty($uri)) {
 	$puntran     = '';
 	$mutation    = '';
 	$resign      = '';
+	$mail        = '';
+	$mail_inbox  = '';
+	$sender      = '';
+	$inbox       = '';
+	$intern_mail = '';
+	$decree      = '';
+	$memo        = '';
 } elseif ($uri=='blood') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -49,6 +56,13 @@ if (empty($uri)) {
 	$puntran     = '';
 	$mutation    = '';
 	$resign      = '';
+	$mail        = '';
+	$mail_inbox  = '';
+	$sender      = '';
+	$inbox       = '';
+	$intern_mail = '';
+	$decree      = '';
+	$memo        = '';
 } elseif ($uri=='marriage') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -73,6 +87,13 @@ if (empty($uri)) {
 	$puntran     = '';
 	$mutation    = '';
 	$resign      = '';
+	$mail        = '';
+	$mail_inbox  = '';
+	$sender      = '';
+	$inbox       = '';
+	$intern_mail = '';
+	$decree      = '';
+	$memo        = '';
 } elseif ($uri=='religion') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -97,6 +118,13 @@ if (empty($uri)) {
 	$puntran     = '';
 	$mutation    = '';
 	$resign      = '';
+	$mail        = '';
+	$mail_inbox  = '';
+	$sender      = '';
+	$inbox       = '';
+	$intern_mail = '';
+	$decree      = '';
+	$memo        = '';
 } elseif ($uri=='education') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -121,6 +149,13 @@ if (empty($uri)) {
 	$puntran     = '';
 	$mutation    = '';
 	$resign      = '';
+	$mail        = '';
+	$mail_inbox  = '';
+	$sender      = '';
+	$inbox       = '';
+	$intern_mail = '';
+	$decree      = '';
+	$memo        = '';
 } elseif ($uri=='relation') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -145,6 +180,13 @@ if (empty($uri)) {
 	$puntran     = '';
 	$mutation    = '';
 	$resign      = '';
+	$mail        = '';
+	$mail_inbox  = '';
+	$sender      = '';
+	$inbox       = '';
+	$intern_mail = '';
+	$decree      = '';
+	$memo        = '';
 } elseif ($uri=='status') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -169,6 +211,13 @@ if (empty($uri)) {
 	$puntran     = '';
 	$mutation    = '';
 	$resign      = '';
+	$mail        = '';
+	$mail_inbox  = '';
+	$sender      = '';
+	$inbox       = '';
+	$intern_mail = '';
+	$decree      = '';
+	$memo        = '';
 } elseif ($uri=='department') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -193,6 +242,13 @@ if (empty($uri)) {
 	$puntran     = '';
 	$mutation    = '';
 	$resign      = '';
+	$mail        = '';
+	$mail_inbox  = '';
+	$sender      = '';
+	$inbox       = '';
+	$intern_mail = '';
+	$decree      = '';
+	$memo        = '';
 } elseif ($uri=='position') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -217,6 +273,13 @@ if (empty($uri)) {
 	$puntran     = '';
 	$mutation    = '';
 	$resign      = '';
+	$mail        = '';
+	$mail_inbox  = '';
+	$sender      = '';
+	$inbox       = '';
+	$intern_mail = '';
+	$decree      = '';
+	$memo        = '';
 } elseif ($uri=='employee') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -241,6 +304,13 @@ if (empty($uri)) {
 	$puntran     = '';
 	$mutation    = '';
 	$resign      = '';
+	$mail        = '';
+	$mail_inbox  = '';
+	$sender      = '';
+	$inbox       = '';
+	$intern_mail = '';
+	$decree      = '';
+	$memo        = '';
 } elseif ($uri=='record') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -265,6 +335,13 @@ if (empty($uri)) {
 	$puntran     = '';
 	$mutation    = '';
 	$resign      = '';
+	$mail        = '';
+	$mail_inbox  = '';
+	$sender      = '';
+	$inbox       = '';
+	$intern_mail = '';
+	$decree      = '';
+	$memo        = '';
 } elseif ($uri=='healthy_insurance') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -289,6 +366,13 @@ if (empty($uri)) {
 	$puntran     = '';
 	$mutation    = '';
 	$resign      = '';
+	$mail        = '';
+	$mail_inbox  = '';
+	$sender      = '';
+	$inbox       = '';
+	$intern_mail = '';
+	$decree      = '';
+	$memo        = '';
 } elseif ($uri=='employment_insurance') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -313,6 +397,13 @@ if (empty($uri)) {
 	$puntran     = '';
 	$mutation    = '';
 	$resign      = '';
+	$mail        = '';
+	$mail_inbox  = '';
+	$sender      = '';
+	$inbox       = '';
+	$intern_mail = '';
+	$decree      = '';
+	$memo        = '';
 } elseif ($uri=='reward') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -337,6 +428,13 @@ if (empty($uri)) {
 	$puntran     = '';
 	$mutation    = '';
 	$resign      = '';
+	$mail        = '';
+	$mail_inbox  = '';
+	$sender      = '';
+	$inbox       = '';
+	$intern_mail = '';
+	$decree      = '';
+	$memo        = '';
 } elseif ($uri=='transaction_reward') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -361,6 +459,13 @@ if (empty($uri)) {
 	$puntran     = '';
 	$mutation    = '';
 	$resign      = '';
+	$mail        = '';
+	$mail_inbox  = '';
+	$sender      = '';
+	$inbox       = '';
+	$intern_mail = '';
+	$decree      = '';
+	$memo        = '';
 } elseif ($uri=='punishment') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -385,6 +490,13 @@ if (empty($uri)) {
 	$puntran     = '';
 	$mutation    = '';
 	$resign      = '';
+	$mail        = '';
+	$mail_inbox  = '';
+	$sender      = '';
+	$inbox       = '';
+	$intern_mail = '';
+	$decree      = '';
+	$memo        = '';
 } elseif ($uri=='transaction_punishment') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -409,6 +521,13 @@ if (empty($uri)) {
 	$puntran     = 'active';
 	$mutation    = '';
 	$resign      = '';
+	$mail        = '';
+	$mail_inbox  = '';
+	$sender      = '';
+	$inbox       = '';
+	$intern_mail = '';
+	$decree      = '';
+	$memo        = '';
 } elseif ($uri=='mutation') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -433,6 +552,13 @@ if (empty($uri)) {
 	$puntran     = '';
 	$mutation    = 'active';
 	$resign      = '';
+	$mail        = '';
+	$mail_inbox  = '';
+	$sender      = '';
+	$inbox       = '';
+	$intern_mail = '';
+	$decree      = '';
+	$memo        = '';
 } elseif ($uri=='resign') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -457,6 +583,137 @@ if (empty($uri)) {
 	$puntran     = '';
 	$mutation    = '';
 	$resign      = 'active';
+	$mail        = '';
+	$mail_inbox  = '';
+	$sender      = '';
+	$inbox       = '';
+	$intern_mail = '';
+	$decree      = '';
+	$memo        = '';
+} elseif ($uri=='sender') {
+	$dashboard   = '';
+	$menu_1      = '';
+	$master      = '';
+	$blood       = '';
+	$marriage    = '';
+	$religion    = '';
+	$education   = '';
+	$relation    = '';
+	$status      = '';
+	$department  = '';
+	$position    = '';
+	$data        = '';
+	$employee    = '';
+	$record      = '';
+	$kesehatan   = '';
+	$tenaga      = '';
+	$rewpun      = '';
+	$rewtype     = '';
+	$rewtran     = '';
+	$puntype     = '';
+	$puntran     = '';
+	$mutation    = '';
+	$resign      = '';
+	$mail        = 'active';
+	$mail_inbox  = 'active';
+	$sender      = 'active';
+	$inbox       = '';
+	$intern_mail = '';
+	$decree      = '';
+	$memo        = '';
+} elseif ($uri=='inbox') {
+	$dashboard   = '';
+	$menu_1      = '';
+	$master      = '';
+	$blood       = '';
+	$marriage    = '';
+	$religion    = '';
+	$education   = '';
+	$relation    = '';
+	$status      = '';
+	$department  = '';
+	$position    = '';
+	$data        = '';
+	$employee    = '';
+	$record      = '';
+	$kesehatan   = '';
+	$tenaga      = '';
+	$rewpun      = '';
+	$rewtype     = '';
+	$rewtran     = '';
+	$puntype     = '';
+	$puntran     = '';
+	$mutation    = '';
+	$resign      = '';
+	$mail        = 'active';
+	$mail_inbox  = 'active';
+	$sender      = '';
+	$inbox       = 'active';
+	$intern_mail = '';
+	$decree      = '';
+	$memo        = '';
+} elseif ($uri=='decree') {
+	$dashboard   = '';
+	$menu_1      = '';
+	$master      = '';
+	$blood       = '';
+	$marriage    = '';
+	$religion    = '';
+	$education   = '';
+	$relation    = '';
+	$status      = '';
+	$department  = '';
+	$position    = '';
+	$data        = '';
+	$employee    = '';
+	$record      = '';
+	$kesehatan   = '';
+	$tenaga      = '';
+	$rewpun      = '';
+	$rewtype     = '';
+	$rewtran     = '';
+	$puntype     = '';
+	$puntran     = '';
+	$mutation    = '';
+	$resign      = '';
+	$mail        = 'active';
+	$mail_inbox  = '';
+	$sender      = '';
+	$inbox       = '';
+	$intern_mail = 'active';
+	$decree      = 'active';
+	$memo        = '';
+} elseif ($uri=='memo') {
+	$dashboard   = '';
+	$menu_1      = '';
+	$master      = '';
+	$blood       = '';
+	$marriage    = '';
+	$religion    = '';
+	$education   = '';
+	$relation    = '';
+	$status      = '';
+	$department  = '';
+	$position    = '';
+	$data        = '';
+	$employee    = '';
+	$record      = '';
+	$kesehatan   = '';
+	$tenaga      = '';
+	$rewpun      = '';
+	$rewtype     = '';
+	$rewtran     = '';
+	$puntype     = '';
+	$puntran     = '';
+	$mutation    = '';
+	$resign      = '';
+	$mail        = 'active';
+	$mail_inbox  = '';
+	$sender      = '';
+	$inbox       = '';
+	$intern_mail = 'active';
+	$decree      = '';
+	$memo        = 'active';
 } else {
 	$dashboard   = 'active';
 	$menu_1      = '';
@@ -481,6 +738,13 @@ if (empty($uri)) {
 	$puntran     = '';
 	$mutation    = '';
 	$resign      = '';
+	$mail        = '';
+	$mail_inbox  = '';
+	$sender      = '';
+	$inbox       = '';
+	$intern_mail = '';
+	$decree      = '';
+	$memo        = '';
 }
 ?>
 <div class="page-header">
@@ -666,36 +930,36 @@ if (empty($uri)) {
 							</li>
 						</ul>
 					</li>
-					<li class="menu-dropdown classic-menu-dropdown ">
+					<li class="menu-dropdown classic-menu-dropdown <?php echo $mail; ?>">
 						<a data-hover="megamenu-dropdown" data-close-others="true" data-toggle="dropdown" href="javascript:;">
 						Mail Administration <i class="fa fa-angle-down"></i>
 						</a>
 						<ul class="dropdown-menu pull-left">
-							<li class=" dropdown-submenu">
+							<li class="<?php echo $mail_inbox; ?> dropdown-submenu">
 								<a href="#">
 								<i class="icon-envelope-open"></i>
 								Mail Inbox </a>
 								<ul class="dropdown-menu">
-									<li class="">
+									<li class="<?php echo $sender; ?>">
 										<a href="<?php echo site_url('mail/sender'); ?>">
 										Sender </a>
 									</li>
-									<li class="">
+									<li class="<?php echo $inbox; ?>">
 										<a href="<?php echo site_url('mail/inbox'); ?>">
 										Data Inbox </a>
 									</li>									
 								</ul>
 							</li>
-							<li class=" dropdown-submenu">
+							<li class="<?php echo $intern_mail; ?> dropdown-submenu">
 								<a href="#">
 								<i class="icon-envelope-letter"></i>
 								Internal Mail </a>
 								<ul class="dropdown-menu">
-									<li class="">
+									<li class="<?php echo $decree; ?>">
 										<a href="<?php echo site_url('mail/decree'); ?>">
 										Decree (Surat Keputusan) </a>
 									</li>
-									<li class="">
+									<li class="<?php echo $memo; ?>">
 										<a href="<?php echo site_url('mail/memo'); ?>">
 										Memo Internal </a>
 									</li>									
