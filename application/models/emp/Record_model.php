@@ -71,7 +71,7 @@ class Record_model extends CI_Model {
 
 		$data = array(    			
     			'record_date'			=> $date_record,    			
-    			'record_desc'			=> trim($this->input->post('reason')),    			
+    			'record_desc'			=> trim($this->input->post('desc')),    			
     			'record_date_update'	=> date('Y-m-d'),
 	    		'record_time_update'	=> date('Y-m-d H:i:s'),
 	    		'user_username' 		=> trim($this->session->userdata('username'))

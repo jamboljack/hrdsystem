@@ -55,7 +55,7 @@ function myMail() {
 					<i class="fa fa-circle"></i>
 				</li>
 				<li class="active">
-					 Edit Data Resign
+					 Edit Data Record Employee
 				</li>
 			</ul>
 			<!-- END PAGE BREADCRUMB -->
@@ -66,7 +66,7 @@ function myMail() {
 					<div class="portlet box red">
 						<div class="portlet-title">
 							<div class="caption">
-								<i class="fa fa-edit"></i>Form Edit Resign Employee
+								<i class="fa fa-edit"></i>Form Edit Record Employee
 							</div>
 							<div class="tools">
 								<a href="javascript:;" class="collapse">
@@ -78,18 +78,12 @@ function myMail() {
 							</div>
 						</div>
 						<div class="portlet-body form">						
-							<form action="<?php echo site_url('emp/resign/updatedata'); ?>" class="form-horizontal" method="post" enctype="multipart/form-data">
+							<form action="<?php echo site_url('emp/record/updatedata'); ?>" class="form-horizontal" method="post" enctype="multipart/form-data">
 							<input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value=
 							"<?php echo $this->security->get_csrf_hash(); ?>">
-							<input type="hidden" name="id" value="<?php echo $detail->resign_id; ?>" />
-							<input type="hidden" name="dep_id" id="dep_id" />
-							<input type="hidden" name="pos_id" id="pos_id" />
+							<input type="hidden" name="id" value="<?php echo $detail->record_id; ?>" />		
 
 								<div class="form-body">
-									<div class="alert alert-danger">
-                                        <strong>ATTENTION !</strong> If you are adding new DATA, then the data Employee Status will be changed to <b>NON-ACTIVE</b>.
-                                    </div>
-                                    
 									<h3 class="form-section">Employee Detail</h3>
 									<div class="form-group">
 										<label class="control-label col-md-3">Employee Name</label>
@@ -115,9 +109,9 @@ function myMail() {
 											<input type="text" class="form-control" placeholder="Position" name="position" id="position" value="<?php echo $detail->position_name; ?>" autocomplete="off" readonly>									
 										</div>
 									</div>									
-									<h3 class="form-section">Resign Detail</h3>
+									<h3 class="form-section">Record Detail</h3>
 									<?php
-			                        $tanggal 	= $detail->resign_date; 
+			                        $tanggal 	= $detail->record_date; 
 			                            
 			                        if (!empty($tanggal)) {
 			                            $xtanggal 	= explode("-",$tanggal);
@@ -133,13 +127,13 @@ function myMail() {
 									<div class="form-group">
 										<label class="control-label col-md-3">Date</label>
 										<div class="col-md-9 has-error">
-											<input class="form-control form-control-inline input-medium date-picker" size="16" type="text" name="date_resign" value="<?php echo $date; ?>" placeholder="DD-MM-YYYY" autocomplete="off" required />											
+											<input class="form-control form-control-inline input-medium date-picker" size="16" type="text" name="date_record" value="<?php echo $date; ?>" placeholder="DD-MM-YYYY" autocomplete="off" required />											
 										</div>
 									</div>
 									<div class="form-group">
-										<label class="control-label col-md-3">Reason</label>
+										<label class="control-label col-md-3">Description</label>
 										<div class="col-md-9 has-error">											
-											<textarea id="summernote_1" name="reason"><?php echo $detail->resign_desc; ?></textarea>
+											<textarea id="summernote_1" name="desc"><?php echo $detail->record_desc; ?></textarea>
 										</div>										
 									</div>
 								</div>
@@ -147,7 +141,7 @@ function myMail() {
 									<div class="row">
 										<div class="col-md-offset-3 col-md-9">
 											<button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-floppy-disk"></span> Update</button>
-											<a href="<?php echo site_url('emp/resign'); ?>" class="btn btn-default"><span class="glyphicon glyphicon-chevron-left"></span> Cancel</a>
+											<a href="<?php echo site_url('emp/record'); ?>" class="btn btn-default"><span class="glyphicon glyphicon-chevron-left"></span> Cancel</a>
 										</div>
 									</div>
 								</div>
