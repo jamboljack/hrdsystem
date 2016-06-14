@@ -229,6 +229,48 @@ CREATE TABLE `hrd_mail_decree` (
 
 insert  into `hrd_mail_decree`(`decree_id`,`decree_no`,`decree_title`,`decree_date`,`decree_desc`,`decree_sign`,`decree_file`,`decree_date_update`,`decree_time_update`,`user_username`) values (1,'1234VVV','Surat Pengangkatan Karyawan Kontrak','2016-06-01','<p>Menyatakan dengan Hormat bahwa</p><p>Nama&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : Jama\' Rochmad Muttaqin</p>Jabatan&nbsp;&nbsp;&nbsp;&nbsp; : IT Officer','Pak Arifandi','Surat_Keputusan_1465544091.jpg','2016-06-10','14:50:07','admin'),(2,'55653232/V/2016','Surat Pernyataan Pegawai','2016-06-13','<p>Surat ini bertujuan untuk<br></p>','Pak Arifandi',NULL,'2016-06-13','15:23:01','admin');
 
+/*Table structure for table `hrd_mail_inbox` */
+
+DROP TABLE IF EXISTS `hrd_mail_inbox`;
+
+CREATE TABLE `hrd_mail_inbox` (
+  `inbox_id` int(10) NOT NULL AUTO_INCREMENT,
+  `sender_id` int(10) NOT NULL,
+  `inbox_title` varchar(100) NOT NULL,
+  `inbox_date` date DEFAULT NULL,
+  `inbox_desc` text,
+  `inbox_date_update` date NOT NULL,
+  `inbox_time_update` time NOT NULL,
+  `user_username` varchar(30) NOT NULL,
+  PRIMARY KEY (`inbox_id`),
+  KEY `sender_id` (`sender_id`),
+  KEY `inbox_title` (`inbox_title`),
+  CONSTRAINT `hrd_mail_inbox_ibfk_1` FOREIGN KEY (`sender_id`) REFERENCES `hrd_mail_sender` (`sender_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `hrd_mail_inbox` */
+
+/*Table structure for table `hrd_mail_sender` */
+
+DROP TABLE IF EXISTS `hrd_mail_sender`;
+
+CREATE TABLE `hrd_mail_sender` (
+  `sender_id` int(10) NOT NULL AUTO_INCREMENT,
+  `sender_name` varchar(50) NOT NULL,
+  `sender_address` varchar(100) NOT NULL,
+  `sender_phone` varchar(30) DEFAULT NULL,
+  `sender_email` varchar(50) DEFAULT NULL,
+  `sender_date_update` date NOT NULL,
+  `sender_time_update` time NOT NULL,
+  `user_username` varchar(30) NOT NULL,
+  PRIMARY KEY (`sender_id`),
+  KEY `sender_name` (`sender_name`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+/*Data for the table `hrd_mail_sender` */
+
+insert  into `hrd_mail_sender`(`sender_id`,`sender_name`,`sender_address`,`sender_phone`,`sender_email`,`sender_date_update`,`sender_time_update`,`user_username`) values (1,'DINAS KESEHATAN KUDUS (DKK)','Jl. Diponegoro Kudus','0291-425632656','dkk@kuduskab.go.id','2016-06-14','16:40:42','admin');
+
 /*Table structure for table `hrd_marriage` */
 
 DROP TABLE IF EXISTS `hrd_marriage`;
@@ -335,8 +377,6 @@ CREATE TABLE `hrd_record` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 /*Data for the table `hrd_record` */
-
-insert  into `hrd_record`(`record_id`,`emp_id`,`record_date`,`record_desc`,`record_date_update`,`record_time_update`,`user_username`) values (1,1,'2016-06-14','<p>Telat 2 Menit<br></p>','2016-06-14','14:18:54','admin');
 
 /*Table structure for table `hrd_relation` */
 
