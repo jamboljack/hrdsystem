@@ -121,7 +121,7 @@ function myEmployee() {
 									<div class="form-group">
 										<label class="control-label col-md-3">Description</label>
 										<div class="col-md-9 has-error">											
-											<textarea id="summernote_1" name="desc"><?php echo set_value('desc'); ?></textarea>
+											<textarea class="form-control ckeditor" name="desc" rows="6"><?php echo set_value('desc'); ?></textarea>
 										</div>
 										<?php echo form_error('desc', '<span class="help-block has-error">','</span>'); ?>
 									</div>

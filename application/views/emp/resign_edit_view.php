@@ -134,7 +134,7 @@ function myMail() {
 									<div class="form-group">
 										<label class="control-label col-md-3">Reason</label>
 										<div class="col-md-9 has-error">											
-											<textarea id="summernote_1" name="reason"><?php echo $detail->resign_desc; ?></textarea>
+											<textarea class="form-control ckeditor" name="desc" rows="6"><?php echo $detail->resign_desc; ?></textarea>
 										</div>										
 									</div>
 								</div>

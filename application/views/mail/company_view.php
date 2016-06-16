@@ -1,8 +1,8 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>js/sweetalert2.css">
 <script src="<?php echo base_url(); ?>js/sweetalert2.min.js"></script>
 <script>
-    function hapusData(sender_id) {
-        var id = sender_id;
+    function hapusData(company_id) {
+        var id = company_id;
         swal({
             title: 'Are You Sure ?',
             text: 'This Data will be Deleted !',type: 'warning',
@@ -13,7 +13,7 @@
             cancelButtonText: 'No',
             closeOnConfirm: true
         }, function() {            
-            window.location.href="<?php echo site_url('mail/sender/deletedata'); ?>"+"/"+id
+            window.location.href="<?php echo site_url('mail/company/deletedata'); ?>"+"/"+id
         });
     }
 </script>
@@ -27,11 +27,11 @@
 	        var phone   	= $(this).data('phone');
 	        var email   	= $(this).data('email');
 	        console.log(id, name, address, phone, email)
-	        $(".sender_id").val(id);
-	        $(".sender_name").val(name);
-	        $(".sender_address").val(address);
-	        $(".sender_phone").val(phone);
-	        $(".sender_email").val(email);
+	        $(".company_id").val(id);
+	        $(".company_name").val(name);
+	        $(".company_address").val(address);
+	        $(".company_phone").val(phone);
+	        $(".company_email").val(email);
 	    })
 	});
 </script>
@@ -42,7 +42,7 @@
 		<div class="container">
 			<!-- BEGIN PAGE TITLE -->
 			<div class="page-title">
-				<h1>Mail Administration <small>Mail Inbox</small></h1>
+				<h1>Mail Administration <small>Inbox & Outbox</small></h1>
 			</div>
 			<!-- END PAGE TITLE -->				
 		</div>
@@ -56,12 +56,12 @@
 			<div class="modal fade bs-modal-lg" id="add" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 				<div class="modal-dialog modal-lg">
 					<div class="modal-content">
-					<form action="<?php echo site_url('mail/sender/savedata'); ?>" class="form-horizontal" method="post">
+					<form action="<?php echo site_url('mail/company/savedata'); ?>" class="form-horizontal" method="post">
 					<input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
 						
 						<div class="modal-header">						
 							<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-							<h4 class="modal-title"><i class="fa fa-plus-circle"></i> Form Add Sender Mail</h4>
+							<h4 class="modal-title"><i class="fa fa-plus-circle"></i> Form Add Company</h4>
 						</div>
 						<div class="modal-body">
 							 <div class="form-group">
@@ -105,43 +105,43 @@
 			<div class="modal fade bs-modal-lg" id="edit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 				<div class="modal-dialog modal-lg">
 					<div class="modal-content">
-					<form action="<?php echo site_url('mail/sender/updatedata'); ?>" class="form-horizontal" method="post">
+					<form action="<?php echo site_url('mail/company/updatedata'); ?>" class="form-horizontal" method="post">
 					<input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
-					<input type="hidden" class="form-control sender_id" name="id">
+					<input type="hidden" class="form-control company_id" name="id">
 						
 						<div class="modal-header">						
 							<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-							<h4 class="modal-title"><i class="fa fa-edit"></i> Form Edit Sender Mail</h4>
+							<h4 class="modal-title"><i class="fa fa-edit"></i> Form Edit Company</h4>
 						</div>
 						<div class="modal-body">
 							<div class="form-group">
 								<label class="col-md-3 control-label">ID</label>
 								<div class="col-md-2 has-error">
-									<input type="text" class="form-control sender_id" placeholder="" name="id" autocomplete="off" readonly>
+									<input type="text" class="form-control company_id" placeholder="" name="id" autocomplete="off" readonly>
 								</div>
 							</div>
 							<div class="form-group">
 								<label class="col-md-3 control-label">Name</label>
 								<div class="col-md-8 has-error">
-									<input type="text" class="form-control sender_name" placeholder="Enter Blood Name" name="name" autocomplete="off" required>									
+									<input type="text" class="form-control company_name" placeholder="Enter Blood Name" name="name" autocomplete="off" required>									
 								</div>
 							</div>
 							<div class="form-group">
 								<label class="col-md-3 control-label">Address</label>
 								<div class="col-md-9 has-error">
-									<input type="text" class="form-control sender_address" placeholder="Enter Address" name="address" autocomplete="off" required>
+									<input type="text" class="form-control company_address" placeholder="Enter Address" name="address" autocomplete="off" required>
 								</div>
 							</div>
 							<div class="form-group">
 								<label class="col-md-3 control-label">Phone</label>
 								<div class="col-md-5 has-error">
-									<input type="text" class="form-control sender_phone" placeholder="Enter Phone" name="phone" autocomplete="off" required>
+									<input type="text" class="form-control company_phone" placeholder="Enter Phone" name="phone" autocomplete="off" required>
 								</div>
 							</div>
 							<div class="form-group">
 								<label class="col-md-3 control-label">Email</label>
 								<div class="col-md-5 has-error">
-									<input type="email" class="form-control sender_email" placeholder="Enter Email" name="email" autocomplete="off">
+									<input type="email" class="form-control company_email" placeholder="Enter Email" name="email" autocomplete="off">
 								</div>
 							</div>
 						</div>
@@ -167,11 +167,11 @@
 					<i class="fa fa-circle"></i>
 				</li>
 				<li>
-					<a href="#">Mail Inbox</a>
+					<a href="#">Inbox & Outbox</a>
 					<i class="fa fa-circle"></i>
 				</li>
 				<li class="active">
-					 Sender Mail
+					 Company
 				</li>
 			</ul>
 			<!-- END PAGE BREADCRUMB -->
@@ -183,8 +183,8 @@
 					<div class="portlet light">
 						<div class="portlet-title">
 							<div class="caption">
-								<i class="fa fa-envelope font-blue-sharp"></i>
-								<span class="caption-subject font-blue-sharp bold uppercase">Sender Mail List</span>
+								<i class="fa fa-bank font-blue-sharp"></i>
+								<span class="caption-subject font-blue-sharp bold uppercase">Company List</span>
 							</div>							
 							<div class="tools">
 							</div>
@@ -208,17 +208,17 @@
 							<?php
 								$no = 1; 
 								foreach($daftarlist as $r) { 
-									$sender_id = $r->sender_id;									
+									$company_id = $r->company_id;									
 							?>
 							<tr>
 								<td><?php echo $no; ?></td>
-								<td><?php echo $r->sender_name; ?></td>								
-								<td><?php echo $r->sender_address; ?></td>
-								<td><?php echo $r->sender_phone; ?></td>								
+								<td><?php echo $r->company_name; ?></td>								
+								<td><?php echo $r->company_address; ?></td>
+								<td><?php echo $r->company_phone; ?></td>								
 								<td>
-									<button type="button" class="btn btn-primary btn-xs edit_button" data-toggle="modal" data-target="#edit" data-id="<?php echo $r->sender_id; ?>" data-name="<?php echo $r->sender_name; ?>" data-address="<?php echo $r->sender_address; ?>" data-phone="<?php echo $r->sender_phone; ?>" data-email="<?php echo $r->sender_email; ?>"><i class="icon-pencil"></i> Edit 
+									<button type="button" class="btn btn-primary btn-xs edit_button" data-toggle="modal" data-target="#edit" data-id="<?php echo $r->company_id; ?>" data-name="<?php echo $r->company_name; ?>" data-address="<?php echo $r->company_address; ?>" data-phone="<?php echo $r->company_phone; ?>" data-email="<?php echo $r->company_email; ?>"><i class="icon-pencil"></i> Edit 
 									</button>
-	                        		<a onclick="hapusData(<?php echo $sender_id; ?>)"><button class="btn btn-danger btn-xs" title="Delete Data"><i class="icon-trash"></i> Delete</button></a>
+	                        		<a onclick="hapusData(<?php echo $company_id; ?>)"><button class="btn btn-danger btn-xs" title="Delete Data"><i class="icon-trash"></i> Delete</button></a>
 								</td>							
 							</tr>
 							<?php 

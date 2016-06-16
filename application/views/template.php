@@ -27,7 +27,6 @@
 <!-- END PAGE LEVEL STYLES -->
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/bootstrap-fileupload/bootstrap-fileupload.css" />
 
-<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/global/plugins/bootstrap-summernote/summernote.css">
 <!-- BEGIN PAGE STYLES -->
 <!--<link href="<?php echo base_url(); ?>assets/admin/pages/css/tasks.css" rel="stylesheet" type="text/css"/> -->
 <!-- END PAGE STYLES -->
@@ -93,7 +92,9 @@ if (empty($mn)) {
 <!--
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/global/plugins/datatables/extensions/Scroller/js/dataTables.scroller.min.js"></script>
 -->
-<script src="<?php echo base_url(); ?>assets/global/plugins/bootstrap-summernote/summernote.min.js" type="text/javascript"></script>
+<!-- CKEditor -->
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/ckeditor/ckeditor.js" charset="utf-8"></script>
+
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/bootstrap-fileupload/bootstrap-fileupload.js"></script>
 <!-- END PAGE LEVEL PLUGINS -->
 
