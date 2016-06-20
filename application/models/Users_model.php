@@ -16,82 +16,89 @@ class Users_model extends CI_Model {
 	function insert_data() {
 		if (!empty($_FILES['userfile']['name'])) {
 			$data = array(    			
-	    			'user_username' 		=> trim($this->input->post('mail_no')),
-	    			'user_password' 		=> trim($this->input->post('title')),
-	    			'user_name' 			=> 
-	    			'user_level' 			=> trim($this->input->post('desc')),
-	    			'user_status' 			=> trim($this->input->post('sign')),
+	    			'user_username' 		=> trim($this->input->post('username')),
+	    			'user_password' 		=> sha1(trim($this->input->post('password'))),
+	    			'user_name' 			=> trim($this->input->post('name')),
+	    			'user_level' 			=> trim($this->input->post('lstLevel')),	    			
 	    			'user_image' 			=> $this->upload->file_name,
-	    			'decree_date_update' 	=> date('Y-m-d'),
-	    			'decree_time_update' 	=> date('Y-m-d H:i:s'),
-	    			'user_username' 		=> trim($this->session->userdata('username'))
+	    			'user_date_update' 		=> date('Y-m-d'),
+	    			'user_time_update' 		=> date('Y-m-d H:i:s')
 					);
 		} else {
 			$data = array(    			
-	    			'decree_no' 			=> trim($this->input->post('mail_no')),
-	    			'decree_title' 			=> trim($this->input->post('title')),
-	    			'decree_date' 			=> $date_mail,
-	    			'decree_desc' 			=> trim($this->input->post('desc')),
-	    			'decree_sign' 			=> trim($this->input->post('sign')),	    			
-	    			'decree_date_update' 	=> date('Y-m-d'),
-	    			'decree_time_update' 	=> date('Y-m-d H:i:s'),
-	    			'user_username' 		=> trim($this->session->userdata('username'))
+	    			'user_username' 		=> trim($this->input->post('username')),
+	    			'user_password' 		=> sha1(trim($this->input->post('password'))),
+	    			'user_name' 			=> trim($this->input->post('name')),
+	    			'user_level' 			=> trim($this->input->post('lstLevel')),	    			
+	    			'user_date_update' 		=> date('Y-m-d'),
+	    			'user_time_update' 		=> date('Y-m-d H:i:s')  			
 					);
 		}
 		
-		$this->db->insert('hrd_mail_decree', $data);
+		$this->db->insert('hrd_users', $data);
 	}
 	
-	function select_by_id($decree_id) {
+	function select_by_id($user_username) {
 		$this->db->select('*');
-		$this->db->from('hrd_mail_decree');		
-		$this->db->where('decree_id', $decree_id);
+		$this->db->from('hrd_users');		
+		$this->db->where('user_username', $user_username);
 		
 		return $this->db->get();
 	}
 
 	function update_data() {
-		$decree_id   = $this->input->post('id');
-		// Date
-		$tanggal 	= trim($this->input->post('date_mail'));
-		$xtanggal	= explode("-",$tanggal);
-		$thn1 		= $xtanggal[2];
-		$bln1 		= $xtanggal[1];
-		$tgl1 		= $xtanggal[0];
-		$date_mail	= $thn1.'-'.$bln1.'-'.$tgl1;
+		$user_username  = $this->input->post('id');
+		$password 		= trim($this->input->post('password'));
 
-		if (!empty($_FILES['userfile']['name'])) {
-			$data = array(    			
-	    			'decree_no' 			=> trim($this->input->post('mail_no')),
-	    			'decree_title' 			=> trim($this->input->post('title')),
-	    			'decree_date' 			=> $date_mail,
-	    			'decree_desc' 			=> trim($this->input->post('desc')),
-	    			'decree_sign' 			=> trim($this->input->post('sign')),
-	    			'decree_file' 			=> $this->upload->file_name,
-	    			'decree_date_update' 	=> date('Y-m-d'),
-	    			'decree_time_update' 	=> date('Y-m-d H:i:s'),
-	    			'user_username' 		=> trim($this->session->userdata('username'))
-					);
+		if (!empty($password)) { // Jika Password Diisi / Change Password
+			if (!empty($_FILES['userfile']['name'])) {
+				$data = array(	    			
+		    			'user_password' 		=> sha1(trim($this->input->post('password'))),
+		    			'user_name' 			=> trim($this->input->post('name')),
+		    			'user_level' 			=> trim($this->input->post('lstLevel')),
+		    			'user_status' 			=> trim($this->input->post('lstStatus')),
+		    			'user_image' 			=> $this->upload->file_name,
+		    			'user_date_update' 		=> date('Y-m-d'),
+		    			'user_time_update' 		=> date('Y-m-d H:i:s')
+						);
+			} else {
+				$data = array(	    			
+		    			'user_password' 		=> sha1(trim($this->input->post('password'))),
+		    			'user_name' 			=> trim($this->input->post('name')),
+		    			'user_level' 			=> trim($this->input->post('lstLevel')),
+		    			'user_status' 			=> trim($this->input->post('lstStatus')),	    			
+		    			'user_date_update' 		=> date('Y-m-d'),
+		    			'user_time_update' 		=> date('Y-m-d H:i:s')  			
+						);
+			}
 		} else {
-			$data = array(    			
-	    			'decree_no' 			=> trim($this->input->post('mail_no')),
-	    			'decree_title' 			=> trim($this->input->post('title')),
-	    			'decree_date' 			=> $date_mail,
-	    			'decree_desc' 			=> trim($this->input->post('desc')),
-	    			'decree_sign' 			=> trim($this->input->post('sign')),	    			
-	    			'decree_date_update' 	=> date('Y-m-d'),
-	    			'decree_time_update' 	=> date('Y-m-d H:i:s'),
-	    			'user_username' 		=> trim($this->session->userdata('username'))
-					);
+			if (!empty($_FILES['userfile']['name'])) {
+				$data = array(		    			
+		    			'user_name' 			=> trim($this->input->post('name')),
+		    			'user_level' 			=> trim($this->input->post('lstLevel')),
+		    			'user_status' 			=> trim($this->input->post('lstStatus')),
+		    			'user_image' 			=> $this->upload->file_name,
+		    			'user_date_update' 		=> date('Y-m-d'),
+		    			'user_time_update' 		=> date('Y-m-d H:i:s')
+						);
+			} else {
+				$data = array(		    			
+		    			'user_name' 			=> trim($this->input->post('name')),
+		    			'user_level' 			=> trim($this->input->post('lstLevel')),
+		    			'user_status' 			=> trim($this->input->post('lstStatus')),	    			
+		    			'user_date_update' 		=> date('Y-m-d'),
+		    			'user_time_update' 		=> date('Y-m-d H:i:s')  			
+						);
+			}
 		}
 
-		$this->db->where('decree_id', $decree_id);
-		$this->db->update('hrd_mail_decree', $data);
+		$this->db->where('user_username', $user_username);
+		$this->db->update('hrd_users', $data);
 	}
 
 	function delete_data($kode) {
-		$this->db->where('decree_id', $kode);
-		$this->db->delete('hrd_mail_decree');		
+		$this->db->where('user_username', $kode);
+		$this->db->delete('hrd_users');	
 	}		
 }
 /* Location: ./application/model/Users_model.php */

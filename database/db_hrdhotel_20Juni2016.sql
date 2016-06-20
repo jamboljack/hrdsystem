@@ -205,6 +205,27 @@ CREATE TABLE `hrd_family` (
 
 insert  into `hrd_family`(`family_id`,`emp_id`,`relation_id`,`family_name`,`family_address`,`family_phone`,`family_work`,`family_status`,`family_date_update`,`family_time_update`,`user_username`) values (1,1,2,'AMBAR SETIYANI','Dusun Tersono Rt. 02/03, Garung Lor - Kaliwungu','0875653235656','karyawan swasta','Alive','2016-06-02','13:35:23','admin'),(2,1,4,'SITI SULASI','Undaan Kidul','-','Petani','Alive','2016-06-02','13:46:14','admin'),(3,3,1,'ANDI KUSNANTO','Jl. Pasar Kliwon','-','','Alive','2016-06-09','20:33:25','admin');
 
+/*Table structure for table `hrd_mail_company` */
+
+DROP TABLE IF EXISTS `hrd_mail_company`;
+
+CREATE TABLE `hrd_mail_company` (
+  `company_id` int(10) NOT NULL AUTO_INCREMENT,
+  `company_name` varchar(50) NOT NULL,
+  `company_address` varchar(100) NOT NULL,
+  `company_phone` varchar(30) DEFAULT NULL,
+  `company_email` varchar(50) DEFAULT NULL,
+  `company_date_update` date NOT NULL,
+  `company_time_update` time NOT NULL,
+  `user_username` varchar(30) NOT NULL,
+  PRIMARY KEY (`company_id`),
+  KEY `sender_name` (`company_name`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+/*Data for the table `hrd_mail_company` */
+
+insert  into `hrd_mail_company`(`company_id`,`company_name`,`company_address`,`company_phone`,`company_email`,`company_date_update`,`company_time_update`,`user_username`) values (1,'DINAS KESEHATAN KUDUS (DKK)','Jl. Diponegoro Kudus','0291-425632656','dkk@kuduskab.go.id','2016-06-16','09:35:43','admin');
+
 /*Table structure for table `hrd_mail_decree` */
 
 DROP TABLE IF EXISTS `hrd_mail_decree`;
@@ -227,7 +248,7 @@ CREATE TABLE `hrd_mail_decree` (
 
 /*Data for the table `hrd_mail_decree` */
 
-insert  into `hrd_mail_decree`(`decree_id`,`decree_no`,`decree_title`,`decree_date`,`decree_desc`,`decree_sign`,`decree_file`,`decree_date_update`,`decree_time_update`,`user_username`) values (1,'1234VVV','Surat Pengangkatan Karyawan Kontrak','2016-06-01','<p>Menyatakan dengan Hormat bahwa</p><p>Nama&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : Jama\' Rochmad Muttaqin</p>Jabatan&nbsp;&nbsp;&nbsp;&nbsp; : IT Officer','Pak Arifandi','Surat_Keputusan_1465544091.jpg','2016-06-10','14:50:07','admin'),(2,'55653232/V/2016','Surat Pernyataan Pegawai','2016-06-13','<p>Surat ini bertujuan untuk<br></p>','Pak Arifandi',NULL,'2016-06-13','15:23:01','admin');
+insert  into `hrd_mail_decree`(`decree_id`,`decree_no`,`decree_title`,`decree_date`,`decree_desc`,`decree_sign`,`decree_file`,`decree_date_update`,`decree_time_update`,`user_username`) values (1,'1234VVV','Surat Pengangkatan Karyawan Kontrak','2016-06-01','<p>Menyatakan dengan Hormat bahwa</p><p>Nama&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : Jama\' Rochmad Muttaqin</p>Jabatan&nbsp;&nbsp;&nbsp;&nbsp; : IT Officer','Pak Arifandi','Surat_Keputusan_1465544091.jpg','2016-06-10','14:50:07','admin'),(2,'55653232/V/2016','Surat Pernyataan Pegawai','2016-06-13','<p>Surat ini bertujuan untuk</p>','Pak Arifandi',NULL,'2016-06-16','11:29:03','admin');
 
 /*Table structure for table `hrd_mail_inbox` */
 
@@ -235,7 +256,8 @@ DROP TABLE IF EXISTS `hrd_mail_inbox`;
 
 CREATE TABLE `hrd_mail_inbox` (
   `inbox_id` int(10) NOT NULL AUTO_INCREMENT,
-  `sender_id` int(10) NOT NULL,
+  `company_id` int(10) NOT NULL,
+  `inbox_no` varchar(100) DEFAULT NULL,
   `inbox_title` varchar(100) NOT NULL,
   `inbox_date` date DEFAULT NULL,
   `inbox_desc` text,
@@ -243,33 +265,58 @@ CREATE TABLE `hrd_mail_inbox` (
   `inbox_time_update` time NOT NULL,
   `user_username` varchar(30) NOT NULL,
   PRIMARY KEY (`inbox_id`),
-  KEY `sender_id` (`sender_id`),
   KEY `inbox_title` (`inbox_title`),
-  CONSTRAINT `hrd_mail_inbox_ibfk_1` FOREIGN KEY (`sender_id`) REFERENCES `hrd_mail_sender` (`sender_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  KEY `company_id` (`company_id`),
+  CONSTRAINT `hrd_mail_inbox_ibfk_1` FOREIGN KEY (`company_id`) REFERENCES `hrd_mail_company` (`company_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 /*Data for the table `hrd_mail_inbox` */
 
-/*Table structure for table `hrd_mail_sender` */
+insert  into `hrd_mail_inbox`(`inbox_id`,`company_id`,`inbox_no`,`inbox_title`,`inbox_date`,`inbox_desc`,`inbox_date_update`,`inbox_time_update`,`user_username`) values (2,1,'34334','Surat DKK','2016-06-16','<p>Tes Surat</p>','2016-06-16','11:21:50','admin');
 
-DROP TABLE IF EXISTS `hrd_mail_sender`;
+/*Table structure for table `hrd_mail_memo` */
 
-CREATE TABLE `hrd_mail_sender` (
-  `sender_id` int(10) NOT NULL AUTO_INCREMENT,
-  `sender_name` varchar(50) NOT NULL,
-  `sender_address` varchar(100) NOT NULL,
-  `sender_phone` varchar(30) DEFAULT NULL,
-  `sender_email` varchar(50) DEFAULT NULL,
-  `sender_date_update` date NOT NULL,
-  `sender_time_update` time NOT NULL,
+DROP TABLE IF EXISTS `hrd_mail_memo`;
+
+CREATE TABLE `hrd_mail_memo` (
+  `memo_id` int(10) NOT NULL AUTO_INCREMENT,
+  `memo_no` varchar(100) NOT NULL,
+  `memo_title` varchar(100) NOT NULL,
+  `memo_date` date DEFAULT NULL,
+  `memo_desc` text,
+  `memo_file` varchar(100) DEFAULT NULL,
+  `memo_sign` varchar(50) DEFAULT NULL,
+  `memo_date_update` date DEFAULT NULL,
+  `memo_time_update` time NOT NULL,
   `user_username` varchar(30) NOT NULL,
-  PRIMARY KEY (`sender_id`),
-  KEY `sender_name` (`sender_name`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`memo_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-/*Data for the table `hrd_mail_sender` */
+/*Data for the table `hrd_mail_memo` */
 
-insert  into `hrd_mail_sender`(`sender_id`,`sender_name`,`sender_address`,`sender_phone`,`sender_email`,`sender_date_update`,`sender_time_update`,`user_username`) values (1,'DINAS KESEHATAN KUDUS (DKK)','Jl. Diponegoro Kudus','0291-425632656','dkk@kuduskab.go.id','2016-06-14','16:40:42','admin');
+/*Table structure for table `hrd_mail_outbox` */
+
+DROP TABLE IF EXISTS `hrd_mail_outbox`;
+
+CREATE TABLE `hrd_mail_outbox` (
+  `outbox_id` int(10) NOT NULL AUTO_INCREMENT,
+  `company_id` int(10) NOT NULL,
+  `outbox_no` varchar(100) NOT NULL,
+  `outbox_title` varchar(100) NOT NULL,
+  `outbox_date` date NOT NULL,
+  `outbox_desc` text NOT NULL,
+  `outbox_date_update` date NOT NULL,
+  `outbox_time_update` time NOT NULL,
+  `user_username` varchar(30) NOT NULL,
+  PRIMARY KEY (`outbox_id`),
+  KEY `company_id` (`company_id`),
+  KEY `outbox_no` (`outbox_no`),
+  CONSTRAINT `hrd_mail_outbox_ibfk_1` FOREIGN KEY (`company_id`) REFERENCES `hrd_mail_company` (`company_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+/*Data for the table `hrd_mail_outbox` */
+
+insert  into `hrd_mail_outbox`(`outbox_id`,`company_id`,`outbox_no`,`outbox_title`,`outbox_date`,`outbox_desc`,`outbox_date_update`,`outbox_time_update`,`user_username`) values (1,1,'2323','Surat Keluar Perusahan','2016-06-16','<p>Tes</p>','2016-06-16','11:24:55','admin'),(2,1,'4545454','Surat Keluar','2016-06-16','<p>Tes Surat keluar, XXX</p>','2016-06-16','11:24:45','admin'),(3,1,'44455454','asdasdas','2016-06-16','<p>asdas</p>','2016-06-16','14:24:19','admin');
 
 /*Table structure for table `hrd_marriage` */
 
@@ -328,6 +375,82 @@ CREATE TABLE `hrd_position` (
 
 insert  into `hrd_position`(`position_id`,`position_name`) values (26,'ACCOUNT RECEIVABLE'),(37,'BELL DRIVE'),(20,'CDP'),(2,'CHIEF ACCOUNTING'),(3,'CHIEF ENGINEERING'),(11,'CHIEF SECURITY'),(12,'CHINEESE CHEF'),(32,'COMMIS 2'),(33,'ENGINEERING'),(23,'ENGINEERING SUPERVISOR'),(4,'EXECUTIVE CHEF'),(31,'FB ATTENDANCE'),(9,'FB MANAGER'),(19,'FB SUPERVISOR'),(17,'FO SUPERVISOR'),(29,'FRONT DESK AGENT'),(7,'FRONT OFFICE MANAGER'),(13,'GENERAL CASHIER'),(1,'GENERAL MANAGER'),(22,'GRO'),(8,'HK COORDINATOR'),(18,'HK SUPERVISOR'),(6,'HR MANAGER'),(27,'INCOME AUDIT'),(14,'IT OFFICER'),(15,'NIGHT MANAGER'),(35,'PUBLIC AREA (PA)'),(25,'PURCHASING'),(21,'QUALITY ASSURANCE'),(30,'ROOM ATTENDANCE'),(24,'SALES ADMIN'),(16,'SALES EXECUTIVE'),(10,'SALES MARKETING'),(5,'SALES MARKETING MANAGER'),(34,'SECURITY'),(28,'SECURITY LEADER'),(36,'STEWARD');
 
+/*Table structure for table `hrd_practice_proposal` */
+
+DROP TABLE IF EXISTS `hrd_practice_proposal`;
+
+CREATE TABLE `hrd_practice_proposal` (
+  `proposal_id` int(10) NOT NULL AUTO_INCREMENT,
+  `school_id` int(10) NOT NULL,
+  `proposal_title` varchar(100) NOT NULL,
+  `proposal_date` date DEFAULT NULL,
+  `proposal_desc` text,
+  `proposal_status` enum('New','Pending','Reject','Accept') NOT NULL DEFAULT 'New',
+  `proposal_file` varchar(100) DEFAULT NULL,
+  `proposal_mou` varchar(100) DEFAULT NULL,
+  `proposal_date_update` date NOT NULL,
+  `proposal_time_update` time NOT NULL,
+  `user_username` varchar(30) NOT NULL,
+  PRIMARY KEY (`proposal_id`),
+  KEY `school_id` (`school_id`),
+  KEY `proposal_title` (`proposal_title`),
+  CONSTRAINT `hrd_practice_proposal_ibfk_1` FOREIGN KEY (`school_id`) REFERENCES `hrd_practice_school` (`school_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+/*Data for the table `hrd_practice_proposal` */
+
+insert  into `hrd_practice_proposal`(`proposal_id`,`school_id`,`proposal_title`,`proposal_date`,`proposal_desc`,`proposal_status`,`proposal_file`,`proposal_mou`,`proposal_date_update`,`proposal_time_update`,`user_username`) values (1,1,'Proposal Praktek Kerja Industri Terkait','2016-06-16','<p>Permohonan Praktek Kerja Industri pada tanggal : 18 Juli 2016 - 18 Agustus 2016. di @HOM Hotel by Horison Kudus</p>','New','Proposal_proposal-praktek-kerja-industri-terkait_1466414059.jpg',NULL,'2016-06-20','17:32:45','admin');
+
+/*Table structure for table `hrd_practice_school` */
+
+DROP TABLE IF EXISTS `hrd_practice_school`;
+
+CREATE TABLE `hrd_practice_school` (
+  `school_id` int(10) NOT NULL AUTO_INCREMENT,
+  `school_name` varchar(100) NOT NULL,
+  `school_address` varchar(100) DEFAULT NULL,
+  `school_phone` varchar(30) DEFAULT NULL,
+  `school_email` varchar(50) DEFAULT NULL,
+  `school_web` varchar(100) DEFAULT NULL,
+  `school_chief` varchar(50) DEFAULT NULL,
+  `school_date_update` date NOT NULL,
+  `school_time_update` time NOT NULL,
+  `user_username` varchar(30) NOT NULL,
+  PRIMARY KEY (`school_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+/*Data for the table `hrd_practice_school` */
+
+insert  into `hrd_practice_school`(`school_id`,`school_name`,`school_address`,`school_phone`,`school_email`,`school_web`,`school_chief`,`school_date_update`,`school_time_update`,`user_username`) values (1,'SMK PGRI 2 KUDUS','Jl. Kudus - Jepara KM. 12','0291-452365233','smkpgri2kudus@gmail.com','smkpgri2kudus@sch.id','Roestono','2016-06-17','13:46:23','admin');
+
+/*Table structure for table `hrd_practice_student` */
+
+DROP TABLE IF EXISTS `hrd_practice_student`;
+
+CREATE TABLE `hrd_practice_student` (
+  `student_id` int(10) NOT NULL AUTO_INCREMENT,
+  `school_id` int(10) NOT NULL,
+  `student_name` varchar(50) NOT NULL,
+  `student_address` varchar(100) DEFAULT NULL,
+  `student_phone` varchar(30) DEFAULT NULL,
+  `student_dept` varchar(30) DEFAULT NULL,
+  `student_teacher` varchar(50) DEFAULT NULL,
+  `student_start` date DEFAULT NULL,
+  `student_end` date DEFAULT NULL,
+  `student_photo` varchar(100) DEFAULT NULL,
+  `student_date_update` date NOT NULL,
+  `student_time_update` time NOT NULL,
+  `user_username` varchar(30) NOT NULL,
+  PRIMARY KEY (`student_id`),
+  KEY `school_id` (`school_id`),
+  KEY `student_name` (`student_name`),
+  CONSTRAINT `hrd_practice_student_ibfk_1` FOREIGN KEY (`school_id`) REFERENCES `hrd_practice_school` (`school_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+/*Data for the table `hrd_practice_student` */
+
+insert  into `hrd_practice_student`(`student_id`,`school_id`,`student_name`,`student_address`,`student_phone`,`student_dept`,`student_teacher`,`student_start`,`student_end`,`student_photo`,`student_date_update`,`student_time_update`,`user_username`) values (1,1,'HENDRI SUSANTO','Desa garung lor rt. 02 rw. 01','085678998990','MEKANIK','SUTRISNO','2016-07-01','2016-08-31','Student_hendri-susanto_1466435886.jpg','2016-06-20','22:18:07','admin');
+
 /*Table structure for table `hrd_province` */
 
 DROP TABLE IF EXISTS `hrd_province`;
@@ -374,7 +497,7 @@ CREATE TABLE `hrd_record` (
   KEY `emp_id` (`emp_id`),
   KEY `record_date` (`record_date`),
   CONSTRAINT `hrd_record_ibfk_1` FOREIGN KEY (`emp_id`) REFERENCES `hrd_employee` (`emp_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `hrd_record` */
 
@@ -423,7 +546,7 @@ CREATE TABLE `hrd_resign` (
   PRIMARY KEY (`resign_id`),
   KEY `emp_id` (`emp_id`),
   CONSTRAINT `hrd_resign_ibfk_1` FOREIGN KEY (`emp_id`) REFERENCES `hrd_employee` (`emp_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `hrd_resign` */
 
@@ -511,7 +634,7 @@ CREATE TABLE `hrd_transaction_punishment` (
 
 /*Data for the table `hrd_transaction_punishment` */
 
-insert  into `hrd_transaction_punishment`(`trans_id`,`emp_id`,`punishment_id`,`trans_no`,`trans_date`,`trans_desc`,`trans_date_update`,`trans_time_update`,`user_username`) values (1,1,1,'1234','2016-06-03','<p>Telat<br></p>','2016-06-06','16:27:50','admin'),(3,3,2,'45454/3434','2016-06-10','<p>Telat beberapa Hari<br></p>','2016-06-10','13:28:14','admin');
+insert  into `hrd_transaction_punishment`(`trans_id`,`emp_id`,`punishment_id`,`trans_no`,`trans_date`,`trans_desc`,`trans_date_update`,`trans_time_update`,`user_username`) values (1,1,1,'1234','2016-06-03','<p>Telat<br></p>','2016-06-06','16:27:50','admin'),(3,3,2,'45454/3434','2016-06-10','<p>Telat beberapa Hari</p>','2016-06-16','11:20:38','admin');
 
 /*Table structure for table `hrd_transaction_reward` */
 
@@ -547,14 +670,17 @@ CREATE TABLE `hrd_users` (
   `user_password` varchar(200) NOT NULL,
   `user_name` varchar(50) NOT NULL,
   `user_level` enum('Admin','User','-') NOT NULL DEFAULT '-',
-  `user_status` enum('Active','Non Active','-') DEFAULT '-',
+  `user_status` enum('Active','Non Active') DEFAULT 'Active',
+  `user_image` varchar(100) DEFAULT NULL,
+  `user_date_update` date DEFAULT NULL,
+  `user_time_update` time DEFAULT NULL,
   PRIMARY KEY (`user_username`),
   KEY `name` (`user_name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `hrd_users` */
 
-insert  into `hrd_users`(`user_username`,`user_password`,`user_name`,`user_level`,`user_status`) values ('admin','d033e22ae348aeb5660fc2140aec35850c4da997','Administratro','Admin','Active');
+insert  into `hrd_users`(`user_username`,`user_password`,`user_name`,`user_level`,`user_status`,`user_image`,`user_date_update`,`user_time_update`) values ('admin','d033e22ae348aeb5660fc2140aec35850c4da997','Administrator','Admin','Active','Avatar__1466065143.jpg','2016-06-16','15:19:03'),('irene','2ec1ddb5b29133e23d1e8722efead92bce315ef7','Irene Sampouw','Admin','Active','Avatar__1466436089.jpg','2016-06-20','22:22:32');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

@@ -1,7 +1,8 @@
 <?php 
-$uri = $this->uri->segment(2);
+$uri  = $this->uri->segment(2);
+$uri2 = $this->uri->segment(1);
 
-if (empty($uri)) {
+if (empty($uri) && empty($uri2)) {
 	$dashboard   = 'active';
 	$menu_1      = '';
 	$master      = '';
@@ -33,6 +34,10 @@ if (empty($uri)) {
 	$intern_mail = '';
 	$decree      = '';
 	$memo        = '';
+	$practice    = '';
+	$school      = '';
+	$proposal    = '';
+	$student     = '';
 	$system      = '';
 	$users       = '';
 } elseif ($uri=='blood') {
@@ -67,6 +72,10 @@ if (empty($uri)) {
 	$intern_mail = '';
 	$decree      = '';
 	$memo        = '';
+	$practice    = '';
+	$school      = '';
+	$proposal    = '';
+	$student     = '';
 	$system      = '';
 	$users       = '';
 } elseif ($uri=='marriage') {
@@ -101,6 +110,10 @@ if (empty($uri)) {
 	$intern_mail = '';
 	$decree      = '';
 	$memo        = '';
+	$practice    = '';
+	$school      = '';
+	$proposal    = '';
+	$student     = '';
 	$system      = '';
 	$users       = '';
 } elseif ($uri=='religion') {
@@ -135,6 +148,10 @@ if (empty($uri)) {
 	$intern_mail = '';
 	$decree      = '';
 	$memo        = '';
+	$practice    = '';
+	$school      = '';
+	$proposal    = '';
+	$student     = '';
 	$system      = '';
 	$users       = '';
 } elseif ($uri=='education') {
@@ -169,6 +186,10 @@ if (empty($uri)) {
 	$intern_mail = '';
 	$decree      = '';
 	$memo        = '';
+	$practice    = '';
+	$school      = '';
+	$proposal    = '';
+	$student     = '';
 	$system      = '';
 	$users       = '';
 } elseif ($uri=='relation') {
@@ -203,6 +224,10 @@ if (empty($uri)) {
 	$intern_mail = '';
 	$decree      = '';
 	$memo        = '';
+	$practice    = '';
+	$school      = '';
+	$proposal    = '';
+	$student     = '';
 	$system      = '';
 	$users       = '';
 } elseif ($uri=='status') {
@@ -237,6 +262,10 @@ if (empty($uri)) {
 	$intern_mail = '';
 	$decree      = '';
 	$memo        = '';
+	$practice    = '';
+	$school      = '';
+	$proposal    = '';
+	$student     = '';
 	$system      = '';
 	$users       = '';
 } elseif ($uri=='department') {
@@ -271,6 +300,10 @@ if (empty($uri)) {
 	$intern_mail = '';
 	$decree      = '';
 	$memo        = '';
+	$practice    = '';
+	$school      = '';
+	$proposal    = '';
+	$student     = '';
 	$system      = '';
 	$users       = '';
 } elseif ($uri=='position') {
@@ -305,6 +338,10 @@ if (empty($uri)) {
 	$intern_mail = '';
 	$decree      = '';
 	$memo        = '';
+	$practice    = '';
+	$school      = '';
+	$proposal    = '';
+	$student     = '';
 	$system      = '';
 	$users       = '';
 } elseif ($uri=='employee') {
@@ -339,6 +376,10 @@ if (empty($uri)) {
 	$intern_mail = '';
 	$decree      = '';
 	$memo        = '';
+	$practice    = '';
+	$school      = '';
+	$proposal    = '';
+	$student     = '';
 	$system      = '';
 	$users       = '';
 } elseif ($uri=='record') {
@@ -373,6 +414,10 @@ if (empty($uri)) {
 	$intern_mail = '';
 	$decree      = '';
 	$memo        = '';
+	$practice    = '';
+	$school      = '';
+	$proposal    = '';
+	$student     = '';
 	$system      = '';
 	$users       = '';
 } elseif ($uri=='healthy_insurance') {
@@ -407,6 +452,10 @@ if (empty($uri)) {
 	$intern_mail = '';
 	$decree      = '';
 	$memo        = '';
+	$practice    = '';
+	$school      = '';
+	$proposal    = '';
+	$student     = '';
 	$system      = '';
 	$users       = '';
 } elseif ($uri=='employment_insurance') {
@@ -441,6 +490,10 @@ if (empty($uri)) {
 	$intern_mail = '';
 	$decree      = '';
 	$memo        = '';
+	$practice    = '';
+	$school      = '';
+	$proposal    = '';
+	$student     = '';
 	$system      = '';
 	$users       = '';
 } elseif ($uri=='reward') {
@@ -475,6 +528,10 @@ if (empty($uri)) {
 	$intern_mail = '';
 	$decree      = '';
 	$memo        = '';
+	$practice    = '';
+	$school      = '';
+	$proposal    = '';
+	$student     = '';
 	$system      = '';
 	$users       = '';
 } elseif ($uri=='transaction_reward') {
@@ -509,6 +566,10 @@ if (empty($uri)) {
 	$intern_mail = '';
 	$decree      = '';
 	$memo        = '';
+	$practice    = '';
+	$school      = '';
+	$proposal    = '';
+	$student     = '';
 	$system      = '';
 	$users       = '';
 } elseif ($uri=='punishment') {
@@ -543,6 +604,10 @@ if (empty($uri)) {
 	$intern_mail = '';
 	$decree      = '';
 	$memo        = '';
+	$practice    = '';
+	$school      = '';
+	$proposal    = '';
+	$student     = '';
 	$system      = '';
 	$users       = '';
 } elseif ($uri=='transaction_punishment') {
@@ -577,6 +642,12 @@ if (empty($uri)) {
 	$intern_mail = '';
 	$decree      = '';
 	$memo        = '';
+	$practice    = '';
+	$school      = '';
+	$proposal    = '';
+	$student     = '';
+	$system      = '';
+	$users       = '';
 } elseif ($uri=='mutation') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -609,6 +680,10 @@ if (empty($uri)) {
 	$intern_mail = '';
 	$decree      = '';
 	$memo        = '';
+	$practice    = '';
+	$school      = '';
+	$proposal    = '';
+	$student     = '';
 	$system      = '';
 	$users       = '';
 } elseif ($uri=='resign') {
@@ -643,6 +718,10 @@ if (empty($uri)) {
 	$intern_mail = '';
 	$decree      = '';
 	$memo        = '';
+	$practice    = '';
+	$school      = '';
+	$proposal    = '';
+	$student     = '';
 	$system      = '';
 	$users       = '';
 } elseif ($uri=='company') {
@@ -677,6 +756,10 @@ if (empty($uri)) {
 	$intern_mail = '';
 	$decree      = '';
 	$memo        = '';
+	$practice    = '';
+	$school      = '';
+	$proposal    = '';
+	$student     = '';
 	$system      = '';
 	$users       = '';
 } elseif ($uri=='inbox') {
@@ -711,6 +794,10 @@ if (empty($uri)) {
 	$intern_mail = '';
 	$decree      = '';
 	$memo        = '';
+	$practice    = '';
+	$school      = '';
+	$proposal    = '';
+	$student     = '';
 	$system      = '';
 	$users       = '';
 } elseif ($uri=='outbox') {
@@ -745,6 +832,10 @@ if (empty($uri)) {
 	$intern_mail = '';
 	$decree      = '';
 	$memo        = '';
+	$practice    = '';
+	$school      = '';
+	$proposal    = '';
+	$student     = '';
 	$system      = '';
 	$users       = '';
 } elseif ($uri=='decree') {
@@ -779,6 +870,10 @@ if (empty($uri)) {
 	$intern_mail = 'active';
 	$decree      = 'active';
 	$memo        = '';
+	$practice    = '';
+	$school      = '';
+	$proposal    = '';
+	$student     = '';
 	$system      = '';
 	$users       = '';
 } elseif ($uri=='memo') {
@@ -813,9 +908,13 @@ if (empty($uri)) {
 	$intern_mail = 'active';
 	$decree      = '';
 	$memo        = 'active';
+	$practice    = '';
+	$school      = '';
+	$proposal    = '';
+	$student     = '';
 	$system      = '';
 	$users       = '';
-} elseif ($uri=='users') {
+} elseif ($uri=='school') {
 	$dashboard   = '';
 	$menu_1      = '';
 	$master      = '';
@@ -847,6 +946,124 @@ if (empty($uri)) {
 	$intern_mail = '';
 	$decree      = '';
 	$memo        = '';
+	$practice    = 'active';
+	$school      = 'active';
+	$proposal    = '';
+	$student     = '';
+	$system      = '';
+	$users       = '';
+} elseif ($uri=='proposal') {
+	$dashboard   = '';
+	$menu_1      = '';
+	$master      = '';
+	$blood       = '';
+	$marriage    = '';
+	$religion    = '';
+	$education   = '';
+	$relation    = '';
+	$status      = '';
+	$department  = '';
+	$position    = '';
+	$data        = '';
+	$employee    = '';
+	$record      = '';
+	$kesehatan   = '';
+	$tenaga      = '';
+	$rewpun      = '';
+	$rewtype     = '';
+	$rewtran     = '';
+	$puntype     = '';
+	$puntran     = '';
+	$mutation    = '';
+	$resign      = '';
+	$mail        = '';
+	$mail_inbox  = '';
+	$company      = '';
+	$inbox       = '';
+	$outbox      = '';
+	$intern_mail = '';
+	$decree      = '';
+	$memo        = '';
+	$practice    = 'active';
+	$school      = '';
+	$proposal    = 'active';
+	$student     = '';
+	$system      = '';
+	$users       = '';
+} elseif ($uri=='student') {
+	$dashboard   = '';
+	$menu_1      = '';
+	$master      = '';
+	$blood       = '';
+	$marriage    = '';
+	$religion    = '';
+	$education   = '';
+	$relation    = '';
+	$status      = '';
+	$department  = '';
+	$position    = '';
+	$data        = '';
+	$employee    = '';
+	$record      = '';
+	$kesehatan   = '';
+	$tenaga      = '';
+	$rewpun      = '';
+	$rewtype     = '';
+	$rewtran     = '';
+	$puntype     = '';
+	$puntran     = '';
+	$mutation    = '';
+	$resign      = '';
+	$mail        = '';
+	$mail_inbox  = '';
+	$company      = '';
+	$inbox       = '';
+	$outbox      = '';
+	$intern_mail = '';
+	$decree      = '';
+	$memo        = '';
+	$practice    = 'active';
+	$school      = '';
+	$proposal    = '';
+	$student     = 'active';
+	$system      = '';
+	$users       = '';
+} elseif ($uri2 == 'users') {
+	$dashboard   = '';
+	$menu_1      = '';
+	$master      = '';
+	$blood       = '';
+	$marriage    = '';
+	$religion    = '';
+	$education   = '';
+	$relation    = '';
+	$status      = '';
+	$department  = '';
+	$position    = '';
+	$data        = '';
+	$employee    = '';
+	$record      = '';
+	$kesehatan   = '';
+	$tenaga      = '';
+	$rewpun      = '';
+	$rewtype     = '';
+	$rewtran     = '';
+	$puntype     = '';
+	$puntran     = '';
+	$mutation    = '';
+	$resign      = '';
+	$mail        = '';
+	$mail_inbox  = '';
+	$company      = '';
+	$inbox       = '';
+	$outbox      = '';
+	$intern_mail = '';
+	$decree      = '';
+	$memo        = '';
+	$practice    = '';
+	$school      = '';
+	$proposal    = '';
+	$student     = '';
 	$system      = 'active';
 	$users       = 'active';
 } else {
@@ -881,6 +1098,10 @@ if (empty($uri)) {
 	$intern_mail = '';
 	$decree      = '';
 	$memo        = '';
+	$practice    = '';
+	$school      = '';
+	$proposal    = '';
+	$student     = '';
 	$system      = '';
 	$users       = '';
 }
@@ -904,7 +1125,7 @@ if (empty($uri)) {
 					<!-- BEGIN USER LOGIN DROPDOWN -->
 					<li class="dropdown dropdown-user dropdown-dark">
 						<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-						<img alt="" class="img-circle" src="<?php echo base_url(); ?>assets/admin/layout3/img/avatar9.jpg">
+						<img alt="" class="img-circle" src="<?php echo base_url(); ?>icon/<?php echo $this->session->userdata('avatar'); ?>">
 						<span class="username username-hide-mobile"><?php echo $this->session->userdata('nama'); ?></span>
 						</a>
 						<ul class="dropdown-menu dropdown-menu-default">
@@ -1109,25 +1330,25 @@ if (empty($uri)) {
 							</li>							
 						</ul>
 					</li>
-					<li class="menu-dropdown classic-menu-dropdown ">
+					<li class="menu-dropdown classic-menu-dropdown <?php echo $practice; ?>">
 						<a data-hover="megamenu-dropdown" data-close-others="true" data-toggle="dropdown" href="javascript:;">
 						Practical Work <i class="fa fa-angle-down"></i>
 						</a>
 						<ul class="dropdown-menu pull-left">
-							<li class="">
-								<a href="<?php echo site_url('pw/school'); ?>">
+							<li class="<?php echo $school; ?>">
+								<a href="<?php echo site_url('practice/school'); ?>">
 								<i class="icon-home"></i>
 								School 
 								</a>								
 							</li>
-							<li class="">
-								<a href="<?php echo site_url('pw/proposal'); ?>">
+							<li class="<?php echo $proposal; ?>">
+								<a href="<?php echo site_url('practice/proposal'); ?>">
 								<i class="icon-envelope"></i>
 								Proposal 
 								</a>								
 							</li>
-							<li class="">
-								<a href="<?php echo site_url('pw/student'); ?>">
+							<li class="<?php echo $student; ?>">
+								<a href="<?php echo site_url('practice/student'); ?>">
 								<i class="icon-user"></i>
 								Students 
 								</a>								
@@ -1138,15 +1359,15 @@ if (empty($uri)) {
 								Report</a>
 								<ul class="dropdown-menu">
 									<li class="">
-										<a href="<?php echo site_url('pw/report_school'); ?>">
+										<a href="<?php echo site_url('practice/report_school'); ?>">
 										School</a>
 									</li>
 									<li class="">
-										<a href="<?php echo site_url('pw/report_proposal'); ?>">
+										<a href="<?php echo site_url('practice/report_proposal'); ?>">
 										Proposal</a>
 									</li>
 									<li class="">
-										<a href="<?php echo site_url('pw/report_students'); ?>">
+										<a href="<?php echo site_url('practice/report_students'); ?>">
 										Students</a>
 									</li>
 								</ul>

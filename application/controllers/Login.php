@@ -52,7 +52,8 @@ class Login extends CI_Controller {
 				{	
 					$array_item = array('username' 	=> $temp_account->user_username, 
 										'nama' 		=> $temp_account->user_name,
-										'level' 	=> $temp_account->user_level,										
+										'level' 	=> $temp_account->user_level,
+										'avatar' 	=> $temp_account->user_image,										
 										'logged_in_hrd' => TRUE
 										);
 					

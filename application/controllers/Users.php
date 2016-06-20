@@ -6,7 +6,7 @@ class Users extends CI_Controller {
 		parent::__construct();
 		if(!$this->session->userdata('logged_in_hrd')) redirect(base_url());
 		$this->load->library('template');		
-		$this->load->model('mail/users_model');	
+		$this->load->model('users_model');	
 	}
 
 	public function index()
@@ -26,21 +26,20 @@ class Users extends CI_Controller {
 	}
 	
 	public function savedata() {										
-		$this->form_validation->set_rules('mail_no','<b>Mail No</b>','trim|required|is_unique[hrd_mail_users.users_no]');		
-		$this->form_validation->set_rules('title','<b>Title</b>','trim|required');		
-		$this->form_validation->set_rules('date_mail','<b>Date</b>','trim|required');
-		$this->form_validation->set_rules('desc','<b>Description</b>','trim|required');
-		$this->form_validation->set_rules('sign','<b>Sign</b>','trim|required');
+		$this->form_validation->set_rules('username','<b>Username</b>','trim|required|is_unique[hrd_users.user_username]');
+		$this->form_validation->set_rules('password','<b>Password</b>','trim|required');		
+		$this->form_validation->set_rules('name','<b>Name</b>','trim|required');
+		$this->form_validation->set_rules('lstLevel','<b>Level</b>','trim|required');		
 
 		if ($this->form_validation->run() == FALSE) {
 			$this->template->display('users_add_view');
 		} else {
 			if (!empty($_FILES['userfile']['name'])) {
 				$jam 	= time();
-				$kode 	= strtolower($this->input->post('mail_no'));
+				$kode 	= strtolower($this->input->post('user_username'));
 					
-				$config['file_name']    = 'Surat_Keputusan_'.$kode.'_'.$jam.'.jpg';
-				$config['upload_path'] = './mail_file/';
+				$config['file_name']    = 'Avatar_'.$kode.'_'.$jam.'.jpg';
+				$config['upload_path'] = './icon/';
 				$config['allowed_types'] = 'jpg|png|gif|jpeg';		
 				$config['overwrite'] = TRUE;
 				$this->load->library('upload', $config);
@@ -49,8 +48,8 @@ class Users extends CI_Controller {
 				$config['source_image'] = $this->upload->upload_path.$this->upload->file_name;
 				$config['maintain_ratio'] = TRUE;
 												
-				$config['width'] = 200;
-				$config['height'] = 350;
+				$config['width'] = 500;
+				$config['height'] = 500;
 				$this->load->library('image_lib',$config);
 				 
 				$this->image_lib->resize();
@@ -71,10 +70,10 @@ class Users extends CI_Controller {
 	public function updatedata() {
 		if (!empty($_FILES['userfile']['name'])) {
 			$jam 	= time();
-			$kode 	= strtolower($this->input->post('mail_no'));
+			$kode 	= strtolower($this->input->post('user_username'));
 					
-			$config['file_name']    = 'Surat_Keputusan_'.$kode.'_'.$jam.'.jpg';
-			$config['upload_path'] = './mail_file/';
+			$config['file_name']    = 'Avatar_'.$kode.'_'.$jam.'.jpg';
+			$config['upload_path'] = './icon/';
 			$config['allowed_types'] = 'jpg|png|gif|jpeg';		
 			$config['overwrite'] = TRUE;
 			$this->load->library('upload', $config);
@@ -83,8 +82,8 @@ class Users extends CI_Controller {
 			$config['source_image'] = $this->upload->upload_path.$this->upload->file_name;
 			$config['maintain_ratio'] = TRUE;
 											
-			$config['width'] = 200;
-			$config['height'] = 350;
+			$config['width'] = 500;
+			$config['height'] = 500;
 			$this->load->library('image_lib',$config);
 			 
 			$this->image_lib->resize();
@@ -97,7 +96,7 @@ class Users extends CI_Controller {
 	}
 	
 	public function deletedata($kode) {
-		$kode = $this->security->xss_clean($this->uri->segment(4));
+		$kode = $this->security->xss_clean($this->uri->segment(3));
 		
 		if ($kode == null) {
 			redirect(site_url('users'));
