@@ -111,6 +111,10 @@ if ($isi == 'add' || $isi == 'edi' || $isi == 'sav') {
 <script src="<?php echo base_url(); ?>assets/admin/pages/scripts/table-advanced.js"></script>
 <script src="<?php echo base_url(); ?>assets/admin/pages/scripts/form-samples.js"></script>
 
+<!-- CHART -->
+<script src="<?php echo base_url(); ?>assets/global/plugins/amcharts/amcharts/amcharts.js" type="text/javascript"></script>
+<script src="<?php echo base_url(); ?>assets/global/plugins/amcharts/amcharts/pie.js" type="text/javascript"></script>
+
 <!-- BEGIN PAGE LEVEL SCRIPTS -->
 <script src="<?php echo base_url(); ?>assets/global/scripts/metronic.js" type="text/javascript"></script>
 <script src="<?php echo base_url(); ?>assets/admin/layout3/scripts/layout.js" type="text/javascript"></script>
@@ -137,6 +141,58 @@ jQuery(document).ready(function() {
 });
 </script>
 <!-- END JAVASCRIPTS -->
+
+<script>
+/* Gender */
+var chart = AmCharts.makeChart("chart_gender", {
+   "type": "pie",
+   "theme": "light",
+   "fontFamily": 'Open Sans',         
+   "color": '#888888',
+   "dataProvider": [{
+      "Gender": "Male",
+      "Total": <?php echo $employee_male; ?>
+   }, {
+      "Gender": "Female",
+      "Total": <?php echo $employee_female; ?>
+   }],
+      "valueField": "Total",
+      "titleField": "Gender",
+      "exportConfig": {
+         menuItems: [{
+         icon: Metronic.getGlobalPluginsPath() + "amcharts/amcharts/images/export.png",
+         format: 'png'
+      }]
+   }
+});
+
+$('#chart_gender').closest('.portlet').find('.fullscreen').click(function() {
+   chart.invalidateSize();
+});
+
+/* Education */
+var chart = AmCharts.makeChart("chart_education", {
+   "type": "pie",
+   "theme": "light",
+   "fontFamily": 'Open Sans',         
+   "color": '#888',
+   "dataProvider": <?php echo $render; ?>,
+      "valueField": "Total",
+      "titleField": "Education",
+      "exportConfig": {
+         menuItems: [{
+         icon: Metronic.getGlobalPluginsPath() + "amcharts/amcharts/images/export.png",
+         format: 'png'
+      }]
+   }
+});
+
+$('#chart_education').closest('.portlet').find('.fullscreen').click(function() {
+   chart.invalidateSize();
+});
+
+</script> 
+
 </body>
 <!-- END BODY -->
 </html>
