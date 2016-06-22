@@ -6,7 +6,7 @@ class Users extends CI_Controller {
 		parent::__construct();
 		if(!$this->session->userdata('logged_in_hrd')) redirect(base_url());
 		$this->load->library('template');		
-		$this->load->model('users_model');	
+		$this->load->model('sistem/users_model');	
 	}
 
 	public function index()
@@ -14,7 +14,7 @@ class Users extends CI_Controller {
 		if($this->session->userdata('logged_in_hrd')) 
 		{
 			$data['daftarlist'] = $this->users_model->select_all()->result();
-			$this->template->display('users_view', $data);			
+			$this->template->display('sistem/users_view', $data);			
 		} else {
 			$this->session->sess_destroy();
 			redirect(base_url());
@@ -22,7 +22,7 @@ class Users extends CI_Controller {
 	}
 
 	public function adddata() {		
-		$this->template->display('users_add_view');
+		$this->template->display('sistem/users_add_view');
 	}
 	
 	public function savedata() {										
@@ -32,7 +32,7 @@ class Users extends CI_Controller {
 		$this->form_validation->set_rules('lstLevel','<b>Level</b>','trim|required');		
 
 		if ($this->form_validation->run() == FALSE) {
-			$this->template->display('users_add_view');
+			$this->template->display('sistem/users_add_view');
 		} else {
 			if (!empty($_FILES['userfile']['name'])) {
 				$jam 	= time();
@@ -58,13 +58,13 @@ class Users extends CI_Controller {
 			}
 
 			$this->users_model->insert_data();
- 			redirect(site_url('users'));
+ 			redirect(site_url('sistem/users'));
 		}
 	}
 	
 	public function editdata($users_id) {		
 		$data['detail'] 		= $this->users_model->select_by_id($users_id)->row();
-		$this->template->display('users_edit_view', $data);
+		$this->template->display('sistem/users_edit_view', $data);
 	}
 	
 	public function updatedata() {
@@ -92,18 +92,18 @@ class Users extends CI_Controller {
 		}		
 		
 		$this->users_model->update_data();
- 		redirect(site_url('users'));
+ 		redirect(site_url('sistem/users'));
 	}
 	
 	public function deletedata($kode) {
 		$kode = $this->security->xss_clean($this->uri->segment(3));
 		
 		if ($kode == null) {
-			redirect(site_url('users'));
+			redirect(site_url('sistem/users'));
 		} else {
 			$this->users_model->delete_data($kode);
-			echo "<meta http-equiv=refresh content=0;url=\"".site_url()."users\">";
+			echo "<meta http-equiv=refresh content=0;url=\"".site_url()."sistem/users\">";
 		}
 	}	
 }
-/* Location: ./application/controller/Users.php */
+/* Location: ./application/controller/sistem/Users.php */

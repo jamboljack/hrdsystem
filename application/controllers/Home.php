@@ -55,6 +55,18 @@ class Home extends CI_Controller{
 			}
 			$data['render_marriage'] = json_encode($render_marriage);
 
+			// Calendar
+			$event 				= $this->home_model->select_event()->result();
+			$render_event = array();
+			foreach ($event as $row) {
+			    $render_event[] = array(
+			        "title" 	=> $row->event_name,
+			        "start" 	=> $row->event_start_date.'T'.$row->event_start_time,
+			        "end" 		=> $row->event_end_date.'T'.$row->event_end_time			        
+				);
+			}
+			$data['render_event'] = json_encode($render_event);
+
 
 			$this->template->display('home_view', $data);
 		} else {

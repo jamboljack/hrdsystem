@@ -6,7 +6,7 @@ class Profil extends CI_Controller {
 		parent::__construct();
 		if(!$this->session->userdata('logged_in_hrd')) redirect(base_url());
 		$this->load->library('template');		
-		$this->load->model('profil_model');	
+		$this->load->model('sistem/profil_model');	
 	}
 
 	public function index()
@@ -15,7 +15,7 @@ class Profil extends CI_Controller {
 		{
 			$user_username = trim($this->session->userdata('username'));
 			$data['detail'] = $this->profil_model->select_by_id($user_username)->row();
-			$this->template->display('profil_view', $data);			
+			$this->template->display('sistem/profil_view', $data);			
 		} else {
 			$this->session->sess_destroy();
 			redirect(base_url());
@@ -24,7 +24,7 @@ class Profil extends CI_Controller {
 	
 	public function updatedata() {	
 		$this->profil_model->update_data_name();
- 		redirect(site_url('profil'));
+ 		redirect(site_url('sistem/profil'));
 	}
 
 	public function updateavatar() {
@@ -52,12 +52,12 @@ class Profil extends CI_Controller {
 		}		
 		
 		$this->profil_model->update_data_avatar();
- 		redirect(site_url('profil'));
+ 		redirect(site_url('sistem/profil'));
 	}
 
 	public function updatepassword() {	
 		$this->profil_model->update_data_password();
- 		redirect(site_url('profil'));
+ 		redirect(site_url('sistem/profil'));
 	}
 }
-/* Location: ./application/controller/Profil.php */
+/* Location: ./application/controller/sistem/Profil.php */

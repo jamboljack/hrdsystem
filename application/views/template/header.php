@@ -1055,7 +1055,7 @@ if (empty($uri) && empty($uri2)) {
 	$system      = '';
 	$users       = '';
 	$event       = '';
-} elseif ($uri2 == 'users') {
+} elseif ($uri == 'users') {
 	$dashboard   = '';
 	$menu_1      = '';
 	$master      = '';
@@ -1094,7 +1094,7 @@ if (empty($uri) && empty($uri2)) {
 	$system      = 'active';
 	$users       = 'active';
 	$event       = '';
-} elseif ($uri2 == 'event') {
+} elseif ($uri == 'event') {
 	$dashboard   = '';
 	$menu_1      = '';
 	$master      = '';
@@ -1198,7 +1198,7 @@ if (empty($uri) && empty($uri2)) {
 						</a>
 						<ul class="dropdown-menu dropdown-menu-default">
 							<li>
-								<a href="<?php echo site_url('profil'); ?>">
+								<a href="<?php echo site_url('sistem/profil'); ?>">
 								<i class="icon-user"></i> My Profile </a>
 							</li>							
 							<li class="divider">
@@ -1423,13 +1423,13 @@ if (empty($uri) && empty($uri2)) {
 						</a>
 						<ul class="dropdown-menu pull-left">
 							<li class="<?php echo $users; ?>">
-								<a href="<?php echo site_url('users'); ?>">
+								<a href="<?php echo site_url('sistem/users'); ?>">
 								<i class="icon-user"></i>
 								Users 
 								</a>								
 							</li>
 							<li class="<?php echo $event; ?>">
-								<a href="<?php echo site_url('event'); ?>">
+								<a href="<?php echo site_url('sistem/event'); ?>">
 								<i class="icon-calendar"></i>
 								Calendar Event 
 								</a>								
@@ -1437,7 +1437,7 @@ if (empty($uri) && empty($uri2)) {
 						</ul>
 					</li>
 					<!-- Report Menu -->
-					<li class="menu-dropdown classic-menu-dropdown <?php echo $mail; ?>">
+					<li class="menu-dropdown classic-menu-dropdown ">
 						<a data-hover="megamenu-dropdown" data-close-others="true" data-toggle="dropdown" href="#">
 						Report <i class="fa fa-angle-down"></i>
 						</a>

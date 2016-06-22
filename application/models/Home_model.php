@@ -90,5 +90,12 @@ class Home_model extends CI_Model {
 				
 		return $this->db->get();
 	}
+
+	function select_event() {
+		$this->db->select('*');
+		$this->db->from('hrd_event');		
+		
+		return $this->db->get();
+	}
 }
 /* Location: ./application/model/Home_model.php */

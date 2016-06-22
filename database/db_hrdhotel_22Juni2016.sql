@@ -176,7 +176,29 @@ CREATE TABLE `hrd_employee` (
 
 /*Data for the table `hrd_employee` */
 
-insert  into `hrd_employee`(`emp_id`,`emp_nik`,`emp_finger`,`emp_name`,`emp_birthdate`,`emp_birthplace`,`emp_gender`,`emp_address`,`province_id`,`country_id`,`education_id`,`marriage_id`,`religion_id`,`blood_id`,`department_id`,`emp_district`,`emp_zipcode`,`emp_ktp_id`,`emp_phone`,`emp_email`,`emp_tb`,`emp_bb`,`emp_bpjs_h_id`,`emp_join_date_h`,`emp_bpjs_k_id`,`emp_join_date_k`,`emp_bank`,`emp_no_account`,`emp_name_account`,`position_id`,`emp_worktype`,`status_id`,`emp_first_salary`,`emp_photo`,`emp_start_join`,`emp_start_contract`,`emp_end_contract`,`emp_status`,`emp_date_update`,`emp_time_update`,`user_username`) values (1,'210787','5','JAMA\' ROCHMAD MUTTAQIN','1987-07-21','KUDUS','Male','Tersono Rt. 02 Rw. 03','03','0319',7,1,1,4,1,'KALIWUNGU','59316','33102107870002','085640969727','jama.muttaqin@gmail.com',170,50,'333433','2016-05-01','55555','2016-05-02','BANK MANDIRI','454545454','JAMA\' ROCHMAD MUTTAQIN',14,'Monthly',2,1600000,'Foto_jama-rochmad-muttaqin_1464661302.jpg','2014-05-04','0000-00-00','0000-00-00','ACTIVE','2016-06-14','08:42:52','admin'),(2,'1','1','DESI KURNIASARI','2016-05-01','KUDUS','Female','kajeksan','03','0319',7,2,1,1,6,'menara','59312','331021020120001','08564021554545','desy.act@hotelhomkudus.com',160,70,'3232323','0000-00-00','','0000-00-00','BANK MANDIRI','33562326556','DESI KURNIASARI',2,'Monthly',2,2000000,'Foto_desi_kurniasari_1464579806.jpg','2016-05-01','2016-05-02','2016-05-04','ACTIVE','2016-06-14','10:16:14','admin'),(3,'123','456','IRENE SAMPOUW','2016-06-01','KUDUS','Female','Pasar Kliwon','03','0319',7,1,1,5,10,'kota','59033','331092107870003','085640969727','hrd@hotelhomkudus.com',0,0,'','0000-00-00','','0000-00-00','','','',6,'Monthly',2,1500000,'Foto_irene-sampouw_1465478177.jpg','2015-06-01','2016-06-09','2016-06-09','ACTIVE','2016-06-14','10:15:59','admin');
+insert  into `hrd_employee`(`emp_id`,`emp_nik`,`emp_finger`,`emp_name`,`emp_birthdate`,`emp_birthplace`,`emp_gender`,`emp_address`,`province_id`,`country_id`,`education_id`,`marriage_id`,`religion_id`,`blood_id`,`department_id`,`emp_district`,`emp_zipcode`,`emp_ktp_id`,`emp_phone`,`emp_email`,`emp_tb`,`emp_bb`,`emp_bpjs_h_id`,`emp_join_date_h`,`emp_bpjs_k_id`,`emp_join_date_k`,`emp_bank`,`emp_no_account`,`emp_name_account`,`position_id`,`emp_worktype`,`status_id`,`emp_first_salary`,`emp_photo`,`emp_start_join`,`emp_start_contract`,`emp_end_contract`,`emp_status`,`emp_date_update`,`emp_time_update`,`user_username`) values (1,'210787','5','JAMA\' ROCHMAD MUTTAQIN','1987-07-21','KUDUS','Male','Tersono Rt. 02 Rw. 03','03','0319',7,1,1,4,1,'KALIWUNGU','59316','33102107870002','085640969727','jama.muttaqin@gmail.com',170,50,'333433','2016-05-01','55555','2016-05-02','BANK MANDIRI','454545454','JAMA\' ROCHMAD MUTTAQIN',14,'Monthly',2,1600000,'Foto_jama-rochmad-muttaqin_1464661302.jpg','2014-05-04','0000-00-00','0000-00-00','ACTIVE','2016-06-14','08:42:52','admin'),(2,'1','1','DESI KURNIASARI','2016-05-01','KUDUS','Female','kajeksan','03','0319',6,2,1,1,6,'menara','59312','331021020120001','08564021554545','desy.act@hotelhomkudus.com',160,70,'3232323','0000-00-00','','0000-00-00','BANK MANDIRI','33562326556','DESI KURNIASARI',2,'Monthly',2,2000000,'Foto_desi_kurniasari_1464579806.jpg','2016-05-01','2016-05-02','2016-05-04','ACTIVE','2016-06-21','14:50:26','admin'),(3,'123','456','IRENE SAMPOUW','2016-06-01','KUDUS','Female','Pasar Kliwon','03','0319',8,1,3,5,10,'kota','59033','331092107870003','085640969727','hrd@hotelhomkudus.com',0,0,'','0000-00-00','','0000-00-00','','','',6,'Monthly',2,1500000,'Foto_irene-sampouw_1465478177.jpg','2015-06-01','2016-06-09','2016-06-09','ACTIVE','2016-06-21','15:16:37','admin');
+
+/*Table structure for table `hrd_event` */
+
+DROP TABLE IF EXISTS `hrd_event`;
+
+CREATE TABLE `hrd_event` (
+  `event_id` int(10) NOT NULL AUTO_INCREMENT,
+  `event_name` varchar(100) NOT NULL,
+  `event_start_date` date NOT NULL,
+  `event_start_time` time NOT NULL,
+  `event_end_date` date NOT NULL,
+  `event_end_time` time NOT NULL,
+  `event_color` varchar(15) NOT NULL,
+  `event_date_update` date NOT NULL,
+  `event_time_update` time NOT NULL,
+  `user_username` varchar(30) NOT NULL,
+  PRIMARY KEY (`event_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+/*Data for the table `hrd_event` */
+
+insert  into `hrd_event`(`event_id`,`event_name`,`event_start_date`,`event_start_time`,`event_end_date`,`event_end_time`,`event_color`,`event_date_update`,`event_time_update`,`user_username`) values (1,'Training Accounting Maxial','2016-06-22','09:00:00','2016-06-22','12:00:00','yellow','2016-06-22','16:53:56','admin');
 
 /*Table structure for table `hrd_family` */
 
@@ -248,7 +270,7 @@ CREATE TABLE `hrd_mail_decree` (
 
 /*Data for the table `hrd_mail_decree` */
 
-insert  into `hrd_mail_decree`(`decree_id`,`decree_no`,`decree_title`,`decree_date`,`decree_desc`,`decree_sign`,`decree_file`,`decree_date_update`,`decree_time_update`,`user_username`) values (1,'1234VVV','Surat Pengangkatan Karyawan Kontrak','2016-06-01','<p>Menyatakan dengan Hormat bahwa</p><p>Nama&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : Jama\' Rochmad Muttaqin</p>Jabatan&nbsp;&nbsp;&nbsp;&nbsp; : IT Officer','Pak Arifandi','Surat_Keputusan_1465544091.jpg','2016-06-10','14:50:07','admin'),(2,'55653232/V/2016','Surat Pernyataan Pegawai','2016-06-13','<p>Surat ini bertujuan untuk</p>','Pak Arifandi',NULL,'2016-06-16','11:29:03','admin');
+insert  into `hrd_mail_decree`(`decree_id`,`decree_no`,`decree_title`,`decree_date`,`decree_desc`,`decree_sign`,`decree_file`,`decree_date_update`,`decree_time_update`,`user_username`) values (1,'1234VVV','SURAT PENGANGKATAN KARYAWAN KONTRAK','2016-06-01','<p>Menyatakan dengan Hormat bahwa</p>\r\n\r\n<p>Nama&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : Jama&#39; Rochmad Muttaqin</p>\r\n\r\n<p>Jabatan&nbsp;&nbsp;&nbsp;&nbsp; : IT Officer</p>','Pak Arifandi','Surat_Keputusan_1465544091.jpg','2016-06-22','11:26:38','admin'),(2,'55653232/V/2016','SURAT PERNYATAAN PEGAWAI','2016-06-13','<p>Surat ini bertujuan untuk</p>','Pak Arifandi',NULL,'2016-06-22','11:26:33','admin');
 
 /*Table structure for table `hrd_mail_inbox` */
 
@@ -259,6 +281,7 @@ CREATE TABLE `hrd_mail_inbox` (
   `company_id` int(10) NOT NULL,
   `inbox_no` varchar(100) DEFAULT NULL,
   `inbox_title` varchar(100) NOT NULL,
+  `inbox_to` varchar(50) DEFAULT NULL,
   `inbox_date` date DEFAULT NULL,
   `inbox_desc` text,
   `inbox_date_update` date NOT NULL,
@@ -268,11 +291,11 @@ CREATE TABLE `hrd_mail_inbox` (
   KEY `inbox_title` (`inbox_title`),
   KEY `company_id` (`company_id`),
   CONSTRAINT `hrd_mail_inbox_ibfk_1` FOREIGN KEY (`company_id`) REFERENCES `hrd_mail_company` (`company_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 /*Data for the table `hrd_mail_inbox` */
 
-insert  into `hrd_mail_inbox`(`inbox_id`,`company_id`,`inbox_no`,`inbox_title`,`inbox_date`,`inbox_desc`,`inbox_date_update`,`inbox_time_update`,`user_username`) values (2,1,'34334','Surat DKK','2016-06-16','<p>Tes Surat</p>','2016-06-16','11:21:50','admin');
+insert  into `hrd_mail_inbox`(`inbox_id`,`company_id`,`inbox_no`,`inbox_title`,`inbox_to`,`inbox_date`,`inbox_desc`,`inbox_date_update`,`inbox_time_update`,`user_username`) values (2,1,'34334','SURAT DKK','GENERAL MANAGER','2016-06-16','<p>Tes Surat</p>','2016-06-22','11:21:28','admin'),(3,1,'55232.33262','SURAT KETERANGAN','HRD','2016-06-22','<p>surat pengumuman</p>','2016-06-22','11:20:17','admin');
 
 /*Table structure for table `hrd_mail_memo` */
 
@@ -316,7 +339,7 @@ CREATE TABLE `hrd_mail_outbox` (
 
 /*Data for the table `hrd_mail_outbox` */
 
-insert  into `hrd_mail_outbox`(`outbox_id`,`company_id`,`outbox_no`,`outbox_title`,`outbox_date`,`outbox_desc`,`outbox_date_update`,`outbox_time_update`,`user_username`) values (1,1,'2323','Surat Keluar Perusahan','2016-06-16','<p>Tes</p>','2016-06-16','11:24:55','admin'),(2,1,'4545454','Surat Keluar','2016-06-16','<p>Tes Surat keluar, XXX</p>','2016-06-16','11:24:45','admin'),(3,1,'44455454','asdasdas','2016-06-16','<p>asdas</p>','2016-06-16','14:24:19','admin');
+insert  into `hrd_mail_outbox`(`outbox_id`,`company_id`,`outbox_no`,`outbox_title`,`outbox_date`,`outbox_desc`,`outbox_date_update`,`outbox_time_update`,`user_username`) values (1,1,'2323','SURAT KELUAR PERUSAHAN','2016-06-16','<p>Tes</p>','2016-06-22','11:25:31','admin'),(2,1,'4545454','SURAT KELUAR','2016-06-16','<p>Tes Surat keluar, XXX</p>','2016-06-22','11:25:27','admin'),(3,1,'44455454','ASDASDAS','2016-06-16','<p>asdas</p>','2016-06-22','11:25:22','admin');
 
 /*Table structure for table `hrd_marriage` */
 
@@ -680,7 +703,7 @@ CREATE TABLE `hrd_users` (
 
 /*Data for the table `hrd_users` */
 
-insert  into `hrd_users`(`user_username`,`user_password`,`user_name`,`user_level`,`user_status`,`user_image`,`user_date_update`,`user_time_update`) values ('admin','d033e22ae348aeb5660fc2140aec35850c4da997','Administrator','Admin','Active','Avatar__1466065143.jpg','2016-06-16','15:19:03'),('irene','2ec1ddb5b29133e23d1e8722efead92bce315ef7','Irene Sampouw','Admin','Active','Avatar__1466436089.jpg','2016-06-20','22:22:32');
+insert  into `hrd_users`(`user_username`,`user_password`,`user_name`,`user_level`,`user_status`,`user_image`,`user_date_update`,`user_time_update`) values ('admin','7712fcffc21bb7215f58035ab4506a5873c4af3c','Administrator','Admin','Active','Avatar_admin_1466566264.jpg','2016-06-22','16:30:48'),('irene','2ec1ddb5b29133e23d1e8722efead92bce315ef7','Irene Sampouw','Admin','Active','Avatar__1466436089.jpg','2016-06-20','22:22:32');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

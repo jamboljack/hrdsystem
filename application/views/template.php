@@ -34,8 +34,10 @@
 <link href="<?php echo base_url(); ?>assets/admin/pages/css/profile.css" rel="stylesheet" type="text/css"/>
 <!-- Error Page -->
 <link href="<?php echo base_url(); ?>assets/admin/pages/css/error.css" rel="stylesheet" type="text/css"/>
-
+<!-- Full Calendar -->
 <link href="<?php echo base_url(); ?>assets/global/plugins/fullcalendar/fullcalendar.min.css" rel="stylesheet"/>
+<!-- Time Picker -->
+<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/global/plugins/bootstrap-timepicker/css/bootstrap-timepicker.min.css"/>
 
 <!-- BEGIN THEME STYLES -->
 <!-- DOC: To use 'rounded corners' style just load 'components-rounded.css' stylesheet instead of 'components.css' in the below style tag -->
@@ -90,10 +92,10 @@
 $mn 	= $this->uri->segment(3);
 if (empty($mn)) { 
 ?>
-<script type="text/javascript" src="<?php echo base_url(); ?>assets/global/plugins/datatables/media/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="<?php echo base_url(); ?>assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js"></script>
-<script type="text/javascript" src="<?php echo base_url(); ?>assets/global/plugins/datatables/extensions/TableTools/js/dataTables.tableTools.min.js"></script>
-<script type="text/javascript" src="<?php echo base_url(); ?>assets/global/plugins/datatables/extensions/ColReorder/js/dataTables.colReorder.min.js"></script>
+   <script type="text/javascript" src="<?php echo base_url(); ?>assets/global/plugins/datatables/media/js/jquery.dataTables.min.js"></script>
+   <script type="text/javascript" src="<?php echo base_url(); ?>assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js"></script>
+   <script type="text/javascript" src="<?php echo base_url(); ?>assets/global/plugins/datatables/extensions/TableTools/js/dataTables.tableTools.min.js"></script>
+   <script type="text/javascript" src="<?php echo base_url(); ?>assets/global/plugins/datatables/extensions/ColReorder/js/dataTables.colReorder.min.js"></script>
 <?php } ?>
 
 <!-- CKEditor -->
@@ -107,9 +109,9 @@ $mn = $this->uri->segment(3);
 $isi = substr($mn, 0,3);
 if ($isi == 'add' || $isi == 'edi' || $isi == 'sav') { 
 ?>
-<script type="text/javascript" src="<?php echo base_url(); ?>assets/datepicker/js/bootstrap-datepicker.js"></script>
-<script type="text/javascript" src="<?php echo base_url(); ?>assets/datepicker/js/moment.min.js"></script>
-<script type="text/javascript" src="<?php echo base_url(); ?>assets/datepicker/js/daterangepicker.js"></script>
+   <script type="text/javascript" src="<?php echo base_url(); ?>assets/datepicker/js/bootstrap-datepicker.js"></script>
+   <script type="text/javascript" src="<?php echo base_url(); ?>assets/datepicker/js/moment.min.js"></script>
+   <script type="text/javascript" src="<?php echo base_url(); ?>assets/datepicker/js/daterangepicker.js"></script>
 <?php } ?>
 
 <script src="<?php echo base_url(); ?>assets/admin/pages/scripts/components-pickers.js"></script>
@@ -123,6 +125,8 @@ if ($isi == 'add' || $isi == 'edi' || $isi == 'sav') {
 <script src="<?php echo base_url(); ?>assets/global/plugins/moment.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/global/plugins/jquery-ui.custom.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/global/plugins/fullcalendar/fullcalendar.min.js"></script>
+
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/global/plugins/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
 
 <!-- BEGIN PAGE LEVEL SCRIPTS -->
 <script src="<?php echo base_url(); ?>assets/global/scripts/metronic.js" type="text/javascript"></script>
@@ -297,16 +301,7 @@ $('#calendar').fullCalendar({
             $(this).remove();
          }
       },
-      events: [{
-         "title": "All Day Event",
-         "start": "2016-06-01",
-         backgroundColor: Metronic.getBrandColor('yellow')
-      }, {
-          "title": "Long Event",
-          "start": "2016-06-22T14:30",
-          "end"  :  "2016-06-22T17:00",
-          backgroundColor: Metronic.getBrandColor('red')
-      }]
+      events: <?php echo $render_event; ?>
 });
 </script>
 

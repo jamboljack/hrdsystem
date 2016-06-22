@@ -41,7 +41,7 @@
 							<div class="tools">
 							</div>
 						</div>
-						<a href="<?php echo site_url('users/adddata'); ?>">
+						<a href="<?php echo site_url('sistem/users/adddata'); ?>">
 							<button type="submit" class="btn btn-primary">
 							<i class="icon-plus"></i> Add Data</button>
 						</a>
@@ -76,7 +76,7 @@
 									<?php } ?>
 								</td>
 								<td>
-									<a href="<?php echo site_url('users/editdata/'.$r->user_username); ?>"><button class="btn btn-primary btn-xs" title="Edit Data"><i class="icon-pencil"></i> Edit</button></a>	                        		
+									<a href="<?php echo site_url('sistem/users/editdata/'.$r->user_username); ?>"><button class="btn btn-primary btn-xs" title="Edit Data"><i class="icon-pencil"></i> Edit</button></a>	                        		
 								</td>							
 							</tr>
 							<?php 

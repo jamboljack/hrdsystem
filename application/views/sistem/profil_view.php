@@ -50,7 +50,7 @@
 							<div class="profile-usermenu">
 								<ul class="nav">
 									<li class="active">
-										<a href="extra_profile_account.html">
+										<a href="#">
 										<i class="icon-settings"></i>
 										Account Settings </a>
 									</li>									
@@ -87,7 +87,7 @@
 										<div class="tab-content">
 											<!-- PERSONAL INFO TAB -->
 											<div class="tab-pane active" id="tab_1_1">
-												<form role="form" action="<?php echo site_url('profil/updatedata'); ?>" method="post">
+												<form role="form" action="<?php echo site_url('sistem/profil/updatedata'); ?>" method="post">
 												<input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
 													<div class="form-group">
 														<label class="control-label">Name</label>
@@ -102,7 +102,7 @@
 											<!-- CHANGE AVATAR TAB -->
 											<div class="tab-pane" id="tab_1_2">
 												<p>Change your Avatar Picture</p>
-												<form action="<?php echo site_url('profil/updateavatar'); ?>" role="form" method="post" enctype="multipart/form-data">
+												<form action="<?php echo site_url('sistem/profil/updateavatar'); ?>" role="form" method="post" enctype="multipart/form-data">
 												<input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
 													<div class="form-group">
 														<div class="fileupload fileupload-new" data-provides="fileupload">
@@ -128,7 +128,7 @@
 											<!-- END CHANGE AVATAR TAB -->
 											<!-- CHANGE PASSWORD TAB -->
 											<div class="tab-pane" id="tab_1_3">
-												<form action="<?php echo site_url('profil/updatepassword'); ?>" method="post">
+												<form action="<?php echo site_url('sistem/profil/updatepassword'); ?>" method="post">
 												<input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">			
 													<div class="form-group">
 														<label class="control-label">New Password</label>
