@@ -114,7 +114,7 @@
 									 Total Users
 								</div>
 							</div>
-							<a class="more" href="<?php echo site_url('users') ;?>">
+							<a class="more" href="<?php echo site_url('sistem/users') ;?>">
 							View more <i class="m-icon-swapright m-icon-white"></i>
 							</a>							
 						</div>

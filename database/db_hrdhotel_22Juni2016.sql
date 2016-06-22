@@ -266,11 +266,9 @@ CREATE TABLE `hrd_mail_decree` (
   PRIMARY KEY (`decree_id`),
   KEY `decree_no` (`decree_no`),
   KEY `decree_title` (`decree_title`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `hrd_mail_decree` */
-
-insert  into `hrd_mail_decree`(`decree_id`,`decree_no`,`decree_title`,`decree_date`,`decree_desc`,`decree_sign`,`decree_file`,`decree_date_update`,`decree_time_update`,`user_username`) values (1,'1234VVV','SURAT PENGANGKATAN KARYAWAN KONTRAK','2016-06-01','<p>Menyatakan dengan Hormat bahwa</p>\r\n\r\n<p>Nama&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : Jama&#39; Rochmad Muttaqin</p>\r\n\r\n<p>Jabatan&nbsp;&nbsp;&nbsp;&nbsp; : IT Officer</p>','Pak Arifandi','Surat_Keputusan_1465544091.jpg','2016-06-22','11:26:38','admin'),(2,'55653232/V/2016','SURAT PERNYATAAN PEGAWAI','2016-06-13','<p>Surat ini bertujuan untuk</p>','Pak Arifandi',NULL,'2016-06-22','11:26:33','admin');
 
 /*Table structure for table `hrd_mail_inbox` */
 
@@ -291,11 +289,9 @@ CREATE TABLE `hrd_mail_inbox` (
   KEY `inbox_title` (`inbox_title`),
   KEY `company_id` (`company_id`),
   CONSTRAINT `hrd_mail_inbox_ibfk_1` FOREIGN KEY (`company_id`) REFERENCES `hrd_mail_company` (`company_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `hrd_mail_inbox` */
-
-insert  into `hrd_mail_inbox`(`inbox_id`,`company_id`,`inbox_no`,`inbox_title`,`inbox_to`,`inbox_date`,`inbox_desc`,`inbox_date_update`,`inbox_time_update`,`user_username`) values (2,1,'34334','SURAT DKK','GENERAL MANAGER','2016-06-16','<p>Tes Surat</p>','2016-06-22','11:21:28','admin'),(3,1,'55232.33262','SURAT KETERANGAN','HRD','2016-06-22','<p>surat pengumuman</p>','2016-06-22','11:20:17','admin');
 
 /*Table structure for table `hrd_mail_memo` */
 
@@ -335,11 +331,9 @@ CREATE TABLE `hrd_mail_outbox` (
   KEY `company_id` (`company_id`),
   KEY `outbox_no` (`outbox_no`),
   CONSTRAINT `hrd_mail_outbox_ibfk_1` FOREIGN KEY (`company_id`) REFERENCES `hrd_mail_company` (`company_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `hrd_mail_outbox` */
-
-insert  into `hrd_mail_outbox`(`outbox_id`,`company_id`,`outbox_no`,`outbox_title`,`outbox_date`,`outbox_desc`,`outbox_date_update`,`outbox_time_update`,`user_username`) values (1,1,'2323','SURAT KELUAR PERUSAHAN','2016-06-16','<p>Tes</p>','2016-06-22','11:25:31','admin'),(2,1,'4545454','SURAT KELUAR','2016-06-16','<p>Tes Surat keluar, XXX</p>','2016-06-22','11:25:27','admin'),(3,1,'44455454','ASDASDAS','2016-06-16','<p>asdas</p>','2016-06-22','11:25:22','admin');
 
 /*Table structure for table `hrd_marriage` */
 
@@ -418,11 +412,9 @@ CREATE TABLE `hrd_practice_proposal` (
   KEY `school_id` (`school_id`),
   KEY `proposal_title` (`proposal_title`),
   CONSTRAINT `hrd_practice_proposal_ibfk_1` FOREIGN KEY (`school_id`) REFERENCES `hrd_practice_school` (`school_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `hrd_practice_proposal` */
-
-insert  into `hrd_practice_proposal`(`proposal_id`,`school_id`,`proposal_title`,`proposal_date`,`proposal_desc`,`proposal_status`,`proposal_file`,`proposal_mou`,`proposal_date_update`,`proposal_time_update`,`user_username`) values (1,1,'Proposal Praktek Kerja Industri Terkait','2016-06-16','<p>Permohonan Praktek Kerja Industri pada tanggal : 18 Juli 2016 - 18 Agustus 2016. di @HOM Hotel by Horison Kudus</p>','New','Proposal_proposal-praktek-kerja-industri-terkait_1466414059.jpg',NULL,'2016-06-20','17:32:45','admin');
 
 /*Table structure for table `hrd_practice_school` */
 
@@ -440,11 +432,9 @@ CREATE TABLE `hrd_practice_school` (
   `school_time_update` time NOT NULL,
   `user_username` varchar(30) NOT NULL,
   PRIMARY KEY (`school_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `hrd_practice_school` */
-
-insert  into `hrd_practice_school`(`school_id`,`school_name`,`school_address`,`school_phone`,`school_email`,`school_web`,`school_chief`,`school_date_update`,`school_time_update`,`user_username`) values (1,'SMK PGRI 2 KUDUS','Jl. Kudus - Jepara KM. 12','0291-452365233','smkpgri2kudus@gmail.com','smkpgri2kudus@sch.id','Roestono','2016-06-17','13:46:23','admin');
 
 /*Table structure for table `hrd_practice_student` */
 
@@ -468,11 +458,9 @@ CREATE TABLE `hrd_practice_student` (
   KEY `school_id` (`school_id`),
   KEY `student_name` (`student_name`),
   CONSTRAINT `hrd_practice_student_ibfk_1` FOREIGN KEY (`school_id`) REFERENCES `hrd_practice_school` (`school_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `hrd_practice_student` */
-
-insert  into `hrd_practice_student`(`student_id`,`school_id`,`student_name`,`student_address`,`student_phone`,`student_dept`,`student_teacher`,`student_start`,`student_end`,`student_photo`,`student_date_update`,`student_time_update`,`user_username`) values (1,1,'HENDRI SUSANTO','Desa garung lor rt. 02 rw. 01','085678998990','MEKANIK','SUTRISNO','2016-07-01','2016-08-31','Student_hendri-susanto_1466435886.jpg','2016-06-20','22:18:07','admin');
 
 /*Table structure for table `hrd_province` */
 
@@ -653,11 +641,9 @@ CREATE TABLE `hrd_transaction_punishment` (
   KEY `punishment_id` (`punishment_id`),
   CONSTRAINT `hrd_transaction_punishment_ibfk_1` FOREIGN KEY (`emp_id`) REFERENCES `hrd_employee` (`emp_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `hrd_transaction_punishment_ibfk_2` FOREIGN KEY (`punishment_id`) REFERENCES `hrd_punishment` (`punishment_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `hrd_transaction_punishment` */
-
-insert  into `hrd_transaction_punishment`(`trans_id`,`emp_id`,`punishment_id`,`trans_no`,`trans_date`,`trans_desc`,`trans_date_update`,`trans_time_update`,`user_username`) values (1,1,1,'1234','2016-06-03','<p>Telat<br></p>','2016-06-06','16:27:50','admin'),(3,3,2,'45454/3434','2016-06-10','<p>Telat beberapa Hari</p>','2016-06-16','11:20:38','admin');
 
 /*Table structure for table `hrd_transaction_reward` */
 
@@ -678,11 +664,9 @@ CREATE TABLE `hrd_transaction_reward` (
   KEY `reward_id` (`reward_id`),
   CONSTRAINT `hrd_transaction_reward_ibfk_1` FOREIGN KEY (`emp_id`) REFERENCES `hrd_employee` (`emp_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `hrd_transaction_reward_ibfk_2` FOREIGN KEY (`reward_id`) REFERENCES `hrd_reward` (`reward_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `hrd_transaction_reward` */
-
-insert  into `hrd_transaction_reward`(`trans_id`,`emp_id`,`trans_no`,`reward_id`,`trans_date`,`trans_desc`,`trans_date_update`,`trans_time_update`,`user_username`) values (2,2,'5522/GM/HOMKUDUS/2016',3,'2016-06-06','<p>Penambahan Off 1 hari<br></p>','2016-06-06','15:20:09','admin'),(3,3,'3343/HOMKUDUS/VI/2016',3,'2016-06-10','<p>Diberikan Extra Off 1 Hari karena Loyalitas<br></p>','2016-06-10','13:19:07','admin');
 
 /*Table structure for table `hrd_users` */
 
