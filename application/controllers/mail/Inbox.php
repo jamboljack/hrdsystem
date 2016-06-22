@@ -29,6 +29,7 @@ class Inbox extends CI_Controller {
 	public function savedata() {
 		$this->form_validation->set_rules('lstCompany','<b>Company</b>','trim|required');
 		$this->form_validation->set_rules('mail_no','<b>Mail No</b>','trim|required|is_unique[hrd_mail_inbox.inbox_no]');
+		$this->form_validation->set_rules('to','<b>To</b>','trim|required');
 		$this->form_validation->set_rules('title','<b>Title</b>','trim|required');		
 		$this->form_validation->set_rules('date_mail','<b>Date</b>','trim|required');
 		$this->form_validation->set_rules('desc','<b>Description</b>','trim|required');		

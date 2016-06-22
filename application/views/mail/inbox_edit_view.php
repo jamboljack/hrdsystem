@@ -61,7 +61,7 @@
 
 								<div class="form-body">
 									<div class="form-group">
-										<label class="control-label col-md-3">Company Name</label>
+										<label class="control-label col-md-3">From Company Name</label>
 										<div class="col-md-5 has-error">
 										<select class="select2_category form-control" data-placeholder="Choose Company Name" name="lstCompany" required autofocus>
 											<option value="">- Choose Company Name -</option>
@@ -89,6 +89,12 @@
 										<label class="control-label col-md-3">Title</label>
 										<div class="col-md-9 has-error">
 											<input type="text" class="form-control" placeholder="Enter Title" name="title" value="<?php echo $detail->inbox_title; ?>" autocomplete="off" required>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3">To</label>
+										<div class="col-md-5 has-error">
+											<input type="text" class="form-control" placeholder="Enter To" name="to" value="<?php echo $detail->inbox_to; ?>" autocomplete="off" required>
 										</div>
 									</div>
 									<?php

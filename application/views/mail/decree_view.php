@@ -74,7 +74,7 @@
 							<thead>
 							<tr>
 								<th width="5%">No</th>
-								<th width="20%">No. Mail</th>
+								<th width="20%">Mail No.</th>
 								<th width="10%">Date</th>
 								<th>Title</th>
 								<th width="15%">Mail Sign</th>

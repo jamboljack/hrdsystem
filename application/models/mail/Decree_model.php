@@ -25,7 +25,7 @@ class Decree_model extends CI_Model {
 		if (!empty($_FILES['userfile']['name'])) {
 			$data = array(    			
 	    			'decree_no' 			=> trim($this->input->post('mail_no')),
-	    			'decree_title' 			=> trim($this->input->post('title')),
+	    			'decree_title' 			=> strtoupper(trim($this->input->post('title'))),
 	    			'decree_date' 			=> $date_mail,
 	    			'decree_desc' 			=> trim($this->input->post('desc')),
 	    			'decree_sign' 			=> trim($this->input->post('sign')),
@@ -37,7 +37,7 @@ class Decree_model extends CI_Model {
 		} else {
 			$data = array(    			
 	    			'decree_no' 			=> trim($this->input->post('mail_no')),
-	    			'decree_title' 			=> trim($this->input->post('title')),
+	    			'decree_title' 			=> strtoupper(trim($this->input->post('title'))),
 	    			'decree_date' 			=> $date_mail,
 	    			'decree_desc' 			=> trim($this->input->post('desc')),
 	    			'decree_sign' 			=> trim($this->input->post('sign')),	    			
@@ -71,7 +71,7 @@ class Decree_model extends CI_Model {
 		if (!empty($_FILES['userfile']['name'])) {
 			$data = array(    			
 	    			'decree_no' 			=> trim($this->input->post('mail_no')),
-	    			'decree_title' 			=> trim($this->input->post('title')),
+	    			'decree_title' 			=> strtoupper(trim($this->input->post('title'))),
 	    			'decree_date' 			=> $date_mail,
 	    			'decree_desc' 			=> trim($this->input->post('desc')),
 	    			'decree_sign' 			=> trim($this->input->post('sign')),
@@ -83,7 +83,7 @@ class Decree_model extends CI_Model {
 		} else {
 			$data = array(    			
 	    			'decree_no' 			=> trim($this->input->post('mail_no')),
-	    			'decree_title' 			=> trim($this->input->post('title')),
+	    			'decree_title' 			=> strtoupper(trim($this->input->post('title'))),
 	    			'decree_date' 			=> $date_mail,
 	    			'decree_desc' 			=> trim($this->input->post('desc')),
 	    			'decree_sign' 			=> trim($this->input->post('sign')),	    			

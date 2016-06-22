@@ -25,7 +25,7 @@ class Memo_model extends CI_Model {
 		if (!empty($_FILES['userfile']['name'])) {
 			$data = array(    			
 	    			'memo_no' 			=> trim($this->input->post('memo_no')),
-	    			'memo_title' 		=> trim($this->input->post('title')),
+	    			'memo_title' 		=> strtoupper(trim($this->input->post('title'))),
 	    			'memo_date' 		=> $date_mail,
 	    			'memo_desc' 		=> trim($this->input->post('desc')),
 	    			'memo_sign' 		=> trim($this->input->post('sign')),
@@ -37,7 +37,7 @@ class Memo_model extends CI_Model {
 		} else {
 			$data = array(    			
 	    			'memo_no' 			=> trim($this->input->post('memo_no')),
-	    			'memo_title' 		=> trim($this->input->post('title')),
+	    			'memo_title' 		=> strtoupper(trim($this->input->post('title'))),
 	    			'memo_date' 		=> $date_mail,
 	    			'memo_desc' 		=> trim($this->input->post('desc')),
 	    			'memo_sign' 		=> trim($this->input->post('sign')),	    			
@@ -71,7 +71,7 @@ class Memo_model extends CI_Model {
 		if (!empty($_FILES['userfile']['name'])) {
 			$data = array(    			
 	    			'memo_no' 			=> trim($this->input->post('memo_no')),
-	    			'memo_title' 		=> trim($this->input->post('title')),
+	    			'memo_title' 		=> strtoupper(trim($this->input->post('title'))),
 	    			'memo_date' 		=> $date_mail,
 	    			'memo_desc' 		=> trim($this->input->post('desc')),
 	    			'memo_sign' 		=> trim($this->input->post('sign')),
@@ -83,7 +83,7 @@ class Memo_model extends CI_Model {
 		} else {
 			$data = array(    			
 	    			'memo_no' 			=> trim($this->input->post('memo_no')),
-	    			'memo_title' 		=> trim($this->input->post('title')),
+	    			'memo_title' 		=> strtoupper(trim($this->input->post('title'))),
 	    			'memo_date' 		=> $date_mail,
 	    			'memo_desc' 		=> trim($this->input->post('desc')),
 	    			'memo_sign' 		=> trim($this->input->post('sign')),	    			

@@ -62,5 +62,33 @@ class Home_model extends CI_Model {
 				
 		return $this->db->get();
 	}
+
+	function select_religion() {
+		$this->db->select('*');
+		$this->db->from('hrd_religion');		
+		
+		return $this->db->get();
+	}
+
+	function select_by_religion($religion_id) {
+		$this->db->select('COUNT(*) as total FROM hrd_employee');
+		$this->db->where('religion_id', $religion_id);		
+				
+		return $this->db->get();
+	}
+
+	function select_marriage() {
+		$this->db->select('*');
+		$this->db->from('hrd_marriage');		
+		
+		return $this->db->get();
+	}
+
+	function select_by_marriage($marriage_id) {
+		$this->db->select('COUNT(*) as total FROM hrd_employee');
+		$this->db->where('marriage_id', $marriage_id);		
+				
+		return $this->db->get();
+	}
 }
 /* Location: ./application/model/Home_model.php */

@@ -6,8 +6,12 @@
 <title>HRD OnWeb</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta content="width=device-width, initial-scale=1" name="viewport">
-<meta content="" name="description">
-<meta content="" name="author">
+<meta name="description" content="Website HRD untuk Pendataan tentang HRD">    
+<meta name="Developer" content="Jama' Rochmad M - 085640969727">
+<meta name="Author" content="@HOM Kudus by Horison">
+<meta name="robots" content="all" />
+<meta name="robots" content="index, follow" />
+<meta name="Googlebot" content="index,follow" />
 
 <!-- BEGIN GLOBAL MANDATORY STYLES -->
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css">
@@ -19,7 +23,6 @@
 
 <!-- BEGIN PAGE LEVEL STYLES DATATABLES -->
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/global/plugins/select2/select2.css"/>
-<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/global/plugins/datatables/extensions/Scroller/css/dataTables.scroller.min.css"/>
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/global/plugins/datatables/extensions/ColReorder/css/dataTables.colReorder.min.css"/>
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css"/>
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/datepicker/css/datepicker.css" />
@@ -27,9 +30,12 @@
 <!-- END PAGE LEVEL STYLES -->
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/bootstrap-fileupload/bootstrap-fileupload.css" />
 
-<!-- BEGIN PAGE STYLES -->
-<!--<link href="<?php echo base_url(); ?>assets/admin/pages/css/tasks.css" rel="stylesheet" type="text/css"/> -->
-<!-- END PAGE STYLES -->
+<!-- Profil -->
+<link href="<?php echo base_url(); ?>assets/admin/pages/css/profile.css" rel="stylesheet" type="text/css"/>
+<!-- Error Page -->
+<link href="<?php echo base_url(); ?>assets/admin/pages/css/error.css" rel="stylesheet" type="text/css"/>
+
+<link href="<?php echo base_url(); ?>assets/global/plugins/fullcalendar/fullcalendar.min.css" rel="stylesheet"/>
 
 <!-- BEGIN THEME STYLES -->
 <!-- DOC: To use 'rounded corners' style just load 'components-rounded.css' stylesheet instead of 'components.css' in the below style tag -->
@@ -88,7 +94,6 @@ if (empty($mn)) {
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/global/plugins/datatables/extensions/TableTools/js/dataTables.tableTools.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/global/plugins/datatables/extensions/ColReorder/js/dataTables.colReorder.min.js"></script>
-<script type="text/javascript" src="<?php echo base_url(); ?>assets/global/plugins/datatables/extensions/Scroller/js/dataTables.scroller.min.js"></script>
 <?php } ?>
 
 <!-- CKEditor -->
@@ -115,14 +120,17 @@ if ($isi == 'add' || $isi == 'edi' || $isi == 'sav') {
 <script src="<?php echo base_url(); ?>assets/global/plugins/amcharts/amcharts/amcharts.js" type="text/javascript"></script>
 <script src="<?php echo base_url(); ?>assets/global/plugins/amcharts/amcharts/pie.js" type="text/javascript"></script>
 
+<script src="<?php echo base_url(); ?>assets/global/plugins/moment.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/global/plugins/jquery-ui.custom.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/global/plugins/fullcalendar/fullcalendar.min.js"></script>
+
 <!-- BEGIN PAGE LEVEL SCRIPTS -->
 <script src="<?php echo base_url(); ?>assets/global/scripts/metronic.js" type="text/javascript"></script>
 <script src="<?php echo base_url(); ?>assets/admin/layout3/scripts/layout.js" type="text/javascript"></script>
-<!--<script src="<?php echo base_url(); ?>assets/admin/layout3/scripts/quick-sidebar.js" type="text/javascript"></script> -->
 <script src="<?php echo base_url(); ?>assets/admin/layout3/scripts/demo.js" type="text/javascript"></script>
 <script src="<?php echo base_url(); ?>assets/admin/pages/scripts/index3.js" type="text/javascript"></script>
-<!--<script src="<?php echo base_url(); ?>assets/admin/pages/scripts/tasks.js" type="text/javascript"></script> -->
 <script src="<?php echo base_url(); ?>assets/admin/pages/scripts/components-editors.js"></script>
+<script src="<?php echo base_url(); ?>assets/admin/pages/scripts/profile.js" type="text/javascript"></script>
 <!-- END PAGE LEVEL SCRIPTS -->
 
 
@@ -138,6 +146,7 @@ jQuery(document).ready(function() {
    FormSamples.init();   
    ComponentsPickers.init();
    ComponentsEditors.init();
+   Profile.init(); // init page demo
 });
 </script>
 <!-- END JAVASCRIPTS -->
@@ -176,7 +185,7 @@ var chart = AmCharts.makeChart("chart_education", {
    "theme": "light",
    "fontFamily": 'Open Sans',         
    "color": '#888',
-   "dataProvider": <?php echo $render; ?>,
+   "dataProvider": <?php echo $render_education; ?>,
       "valueField": "Total",
       "titleField": "Education",
       "exportConfig": {
@@ -191,7 +200,115 @@ $('#chart_education').closest('.portlet').find('.fullscreen').click(function() {
    chart.invalidateSize();
 });
 
+/* Religion */
+var chart = AmCharts.makeChart("chart_religion", {
+   "type": "pie",
+   "theme": "light",
+   "fontFamily": 'Open Sans',         
+   "color": '#888',
+   "dataProvider": <?php echo $render_religion; ?>,
+      "valueField": "Total",
+      "titleField": "Religion",
+      "exportConfig": {
+         menuItems: [{
+         icon: Metronic.getGlobalPluginsPath() + "amcharts/amcharts/images/export.png",
+         format: 'png'
+      }]
+   }
+});
+
+$('#chart_religion').closest('.portlet').find('.fullscreen').click(function() {
+   chart.invalidateSize();
+});
+
+/* Marriage */
+var chart = AmCharts.makeChart("chart_marriage", {
+   "type": "pie",
+   "theme": "light",
+   "fontFamily": 'Open Sans',         
+   "color": '#888',
+   "dataProvider": <?php echo $render_marriage; ?>,
+      "valueField": "Total",
+      "titleField": "Marriage",
+      "exportConfig": {
+         menuItems: [{
+         icon: Metronic.getGlobalPluginsPath() + "amcharts/amcharts/images/export.png",
+         format: 'png'
+      }]
+   }
+});
+
+$('#chart_marriage').closest('.portlet').find('.fullscreen').click(function() {
+   chart.invalidateSize();
+});
+
 </script> 
+
+<script>
+/* initialize the calendar
+-----------------------------------------------------------------*/
+var h = {};
+if (Metronic.isRTL()) {
+   if ($('#calendar').parents(".portlet").width() <= 720) {
+      $('#calendar').addClass("mobile");
+      h = {
+         right: 'title, prev, next',
+         center: '',
+         left: 'agendaDay, agendaWeek, month, today'
+      };
+   } else {
+      $('#calendar').removeClass("mobile");
+      h = {
+         right: 'title',
+         center: '',
+         left: 'agendaDay, agendaWeek, month, today, prev,next'
+      };
+   }
+} else {
+   if ($('#calendar').parents(".portlet").width() <= 720) {
+      $('#calendar').addClass("mobile");
+      h = {
+         left: 'title, prev, next',
+         center: '',
+         right: 'today,month,agendaWeek,agendaDay'
+      };
+   } else {
+      $('#calendar').removeClass("mobile");
+      h = {
+         left: 'title',
+         center: '',
+         right: 'prev,next,today,month,agendaWeek,agendaDay'
+      };
+   }
+}
+$('#calendar').fullCalendar('destroy');
+$('#calendar').fullCalendar({
+   header: h,
+      defaultView: 'month', 
+      slotMinutes: 15,
+      editable: true,
+      droppable: true,
+      drop: function(date, allday) {         
+         var originalEventObject = $(this).data('eventObject');               
+         var copiedEventObject = $.extend({}, originalEventObject);      
+         copiedEventObject.start = date;         
+         $('#calendar').fullCalendar('renderEvent', copiedEventObject, true);         
+            if ($('#drop-remove').is(':checked')) {         
+            $(this).remove();
+         }
+      },
+      events: [{
+         "title": "All Day Event",
+         "start": "2016-06-01",
+         backgroundColor: Metronic.getBrandColor('yellow')
+      }, {
+          "title": "Long Event",
+          "start": "2016-06-22T14:30",
+          "end"  :  "2016-06-22T17:00",
+          backgroundColor: Metronic.getBrandColor('red')
+      }]
+});
+</script>
 
 </body>
 <!-- END BODY -->

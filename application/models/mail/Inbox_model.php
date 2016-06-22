@@ -6,9 +6,10 @@ class Inbox_model extends CI_Model {
 	}
 		
 	function select_all() {
-		$this->db->select('*');
-		$this->db->from('hrd_mail_inbox');		
-		$this->db->order_by('inbox_id','desc');
+		$this->db->select('i.*, c.company_name');
+		$this->db->from('hrd_mail_inbox i');
+		$this->db->join('hrd_mail_company c', 'i.company_id=c.company_id');
+		$this->db->order_by('i.inbox_id','desc');
 		
 		return $this->db->get();
 	}
@@ -33,7 +34,8 @@ class Inbox_model extends CI_Model {
 		$data = array(    			
 	    		'company_id'			=> trim($this->input->post('lstCompany')),
 	    		'inbox_no' 				=> trim($this->input->post('mail_no')),
-	    		'inbox_title' 			=> trim($this->input->post('title')),
+	    		'inbox_to' 				=> strtoupper(trim($this->input->post('to'))),
+	    		'inbox_title' 			=> strtoupper(trim($this->input->post('title'))),
 	    		'inbox_date' 			=> $date_mail,
 	    		'inbox_desc' 			=> trim($this->input->post('desc')),	    		
 	    		'inbox_date_update' 	=> date('Y-m-d'),
@@ -65,7 +67,8 @@ class Inbox_model extends CI_Model {
 		$data = array(
 				'company_id'			=> trim($this->input->post('lstCompany')),   			
     			'inbox_no' 				=> trim($this->input->post('mail_no')),
-    			'inbox_title' 			=> trim($this->input->post('title')),
+    			'inbox_to' 				=> strtoupper(trim($this->input->post('to'))),
+    			'inbox_title' 			=> strtoupper(trim($this->input->post('title'))),
     			'inbox_date' 			=> $date_mail,
     			'inbox_desc' 			=> trim($this->input->post('desc')),    			
     			'inbox_date_update' 	=> date('Y-m-d'),

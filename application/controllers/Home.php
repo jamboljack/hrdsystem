@@ -24,14 +24,37 @@ class Home extends CI_Controller{
 
 			// Education
 			$education 				= $this->home_model->select_education()->result();
-			$render = array();
+			$render_education = array();
 			foreach ($education as $row) {
-			    $render[] = array(
+			    $render_education[] = array(
 			        "Education" => $row->education_name,
 			        "Total" 	=> (int) $this->home_model->select_by_education($row->education_id)->row()->total
 				);
 			}
-			$data['render'] = json_encode($render);				
+			$data['render_education'] = json_encode($render_education);
+
+			// Religion
+			$religion 				= $this->home_model->select_religion()->result();
+			$render_religion = array();
+			foreach ($religion as $row) {
+			    $render_religion[] = array(
+			        "Religion" 	=> $row->religion_name,
+			        "Total" 	=> (int) $this->home_model->select_by_religion($row->religion_id)->row()->total
+				);
+			}
+			$data['render_religion'] = json_encode($render_religion);
+
+			// Marriage
+			$marriage 				= $this->home_model->select_marriage()->result();
+			$render_marriage = array();
+			foreach ($marriage as $row) {
+			    $render_marriage[] = array(
+			        "Marriage" 	=> $row->marriage_name,
+			        "Total" 	=> (int) $this->home_model->select_by_marriage($row->marriage_id)->row()->total
+				);
+			}
+			$data['render_marriage'] = json_encode($render_marriage);
+
 
 			$this->template->display('home_view', $data);
 		} else {

@@ -1,3 +1,11 @@
+<style>	
+	#external-events .fc-event {
+		margin: 5px 0;
+		height: 10pt;		
+		cursor: pointer;
+	} 
+</style>
+
 <div class="page-container">
 	<!-- BEGIN PAGE HEAD -->
 	<div class="page-head">
@@ -42,7 +50,10 @@
 								<div class="desc">
 									 Total Employee
 								</div>
-							</div>							
+							</div>
+							<a class="more" href="<?php echo site_url('emp/employee') ;?>">
+							View more <i class="m-icon-swapright m-icon-white"></i>
+							</a>							
 						</div>
 					</div>
 					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
@@ -60,7 +71,10 @@
 								<div class="desc">
 									 Total Resign
 								</div>
-							</div>							
+							</div>
+							<a class="more" href="<?php echo site_url('emp/resign') ;?>">
+							View more <i class="m-icon-swapright m-icon-white"></i>
+							</a>							
 						</div>
 					</div>
 					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
@@ -78,7 +92,10 @@
 								<div class="desc">
 									Total Student
 								</div>
-							</div>							
+							</div>
+							<a class="more" href="<?php echo site_url('practice/student') ;?>">
+							View more <i class="m-icon-swapright m-icon-white"></i>
+							</a>							
 						</div>
 					</div>
 					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
@@ -96,11 +113,34 @@
 								<div class="desc">
 									 Total Users
 								</div>
-							</div>							
+							</div>
+							<a class="more" href="<?php echo site_url('users') ;?>">
+							View more <i class="m-icon-swapright m-icon-white"></i>
+							</a>							
 						</div>
 					</div>
 					<!-- END PORTLET-->
 				</div>				
+			</div>
+
+			<!-- Calendar -->
+			<div class="row">
+				<div class="col-md-12">
+					<div class="portlet box red calendar">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="fa fa-calendar"></i>Calendar
+							</div>
+						</div>
+						<div class="portlet-body">
+							<div class="row">									
+								<div class="col-md-12 col-sm-12">
+									<div id="calendar" class="has-toolbar"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 
 			<div class="row">
@@ -142,7 +182,49 @@
 					</div>
 				<!-- END CHART PORTLET-->
 				</div>
-			</div>				
+			</div>
+
+			<div class="row">
+				<div class="col-md-6">
+				<!-- BEGIN CHART PORTLET-->
+					<div class="portlet light">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="icon-bar-chart font-green-haze"></i>
+								<span class="caption-subject bold uppercase font-green-haze"> RELIGION CHART</span>
+							</div>
+							<div class="tools">
+								<a href="javascript:;" class="collapse"></a>
+								<a href="javascript:;" class="fullscreen"></a>								
+							</div>
+						</div>
+						<div class="portlet-body">
+							<div id="chart_religion" class="chart" style="height: 300px;"></div>
+						</div>
+					</div>
+				<!-- END CHART PORTLET-->
+				</div>
+				<div class="col-md-6">
+				<!-- BEGIN CHART PORTLET-->
+					<div class="portlet light">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="icon-bar-chart font-green-haze"></i>
+								<span class="caption-subject bold uppercase font-green-haze"> MARRIAGE CHART</span>
+							</div>
+							<div class="tools">
+								<a href="javascript:;" class="collapse"></a>
+								<a href="javascript:;" class="fullscreen"></a>								
+							</div>
+						</div>
+						<div class="portlet-body">
+							<div id="chart_marriage" class="chart" style="height: 300px;"></div>
+						</div>
+					</div>
+				<!-- END CHART PORTLET-->
+				</div>
+			</div>			
+
 		</div>			
 		<!-- END PAGE CONTENT INNER -->
 	</div>

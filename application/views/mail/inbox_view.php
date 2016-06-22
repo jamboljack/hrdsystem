@@ -76,8 +76,8 @@
 								<th width="5%">No</th>
 								<th width="15%">Mail No.</th>
 								<th width="10%">Date</th>
-								<th width="20%">Title</th>
-								<th>Description</th>
+								<th width="20%">From</th>
+								<th>Title</th>
 								<th width="13%">Action</th>
 							</tr>
 							</thead>
@@ -97,16 +97,13 @@
 				                    } else { 
 				                    	$date 		= '';
 				                    }
-
-				                    $desc = $r->inbox_desc; 
-                        			$desc = word_limiter($desc, 10);
 							?>
 							<tr>
 								<td><?php echo $no; ?></td>
 								<td><?php echo $r->inbox_no; ?></td>								
 								<td><?php echo $date; ?></td>
-								<td><?php echo $r->inbox_title; ?></td>
-								<td><?php echo $desc; ?></td>
+								<td><?php echo $r->company_name; ?></td>
+								<td><?php echo $r->inbox_title; ?></td>								
 								<td>
 									<a href="<?php echo site_url('mail/inbox/editdata/'.$r->inbox_id); ?>"><button class="btn btn-primary btn-xs" title="Edit Data"><i class="icon-pencil"></i> Edit</button></a>
 	                        		<a onclick="hapusData(<?php echo $inbox_id; ?>)"><button class="btn btn-danger btn-xs" title="Delete Data"><i class="icon-trash"></i> Delete</button></a>

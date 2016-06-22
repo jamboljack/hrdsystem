@@ -6,9 +6,10 @@ class Outbox_model extends CI_Model {
 	}
 		
 	function select_all() {
-		$this->db->select('*');
-		$this->db->from('hrd_mail_outbox');		
-		$this->db->order_by('outbox_id','desc');
+		$this->db->select('o.*, c.company_name');
+		$this->db->from('hrd_mail_outbox o');
+		$this->db->join('hrd_mail_company c', 'o.company_id=c.company_id');
+		$this->db->order_by('o.outbox_id','desc');
 		
 		return $this->db->get();
 	}
@@ -33,7 +34,7 @@ class Outbox_model extends CI_Model {
 		$data = array(    			
 	    		'company_id'			=> trim($this->input->post('lstCompany')),
 	    		'outbox_no' 			=> trim($this->input->post('mail_no')),
-	    		'outbox_title' 			=> trim($this->input->post('title')),
+	    		'outbox_title' 			=> strtoupper(trim($this->input->post('title'))),
 	    		'outbox_date' 			=> $date_mail,
 	    		'outbox_desc' 			=> trim($this->input->post('desc')),	    		
 	    		'outbox_date_update' 	=> date('Y-m-d'),
@@ -64,8 +65,8 @@ class Outbox_model extends CI_Model {
 
 		$data = array(
 				'company_id'			=> trim($this->input->post('lstCompany')),   			
-    			'outbox_no' 				=> trim($this->input->post('mail_no')),
-    			'outbox_title' 			=> trim($this->input->post('title')),
+    			'outbox_no' 			=> trim($this->input->post('mail_no')),
+    			'outbox_title' 			=> strtoupper(trim($this->input->post('title'))),
     			'outbox_date' 			=> $date_mail,
     			'outbox_desc' 			=> trim($this->input->post('desc')),    			
     			'outbox_date_update' 	=> date('Y-m-d'),

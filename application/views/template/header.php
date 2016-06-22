@@ -40,6 +40,7 @@ if (empty($uri) && empty($uri2)) {
 	$student     = '';
 	$system      = '';
 	$users       = '';
+	$event       = '';
 } elseif ($uri=='blood') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -78,6 +79,7 @@ if (empty($uri) && empty($uri2)) {
 	$student     = '';
 	$system      = '';
 	$users       = '';
+	$event       = '';
 } elseif ($uri=='marriage') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -116,6 +118,7 @@ if (empty($uri) && empty($uri2)) {
 	$student     = '';
 	$system      = '';
 	$users       = '';
+	$event       = '';
 } elseif ($uri=='religion') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -154,6 +157,7 @@ if (empty($uri) && empty($uri2)) {
 	$student     = '';
 	$system      = '';
 	$users       = '';
+	$event       = '';
 } elseif ($uri=='education') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -192,6 +196,7 @@ if (empty($uri) && empty($uri2)) {
 	$student     = '';
 	$system      = '';
 	$users       = '';
+	$event       = '';
 } elseif ($uri=='relation') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -230,6 +235,7 @@ if (empty($uri) && empty($uri2)) {
 	$student     = '';
 	$system      = '';
 	$users       = '';
+	$event       = '';
 } elseif ($uri=='status') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -268,6 +274,7 @@ if (empty($uri) && empty($uri2)) {
 	$student     = '';
 	$system      = '';
 	$users       = '';
+	$event       = '';
 } elseif ($uri=='department') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -306,6 +313,7 @@ if (empty($uri) && empty($uri2)) {
 	$student     = '';
 	$system      = '';
 	$users       = '';
+	$event       = '';
 } elseif ($uri=='position') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -344,6 +352,7 @@ if (empty($uri) && empty($uri2)) {
 	$student     = '';
 	$system      = '';
 	$users       = '';
+	$event       = '';
 } elseif ($uri=='employee') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -382,6 +391,7 @@ if (empty($uri) && empty($uri2)) {
 	$student     = '';
 	$system      = '';
 	$users       = '';
+	$event       = '';
 } elseif ($uri=='record') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -420,6 +430,7 @@ if (empty($uri) && empty($uri2)) {
 	$student     = '';
 	$system      = '';
 	$users       = '';
+	$event       = '';
 } elseif ($uri=='healthy_insurance') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -458,6 +469,7 @@ if (empty($uri) && empty($uri2)) {
 	$student     = '';
 	$system      = '';
 	$users       = '';
+	$event       = '';
 } elseif ($uri=='employment_insurance') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -496,6 +508,7 @@ if (empty($uri) && empty($uri2)) {
 	$student     = '';
 	$system      = '';
 	$users       = '';
+	$event       = '';
 } elseif ($uri=='reward') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -534,6 +547,7 @@ if (empty($uri) && empty($uri2)) {
 	$student     = '';
 	$system      = '';
 	$users       = '';
+	$event       = '';
 } elseif ($uri=='transaction_reward') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -572,6 +586,7 @@ if (empty($uri) && empty($uri2)) {
 	$student     = '';
 	$system      = '';
 	$users       = '';
+	$event       = '';
 } elseif ($uri=='punishment') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -610,6 +625,7 @@ if (empty($uri) && empty($uri2)) {
 	$student     = '';
 	$system      = '';
 	$users       = '';
+	$event       = '';
 } elseif ($uri=='transaction_punishment') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -648,6 +664,7 @@ if (empty($uri) && empty($uri2)) {
 	$student     = '';
 	$system      = '';
 	$users       = '';
+	$event       = '';
 } elseif ($uri=='mutation') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -686,6 +703,7 @@ if (empty($uri) && empty($uri2)) {
 	$student     = '';
 	$system      = '';
 	$users       = '';
+	$event       = '';
 } elseif ($uri=='resign') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -724,6 +742,7 @@ if (empty($uri) && empty($uri2)) {
 	$student     = '';
 	$system      = '';
 	$users       = '';
+	$event       = '';
 } elseif ($uri=='company') {
 	$dashboard   = '';
 	$menu_1      = '';
@@ -762,6 +781,7 @@ if (empty($uri) && empty($uri2)) {
 	$student     = '';
 	$system      = '';
 	$users       = '';
+	$event       = '';
 } elseif ($uri=='inbox') {
 	$dashboard   = '';
 	$menu_1      = '';
@@ -800,6 +820,7 @@ if (empty($uri) && empty($uri2)) {
 	$student     = '';
 	$system      = '';
 	$users       = '';
+	$event       = '';
 } elseif ($uri=='outbox') {
 	$dashboard   = '';
 	$menu_1      = '';
@@ -838,6 +859,7 @@ if (empty($uri) && empty($uri2)) {
 	$student     = '';
 	$system      = '';
 	$users       = '';
+	$event       = '';
 } elseif ($uri=='decree') {
 	$dashboard   = '';
 	$menu_1      = '';
@@ -876,6 +898,7 @@ if (empty($uri) && empty($uri2)) {
 	$student     = '';
 	$system      = '';
 	$users       = '';
+	$event       = '';
 } elseif ($uri=='memo') {
 	$dashboard   = '';
 	$menu_1      = '';
@@ -914,6 +937,7 @@ if (empty($uri) && empty($uri2)) {
 	$student     = '';
 	$system      = '';
 	$users       = '';
+	$event       = '';
 } elseif ($uri=='school') {
 	$dashboard   = '';
 	$menu_1      = '';
@@ -952,6 +976,7 @@ if (empty($uri) && empty($uri2)) {
 	$student     = '';
 	$system      = '';
 	$users       = '';
+	$event       = '';
 } elseif ($uri=='proposal') {
 	$dashboard   = '';
 	$menu_1      = '';
@@ -990,6 +1015,7 @@ if (empty($uri) && empty($uri2)) {
 	$student     = '';
 	$system      = '';
 	$users       = '';
+	$event       = '';
 } elseif ($uri=='student') {
 	$dashboard   = '';
 	$menu_1      = '';
@@ -1028,6 +1054,7 @@ if (empty($uri) && empty($uri2)) {
 	$student     = 'active';
 	$system      = '';
 	$users       = '';
+	$event       = '';
 } elseif ($uri2 == 'users') {
 	$dashboard   = '';
 	$menu_1      = '';
@@ -1066,6 +1093,46 @@ if (empty($uri) && empty($uri2)) {
 	$student     = '';
 	$system      = 'active';
 	$users       = 'active';
+	$event       = '';
+} elseif ($uri2 == 'event') {
+	$dashboard   = '';
+	$menu_1      = '';
+	$master      = '';
+	$blood       = '';
+	$marriage    = '';
+	$religion    = '';
+	$education   = '';
+	$relation    = '';
+	$status      = '';
+	$department  = '';
+	$position    = '';
+	$data        = '';
+	$employee    = '';
+	$record      = '';
+	$kesehatan   = '';
+	$tenaga      = '';
+	$rewpun      = '';
+	$rewtype     = '';
+	$rewtran     = '';
+	$puntype     = '';
+	$puntran     = '';
+	$mutation    = '';
+	$resign      = '';
+	$mail        = '';
+	$mail_inbox  = '';
+	$company      = '';
+	$inbox       = '';
+	$outbox      = '';
+	$intern_mail = '';
+	$decree      = '';
+	$memo        = '';
+	$practice    = '';
+	$school      = '';
+	$proposal    = '';
+	$student     = '';
+	$system      = 'active';
+	$users       = '';
+	$event       = 'active';
 } else {
 	$dashboard   = 'active';
 	$menu_1      = '';
@@ -1104,6 +1171,7 @@ if (empty($uri) && empty($uri2)) {
 	$student     = '';
 	$system      = '';
 	$users       = '';
+	$event       = '';
 }
 ?>
 <div class="page-header">
@@ -1117,14 +1185,14 @@ if (empty($uri) && empty($uri2)) {
 			<!-- END LOGO -->
 			
 			<!-- BEGIN RESPONSIVE MENU TOGGLER -->
-			<a href="javascript:;" class="menu-toggler"></a>
+			<a href="#" class="menu-toggler"></a>
 			<!-- END RESPONSIVE MENU TOGGLER -->
 			<!-- BEGIN TOP NAVIGATION MENU -->
 			<div class="top-menu">
 				<ul class="nav navbar-nav pull-right">								
 					<!-- BEGIN USER LOGIN DROPDOWN -->
 					<li class="dropdown dropdown-user dropdown-dark">
-						<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
 						<img alt="" class="img-circle" src="<?php echo base_url(); ?>icon/<?php echo $this->session->userdata('avatar'); ?>">
 						<span class="username username-hide-mobile"><?php echo $this->session->userdata('nama'); ?></span>
 						</a>
@@ -1135,10 +1203,12 @@ if (empty($uri) && empty($uri2)) {
 							</li>							
 							<li class="divider">
 							</li>
+							<!--
 							<li>
-								<a href="<?php echo site_url('lock_system'); ?>">
+								<a href="<?php // echo site_url('lock_system'); ?>">
 								<i class="icon-lock"></i> Lock Screen </a>
 							</li>
+							-->
 							<li>
 								<a href="<?php echo site_url('login/logout'); ?>">
 								<i class="icon-key"></i> Log Out </a>
@@ -1161,15 +1231,7 @@ if (empty($uri) && empty($uri2)) {
 	<!-- BEGIN HEADER MENU -->
 	<div class="page-header-menu">
 		<div class="container">
-			<!-- BEGIN HEADER SEARCH BOX -->
-			<form class="search-form" action="extra_search.html" method="GET">
-				<div class="input-group">
-					<input type="text" class="form-control" placeholder="Search" name="query">
-					<span class="input-group-btn">
-					<a href="javascript:;" class="btn submit"><i class="icon-magnifier"></i></a>
-					</span>
-				</div>
-			</form>
+			<!-- BEGIN HEADER SEARCH BOX -->			
 			<!-- END HEADER SEARCH BOX -->
 			<!-- BEGIN MEGA MENU -->
 			<!-- DOC: Apply "hor-menu-light" class after the "hor-menu" class below to have a horizontal menu with white background -->
@@ -1180,7 +1242,7 @@ if (empty($uri) && empty($uri2)) {
 						<a href="<?php echo base_url(); ?>">Dashboard</a>
 					</li>					
 					<li class="menu-dropdown classic-menu-dropdown <?php echo $menu_1; ?>">
-						<a data-hover="megamenu-dropdown" data-close-others="true" data-toggle="dropdown" href="javascript:;">
+						<a data-hover="megamenu-dropdown" data-close-others="true" data-toggle="dropdown" href="#">
 						Employee <i class="fa fa-angle-down"></i>
 						</a>
 						<ul class="dropdown-menu pull-left">
@@ -1290,7 +1352,7 @@ if (empty($uri) && empty($uri2)) {
 						</ul>
 					</li>
 					<li class="menu-dropdown classic-menu-dropdown <?php echo $mail; ?>">
-						<a data-hover="megamenu-dropdown" data-close-others="true" data-toggle="dropdown" href="javascript:;">
+						<a data-hover="megamenu-dropdown" data-close-others="true" data-toggle="dropdown" href="#">
 						Mail Administration <i class="fa fa-angle-down"></i>
 						</a>
 						<ul class="dropdown-menu pull-left">
@@ -1331,7 +1393,7 @@ if (empty($uri) && empty($uri2)) {
 						</ul>
 					</li>
 					<li class="menu-dropdown classic-menu-dropdown <?php echo $practice; ?>">
-						<a data-hover="megamenu-dropdown" data-close-others="true" data-toggle="dropdown" href="javascript:;">
+						<a data-hover="megamenu-dropdown" data-close-others="true" data-toggle="dropdown" href="#">
 						Practical Work <i class="fa fa-angle-down"></i>
 						</a>
 						<ul class="dropdown-menu pull-left">
@@ -1353,29 +1415,10 @@ if (empty($uri) && empty($uri2)) {
 								Students 
 								</a>								
 							</li>
-							<li class=" dropdown-submenu">
-								<a href="#">
-								<i class="icon-doc"></i>
-								Report</a>
-								<ul class="dropdown-menu">
-									<li class="">
-										<a href="<?php echo site_url('practice/report_school'); ?>">
-										School</a>
-									</li>
-									<li class="">
-										<a href="<?php echo site_url('practice/report_proposal'); ?>">
-										Proposal</a>
-									</li>
-									<li class="">
-										<a href="<?php echo site_url('practice/report_students'); ?>">
-										Students</a>
-									</li>
-								</ul>
-							</li>							
 						</ul>
 					</li>					
 					<li class="menu-dropdown classic-menu-dropdown <?php echo $system; ?>">
-						<a data-hover="megamenu-dropdown" data-close-others="true" data-toggle="dropdown" href="javascript:;">
+						<a data-hover="megamenu-dropdown" data-close-others="true" data-toggle="dropdown" href="#">
 						System <i class="fa fa-angle-down"></i>
 						</a>
 						<ul class="dropdown-menu pull-left">
@@ -1384,7 +1427,142 @@ if (empty($uri) && empty($uri2)) {
 								<i class="icon-user"></i>
 								Users 
 								</a>								
+							</li>
+							<li class="<?php echo $event; ?>">
+								<a href="<?php echo site_url('event'); ?>">
+								<i class="icon-calendar"></i>
+								Calendar Event 
+								</a>								
 							</li>							
+						</ul>
+					</li>
+					<!-- Report Menu -->
+					<li class="menu-dropdown classic-menu-dropdown <?php echo $mail; ?>">
+						<a data-hover="megamenu-dropdown" data-close-others="true" data-toggle="dropdown" href="#">
+						Report <i class="fa fa-angle-down"></i>
+						</a>
+						<ul class="dropdown-menu pull-left">							
+							<li class=" dropdown-submenu">
+								<a href="#">
+								<i class="icon-notebook"></i>
+								Employee </a>
+								<ul class="dropdown-menu">
+									<li class=" ">
+										<a href="<?php echo site_url('report/listmaster'); ?>">
+										<i class="icon-notebook"></i>
+										Master </a>
+									</li>
+									<li class=" dropdown-submenu">
+										<a href="#">
+										<i class="icon-notebook"></i>
+										Data Employee </a>
+										<ul class="dropdown-menu">
+											<li class=" ">
+												<a href="<?php echo site_url('report/listemployee'); ?>">
+												Employee List</a>
+											</li>
+											<li class=" ">
+												<a href="<?php echo site_url('report/listemployeedetail'); ?>">
+												Detail Employee </a>
+											</li>
+											<li class=" ">
+												<a href="<?php echo site_url('report/listinsurance'); ?>">
+												Insurance </a>
+											</li>											
+										</ul>
+									</li>
+									<li class=" dropdown-submenu">
+										<a href="#">
+										<i class="icon-notebook"></i>
+										Reward & Punishment </a>
+										<ul class="dropdown-menu">
+											<li class=" ">
+												<a href="<?php echo site_url('report/listreward'); ?>">
+												Reward List</a>
+											</li>
+											<li class=" ">
+												<a href="<?php echo site_url('report/listpunishment'); ?>">
+												Punishment List</a>
+											</li>											
+										</ul>
+									</li>
+									<li class=" ">
+										<a href="<?php echo site_url('report/listmutation'); ?>">
+										<i class="icon-notebook"></i>
+										Mutation </a>
+									</li>
+									<li class=" ">
+										<a href="<?php echo site_url('report/listresign'); ?>">
+										<i class="icon-notebook"></i>
+										Resign </a>
+									</li>
+								</ul>
+							</li>
+							<!-- Mail Report -->
+							<li class=" dropdown-submenu">
+								<a href="#">
+								<i class="icon-notebook"></i>
+								Mail Administration </a>
+								<ul class="dropdown-menu">
+									<li class=" dropdown-submenu">
+										<a href="#">
+										<i class="icon-notebook"></i>
+										Inbox & Outbox </a>
+										<ul class="dropdown-menu">
+											<li class=" ">
+												<a href="<?php echo site_url('report/listcompany'); ?>">
+												Company List</a>
+											</li>
+											<li class=" ">
+												<a href="<?php echo site_url('report/listinbox'); ?>">
+												Inbox Mail </a>
+											</li>
+											<li class=" ">
+												<a href="<?php echo site_url('report/listoutbox'); ?>">
+												Outbox Mail </a>
+											</li>											
+										</ul>
+									</li>
+									<li class=" dropdown-submenu">
+										<a href="#">
+										<i class="icon-notebook"></i>
+										Internal </a>
+										<ul class="dropdown-menu">
+											<li class=" ">
+												<a href="<?php echo site_url('report/listdecree'); ?>">
+												Decree Mail </a>
+											</li>
+											<li class=" ">
+												<a href="<?php echo site_url('report/listmemo'); ?>">
+												Memo </a>
+											</li>											
+										</ul>
+									</li>									
+								</ul>
+							</li>
+							<!-- Practical Work Report -->
+							<li class=" dropdown-submenu">
+								<a href="#">
+								<i class="icon-notebook"></i>
+								Practical Work </a>
+								<ul class="dropdown-menu">
+									<li class=" ">
+										<a href="<?php echo site_url('report/listschool'); ?>">
+										<i class="icon-notebook"></i>
+										School List </a>
+									</li>
+									<li class=" ">
+										<a href="<?php echo site_url('report/listproposal'); ?>">
+										<i class="icon-notebook"></i>
+										Proposal List </a>
+									</li>
+									<li class=" ">
+										<a href="<?php echo site_url('report/liststudent'); ?>">
+										<i class="icon-notebook"></i>
+										Student List </a>
+									</li>
+								</ul>
+							</li>
 						</ul>
 					</li>
 				</ul>
