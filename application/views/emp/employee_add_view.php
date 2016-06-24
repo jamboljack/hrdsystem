@@ -281,7 +281,7 @@
 											<div class="form-group">
 												<label class="control-label col-md-3">Email</label>
 												<div class="col-md-9 has-error">
-													<input type="email" class="form-control" name="email" value="<?php echo set_value('email'); ?>" placeholder="Enter Email" autocomplete="off" required>
+													<input type="email" class="form-control" name="email" value="<?php echo set_value('email'); ?>" placeholder="Enter Email" autocomplete="off">
 													<?php echo form_error('email', '<span class="help-block has-error">','</span>'); ?>
 												</div>
 											</div>

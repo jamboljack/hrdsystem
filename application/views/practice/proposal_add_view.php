@@ -93,12 +93,19 @@ function mySchool() {
 											<input type="text" class="form-control" placeholder="Enter Title" name="title" value="<?php echo set_value('title'); ?>" autocomplete="off" required autofocus />
 											<?php echo form_error('title', '<span class="help-block has-error">','</span>'); ?>									
 										</div>
-									</div>
+									</div>									
 									<div class="form-group">
 										<label class="control-label col-md-3">Date</label>
 										<div class="col-md-9 has-error">
 											<input class="form-control form-control-inline input-medium date-picker" size="16" type="text" name="date_mail" value="<?php echo set_value('date_mail'); ?>" placeholder="DD-MM-YYYY" autocomplete="off" required />
 											<?php echo form_error('date_mail', '<span class="help-block has-error">','</span>'); ?>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3">Month</label>
+										<div class="col-md-3 has-error">
+											<input type="text" class="form-control" placeholder="January 2016, February 2017, etc" name="month" value="<?php echo set_value('month'); ?>" autocomplete="off" required />
+											<?php echo form_error('month', '<span class="help-block has-error">','</span>'); ?>
 										</div>
 									</div>
 									<div class="form-group">

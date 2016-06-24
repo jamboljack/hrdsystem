@@ -35,6 +35,7 @@ class Proposal_model extends CI_Model {
 			$data = array(    			
 	    			'school_id' 			=> trim($this->input->post('lstSchool')),
 	    			'proposal_title' 		=> trim($this->input->post('title')),
+	    			'proposal_month' 		=> ucwords(strtolower(trim($this->input->post('month')))),
 	    			'proposal_date' 		=> $date_mail,
 	    			'proposal_desc' 		=> trim($this->input->post('desc')),	    			
 	    			'proposal_file' 		=> $this->upload->file_name,
@@ -46,6 +47,7 @@ class Proposal_model extends CI_Model {
 			$data = array(    			
 	    			'school_id' 			=> trim($this->input->post('lstSchool')),
 	    			'proposal_title' 		=> trim($this->input->post('title')),
+	    			'proposal_month' 		=> ucwords(strtolower(trim($this->input->post('month')))),
 	    			'proposal_date' 		=> $date_mail,
 	    			'proposal_desc' 		=> trim($this->input->post('desc')),	    			
 	    			'proposal_date_update' 	=> date('Y-m-d'),
@@ -81,8 +83,10 @@ class Proposal_model extends CI_Model {
 			$data = array(    			
 	    			'school_id' 			=> trim($this->input->post('lstSchool')),
 	    			'proposal_title' 		=> trim($this->input->post('title')),
+	    			'proposal_month' 		=> ucwords(strtolower(trim($this->input->post('month')))),
 	    			'proposal_date' 		=> $date_mail,
-	    			'proposal_desc' 		=> trim($this->input->post('desc')),	    			
+	    			'proposal_desc' 		=> trim($this->input->post('desc')),
+	    			'proposal_status' 		=> trim($this->input->post('lstStatus')),
 	    			'proposal_file' 		=> $this->upload->file_name,
 	    			'proposal_date_update' 	=> date('Y-m-d'),
 	    			'proposal_time_update' 	=> date('Y-m-d H:i:s'),
@@ -92,8 +96,10 @@ class Proposal_model extends CI_Model {
 			$data = array(    			
 	    			'school_id' 			=> trim($this->input->post('lstSchool')),
 	    			'proposal_title' 		=> trim($this->input->post('title')),
+	    			'proposal_month' 		=> ucwords(strtolower(trim($this->input->post('month')))),
 	    			'proposal_date' 		=> $date_mail,
-	    			'proposal_desc' 		=> trim($this->input->post('desc')),	    			
+	    			'proposal_desc' 		=> trim($this->input->post('desc')),
+	    			'proposal_status' 		=> trim($this->input->post('lstStatus')),
 	    			'proposal_date_update' 	=> date('Y-m-d'),
 	    			'proposal_time_update' 	=> date('Y-m-d H:i:s'),
 	    			'user_username' 		=> trim($this->session->userdata('username'))

@@ -477,7 +477,7 @@
 											<div class="form-group">
 												<label class="control-label col-md-3">Email</label>
 												<div class="col-md-9 has-error">
-													<input type="email" class="form-control" name="email" value="<?php echo $detail->emp_email; ?>" placeholder="Enter Email" autocomplete="off" required>
+													<input type="email" class="form-control" name="email" value="<?php echo $detail->emp_email; ?>" placeholder="Enter Email" autocomplete="off">
 												</div>
 											</div>
 										</div>										
@@ -841,6 +841,10 @@
 							<li>
 								<a href="#tab_4" data-toggle="tab">
 								Punishment </a>
+							</li>
+							<li>
+								<a href="#tab_5" data-toggle="tab">
+								Record </a>
 							</li>							
 						</ul>
 						<div class="tab-content">
@@ -1801,11 +1805,22 @@
 											<?php 
 											$no = 1;
 											foreach($rewardlist as $re) {
+												$tanggal  	 = $re->trans_date;
+							                    if (!empty($tanggal)) {
+							                        $xtanggal 	= explode("-",$tanggal);
+							                        $thn1 		= $xtanggal[0];
+							                        $bln1 		= $xtanggal[1];
+							                        $tgl1 		= $xtanggal[2];
+
+							                        $date 		= $tgl1.'-'.$bln1.'-'.$thn1;
+							                    } else { 
+							                    	$date 		= '';
+							                    }
 											?>
 											<tr>
 												<td><?php echo $no; ?></td>
 												<td><?php echo $re->trans_no; ?></td>
-												<td><?php echo $re->trans_date; ?></td>
+												<td><?php echo $date; ?></td>
 												<td><?php echo $re->reward_name; ?></td>
 												<td><?php echo $re->trans_desc; ?></td>
 											</tr>
@@ -1854,13 +1869,87 @@
 											<?php 
 											$no = 1;
 											foreach($punishmentlist as $p) {
+												$tanggal  	 = $p->trans_date;
+							                    if (!empty($tanggal)) {
+							                        $xtanggal 	= explode("-",$tanggal);
+							                        $thn1 		= $xtanggal[0];
+							                        $bln1 		= $xtanggal[1];
+							                        $tgl1 		= $xtanggal[2];
+
+							                        $date 		= $tgl1.'-'.$bln1.'-'.$thn1;
+							                    } else { 
+							                    	$date 		= '';
+							                    }
 											?>
 											<tr>
 												<td><?php echo $no; ?></td>
 												<td><?php echo $p->trans_no; ?></td>
-												<td><?php echo $p->trans_date; ?></td>
+												<td><?php echo $date; ?></td>
 												<td><?php echo $p->punishment_name; ?></td>
 												<td><?php echo $p->trans_desc; ?></td>
+											</tr>
+											<?php 
+												$no++; 
+											} 
+											?>											
+											</tbody>
+											</table>
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+							<!-- Record -->
+							<div class="tab-pane" id="tab_5">
+								<div class="portlet box blue">
+									<div class="portlet-title">
+										<div class="caption">
+											<i class="fa fa-list"></i>Record List (<?php echo $detail->emp_name; ?>)
+										</div>
+										<div class="tools">
+											<a href="javascript:;" class="collapse">
+											</a>								
+											<a href="javascript:;" class="reload">
+											</a>
+											<a href="javascript:;" class="remove">
+											</a>
+										</div>
+									</div>
+									
+									<div class="portlet-body">										
+										<!-- Isi Data Tabel -->
+										<div class="table-scrollable">
+											<table class="table table-hover">
+											<thead>
+											<tr>
+												<th width="5%">No</th>
+												<th width="15%">Information</th>
+												<th width="10%">Date</th>												
+												<th>Description</th>
+											</tr>
+											</thead>
+											<tbody>
+											<?php 
+											$no = 1;
+											foreach($recordlist as $r) {
+												$tanggal  	 = $r->record_date;
+							                    if (!empty($tanggal)) {
+							                        $xtanggal 	= explode("-",$tanggal);
+							                        $thn1 		= $xtanggal[0];
+							                        $bln1 		= $xtanggal[1];
+							                        $tgl1 		= $xtanggal[2];
+
+							                        $date 		= $tgl1.'-'.$bln1.'-'.$thn1;
+							                    } else { 
+							                    	$date 		= '';
+							                    }
+											?>
+											<tr>
+												<td><?php echo $no; ?></td>
+												<td><span class="label label-sm <?php echo $r->absent_color; ?>"><?php echo $r->absent_name; ?></span></td>
+												<td><?php echo $date; ?></td>
+												<td><?php echo $r->record_desc; ?></td>
 											</tr>
 											<?php 
 												$no++; 

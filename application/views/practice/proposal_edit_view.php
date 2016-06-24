@@ -118,10 +118,28 @@ function mySchool() {
 										</div>
 									</div>
 									<div class="form-group">
+										<label class="control-label col-md-3">Month</label>
+										<div class="col-md-3 has-error">
+											<input type="text" class="form-control" placeholder="January 2016, February 2017, etc" name="month" value="<?php echo $detail->proposal_month; ?>" autocomplete="off" required />		
+										</div>
+									</div>
+									<div class="form-group">
 										<label class="control-label col-md-3">Description</label>
 										<div class="col-md-9 has-error">											
 											<textarea class="form-control ckeditor" name="desc" rows="6"><?php echo $detail->proposal_desc; ?></textarea>
 										</div>										
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3">Status</label>
+										<div class="col-md-2 has-error">
+										<select class="form-control" name="lstStatus" required />
+											<option value="">- Choose Status -</option>
+											<option value="New" <?php if ($detail->proposal_status=='New') { echo 'selected'; } ?>>New</option>
+											<option value="Pending" <?php if ($detail->proposal_status=='Pending') { echo 'selected'; } ?>>Pending</option>
+											<option value="Reject" <?php if ($detail->proposal_status=='Reject') { echo 'selected'; } ?>>Reject</option>
+											<option value="Accept" <?php if ($detail->proposal_status=='Accept') { echo 'selected'; } ?>>Accept</option>
+										</select>										
+										</div>
 									</div>
 									<h3 class="form-section">Scan File</h3>
 									<div class="form-group">

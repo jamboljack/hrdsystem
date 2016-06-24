@@ -77,9 +77,11 @@
 								<th width="10%">N I K</th>
 								<th width="5%">ID Finger</th>								
 								<th>Employee Name</th>
-								<th width="20%">Department</th>
+								<th width="5%">Age</th>
+								<th width="5%">YoS</th>
+								<th width="15%">Department</th>
 								<th width="15%">Position</th>
-								<th width="10%">Status</th>
+								<th width="6%">Status</th>
 								<th width="13%">Action</th>				
 							</tr>
 							</thead>
@@ -94,13 +96,15 @@
 								<td><?php echo $r->emp_nik; ?></td>
 								<td><?php echo $r->emp_finger; ?></td>
 								<td><?php echo $r->emp_name; ?></td>
+								<td><?php echo age($r->emp_birthdate); ?></td>
+								<td><?php echo age($r->emp_start_join); ?></td>
 								<td><?php echo $r->department_name; ?></td>
 								<td><?php echo $r->position_name; ?></td>
 								<td>
 									<?php if ($r->emp_status=='ACTIVE') { ?>
 										<span class="label label-sm label-success"><?php echo $r->emp_status; ?></span>
 									<?php } else { ?>
-										<span class="label label-sm label-error"><?php echo $r->emp_status; ?></span>
+										<span class="label label-sm label-danger"><?php echo $r->emp_status; ?></span>
 									<?php } ?>
 								</td>
 								<td>

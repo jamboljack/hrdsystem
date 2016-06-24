@@ -73,6 +73,7 @@
 								<th width="10%">Date</th>
 								<th width="20%">School Name</th>
 								<th>Title</th>
+								<th width="12%">Month</th>
 								<th width="8%">Status</th>
 								<th width="13%">Action</th>
 							</tr>
@@ -99,6 +100,7 @@
 								<td><?php echo $date; ?></td>
 								<td><?php echo $r->school_name; ?></td>
 								<td><?php echo $r->proposal_title; ?></td>
+								<td><?php echo $r->proposal_month; ?></td>
 								<td>
 									<?php if ($r->proposal_status=='New') { ?>
 										<span class="label label-sm label-success"><?php echo $r->proposal_status; ?></span>
@@ -107,7 +109,7 @@
 									<?php } elseif ($r->proposal_status=='Reject') { ?>
 										<span class="label label-sm label-danger"><?php echo $r->proposal_status; ?></span>
 									<?php } elseif ($r->proposal_status=='Accept') { ?>
-										<span class="label label-sm label-warning"><?php echo $r->proposal_status; ?></span>
+										<span class="label label-sm label-success"><?php echo $r->proposal_status; ?></span>
 									<?php } ?>
 								</td>
 								<td>

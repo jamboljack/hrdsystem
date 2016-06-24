@@ -28,8 +28,9 @@ class Proposal extends CI_Controller {
 	
 	public function savedata() {
 		$this->form_validation->set_rules('lstSchool','<b>School Name</b>','trim|required');
-		$this->form_validation->set_rules('title','<b>Title</b>','trim|required');		
+		$this->form_validation->set_rules('title','<b>Title</b>','trim|required');
 		$this->form_validation->set_rules('date_mail','<b>Date</b>','trim|required');
+		$this->form_validation->set_rules('month','<b>Month</b>','trim|required');		
 		$this->form_validation->set_rules('desc','<b>Description</b>','trim|required');
 
 		if ($this->form_validation->run() == FALSE) {

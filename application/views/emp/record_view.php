@@ -75,10 +75,10 @@
 							<tr>
 								<th width="5%">No</th>
 								<th width="10%">Date</th>								
-								<th width="20%">Employee Name</th>								
+								<th>Employee Name</th>								
 								<th width="15%">Department</th>
 								<th width="15%">Position</th>
-								<th>Description</th>
+								<th width="15%">Information</th>
 								<th width="13%">Action</th>							
 							</tr>
 							</thead>
@@ -98,9 +98,6 @@
 				                    } else { 
 				                    	$date 		= '';
 				                    }
-
-				                    $desc = $r->record_desc; 
-                        			$desc = word_limiter($desc, 10);
 							?>
 							<tr>
 								<td><?php echo $no; ?></td>
@@ -108,7 +105,7 @@
 								<td><?php echo $r->emp_name; ?></td>								
 								<td><?php echo $r->department_name; ?></td>								
 								<td><?php echo $r->position_name; ?></td>
-								<td><?php echo $desc; ?></td>
+								<td><span class="label label-sm <?php echo $r->absent_color; ?>"><?php echo $r->absent_name; ?></span></td>
 								<td>
 									<a href="<?php echo site_url('emp/record/editdata/'.$r->record_id); ?>"><button class="btn btn-primary btn-xs" title="Edit Data"><i class="icon-pencil"></i> Edit</button></a>
 	                        		<a onclick="hapusData(<?php echo $record_id; ?>)"><button class="btn btn-danger btn-xs" title="Delete Data"><i class="icon-trash"></i> Delete</button></a>

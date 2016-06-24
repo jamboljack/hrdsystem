@@ -110,6 +110,26 @@ function myMail() {
 										</div>
 									</div>									
 									<h3 class="form-section">Record Detail</h3>
+									<div class="form-group">
+										<label class="control-label col-md-3">Information</label>
+										<div class="col-md-3 has-error">
+										<select class="select2_category form-control" data-placeholder="Choose Information" name="lstInfo" required />
+											<option value="">- Choose Information -</option>
+											<?php 
+											foreach($absentlist as $a) {
+												if ($detail->absent_id == $a->absent_id) {
+											?>
+												<option value="<?php echo $a->absent_id; ?>" selected><?php echo $a->absent_name; ?></option>
+											<?php } else { ?>
+												<option value="<?php echo $a->absent_id; ?>"><?php echo $a->absent_name; ?></option>
+											<?php
+												}
+											} 
+											?>
+										</select>
+										<?php echo form_error('lstInfo', '<span class="help-block has-error">','</span>'); ?>
+										</div>
+									</div>
 									<?php
 			                        $tanggal 	= $detail->record_date; 
 			                            

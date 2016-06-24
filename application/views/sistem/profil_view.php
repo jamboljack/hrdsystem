@@ -1,3 +1,6 @@
+<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>js/sweetalert2.css">
+<script src="<?php echo base_url(); ?>js/sweetalert2.min.js"></script>
+
 <div class="page-container">
 	<!-- BEGIN PAGE HEAD -->
 	<div class="page-head">
@@ -145,8 +148,20 @@
 								</div>
 							</div>
 						</div>
+						<?php 
+				        if ($this->session->flashdata('notification')) { ?>
+				        	<script>
+		                        swal({
+		                            title: "Done",
+		                            text: "<?php echo $this->session->flashdata('notification'); ?>",
+		                            timer: 2500,
+		                            showConfirmButton: false,
+		                            type: 'success'
+		                        });
+		                    </script>
+				        <? } ?>
 					</div>
-					<!-- END PROFILE CONTENT -->
+					<!-- END PROFILE CONTENT -->					
 				</div>
 			</div>
 			<!-- END PAGE CONTENT INNER -->		

@@ -150,6 +150,18 @@
 							<button type="submit" class="btn btn-primary">
 							<i class="icon-plus"></i> Add Data</button>
 						</a>
+						<?php 
+				        if ($this->session->flashdata('notification')) { ?>
+				        	<script>
+		                        swal({
+		                            title: "Done",
+		                            text: "<?php echo $this->session->flashdata('notification'); ?>",
+		                            timer: 2000,
+		                            showConfirmButton: false,
+		                            type: 'success'
+		                        });
+		                    </script>
+				        <? } ?>
 						<div class="portlet-body">
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>

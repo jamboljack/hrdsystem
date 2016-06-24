@@ -23,16 +23,19 @@ class Record extends CI_Controller {
 
 	public function adddata() {		
 		$data['employeelist'] 	= $this->record_model->select_employee()->result();
+		$data['absentlist'] 	= $this->record_model->select_absent()->result();
 		$this->template->display('emp/record_add_view', $data);
 	}
 	
 	public function savedata() {
 		$this->form_validation->set_rules('lstEmployee','<b>Employee</b>','trim|required');
 		$this->form_validation->set_rules('date_record','<b>Date</b>','trim|required');
-		$this->form_validation->set_rules('desc','<b>Description</b>','trim|required');		
+		$this->form_validation->set_rules('lstInfo','<b>Information</b>','trim|required');
+		$this->form_validation->set_rules('desc','<b>Description</b>','trim|required');
 
 		if ($this->form_validation->run() == FALSE) {
 			$data['employeelist'] 	= $this->record_model->select_employee()->result();
+			$data['absentlist'] 	= $this->record_model->select_absent()->result();
 			$this->template->display('emp/record_add_view', $data);
 		} else {
 			$this->record_model->insert_data(); // Insert ke Table Record			
@@ -41,7 +44,8 @@ class Record extends CI_Controller {
 	}
 	
 	public function editdata($record_id) {		
-		$data['employeelist'] 	= $this->record_model->select_employee()->result();		
+		$data['employeelist'] 	= $this->record_model->select_employee()->result();
+		$data['absentlist'] 	= $this->record_model->select_absent()->result();
 		$data['detail'] 		= $this->record_model->select_by_id($record_id)->row();
 		$this->template->display('emp/record_edit_view', $data);
 	}

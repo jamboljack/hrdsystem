@@ -110,7 +110,23 @@ function myEmployee() {
 											<input type="text" class="form-control" placeholder="Position" name="position" id="position" value="<?php echo set_value('position'); ?>" autocomplete="off" readonly>									
 										</div>
 									</div>									
-									<h3 class="form-section">Record Detail</h3>	
+									<h3 class="form-section">Record Detail</h3>
+									<div class="form-group">
+										<label class="control-label col-md-3">Information</label>
+										<div class="col-md-3 has-error">
+										<select class="select2_category form-control" data-placeholder="Choose Information" name="lstInfo" required />
+											<option value="">- Choose Information -</option>
+											<?php 
+											foreach($absentlist as $a) {
+											?>
+											<option value="<?php echo $a->absent_id; ?>" <?php echo set_select('lstInfo', $a->absent_id); ?>><?php echo $a->absent_name; ?></option>
+											<?php
+											} 
+											?>
+										</select>
+										<?php echo form_error('lstInfo', '<span class="help-block has-error">','</span>'); ?>
+										</div>
+									</div>
 									<div class="form-group">
 										<label class="control-label col-md-3">Date</label>
 										<div class="col-md-9 has-error">

@@ -10,6 +10,7 @@ class Employee extends CI_Controller {
 		$this->load->model('emp/school_model');
 		$this->load->model('emp/company_model');
 		$this->load->model('emp/family_model');
+		$this->load->model('emp/record_model');
 		$this->load->model('rew-pun/transaction_reward_model');
 		$this->load->model('rew-pun/transaction_punishment_model');
 	}
@@ -118,6 +119,8 @@ class Employee extends CI_Controller {
 		$data['rewardlist'] 		= $this->transaction_reward_model->select_reward_employee($employee_id)->result();
 		// Punishment
 		$data['punishmentlist'] 	= $this->transaction_punishment_model->select_punishment_employee($employee_id)->result();
+		// Record
+		$data['recordlist'] 		= $this->record_model->select_record_employee($employee_id)->result();
 
 		$this->template->display('emp/employee_edit_view', $data);
 	}

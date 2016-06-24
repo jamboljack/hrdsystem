@@ -24,6 +24,7 @@ class Profil extends CI_Controller {
 	
 	public function updatedata() {	
 		$this->profil_model->update_data_name();
+		$this->session->set_flashdata('notification','Update Data Success.');
  		redirect(site_url('sistem/profil'));
 	}
 
@@ -52,11 +53,13 @@ class Profil extends CI_Controller {
 		}		
 		
 		$this->profil_model->update_data_avatar();
+		$this->session->set_flashdata('notification','Update Avatar Success.');
  		redirect(site_url('sistem/profil'));
 	}
 
 	public function updatepassword() {	
 		$this->profil_model->update_data_password();
+		$this->session->set_flashdata('notification','Update Password Success.');
  		redirect(site_url('sistem/profil'));
 	}
 }

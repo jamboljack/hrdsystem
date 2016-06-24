@@ -27,6 +27,7 @@ class Department extends CI_Controller {
 	
 	public function savedata() {
 		$this->department_model->insert_data();
+		$this->session->set_flashdata('notification','Save Data Success.');
  		redirect(site_url('master/department'));		
 	}
 	
@@ -37,6 +38,7 @@ class Department extends CI_Controller {
 	
 	public function updatedata() {
 		$this->department_model->update_data();
+		$this->session->set_flashdata('notification','Update Data Success.');
  		redirect(site_url('master/department'));
 	}
 	
@@ -47,6 +49,7 @@ class Department extends CI_Controller {
 			redirect(site_url('master/department'));
 		} else {
 			$this->department_model->delete_data($kode);
+			$this->session->set_flashdata('notification','Delete Data Success.');
 			echo "<meta http-equiv=refresh content=0;url=\"".site_url()."department\">";
 		}
 	}	
