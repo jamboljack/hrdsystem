@@ -27,11 +27,11 @@
 					<i class="fa fa-circle"></i>
 				</li>
 				<li>
-					<a href="<?php echo site_url('emp/healthy_insurance'); ?>">Healthy Insurance</a>
+					<a href="<?php echo site_url('emp/employment_insurance'); ?>">Employment Insurance</a>
 					<i class="fa fa-circle"></i>
 				</li>
 				<li class="active">
-					Healthy Insurance Detail
+					Employment Insurance Detail
 				</li>
 			</ul>
 			<!-- END PAGE BREADCRUMB -->
@@ -42,7 +42,7 @@
 					<div class="portlet box red">
 						<div class="portlet-title">
 							<div class="caption">
-								<i class="fa fa-edit"></i>Detail Healthy Insurance Employee
+								<i class="fa fa-edit"></i>Detail Employment Insurance Employee
 							</div>
 							<div class="tools">
 								<a href="javascript:;" class="collapse">
@@ -99,12 +99,12 @@
                                         	<div class="form-group">
                                             	<label class="control-label col-md-3">No. Insurance :</label>
                                                 <div class="col-md-9">
-                                                	<p class="form-control-static"> <?php echo $detail->emp_bpjs_h_id; ?></p>
+                                                	<p class="form-control-static"> <?php echo $detail->emp_bpjs_k_id; ?></p>
                                                 </div>
 											</div>
                                         </div>
                                         <?php
-				                        $tanggal 	= $detail->emp_join_date_h; 
+				                        $tanggal 	= $detail->emp_join_date_k; 
 				                            
 				                        if (!empty($tanggal)) {
 				                            $xtanggal 	= explode("-",$tanggal);
@@ -132,7 +132,7 @@
                                         <div class="col-md-6">
                                         	<div class="row">
                                             <div class="col-md-offset-3 col-md-9">
-											<a href="<?php echo site_url('emp/healthy_insurance'); ?>" class="btn btn-default"><span class="glyphicon glyphicon-chevron-left"></span> Back</a>
+											<a href="<?php echo site_url('emp/employment_insurance'); ?>" class="btn btn-default"><span class="glyphicon glyphicon-chevron-left"></span> Back</a>
 											</div>
 											</div>
 										</div>
