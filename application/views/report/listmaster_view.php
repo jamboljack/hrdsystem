@@ -58,19 +58,20 @@
 									<div class="form-group">
 										<label class="control-label col-md-3">Choose Master</label>
 										<div class="col-md-3 has-error">
-										<select class="form-control" name="lstMaster" required>
-											<option value="">- Choose Master -</option>
-											<option value="blood" <?php echo set_select('blood', 'lstMaster'); ?>>Blood</option>
-											<option value="marriage" <?php echo set_select('marriage', 'lstMaster'); ?>>Marriage</option>
-											<option value="religion" <?php echo set_select('religion', 'lstMaster'); ?>>Religion</option>
-											<option value="education" <?php echo set_select('education', 'lstMaster'); ?>>Education</option>
-											<option value="relation" <?php echo set_select('relation', 'lstMaster'); ?>>Relation</option>
-											<option value="status" <?php echo set_select('status', 'lstMaster'); ?>>Status</option>
-											<option value="deparment" <?php echo set_select('deparment', 'lstMaster'); ?>>Department</option>
-											<option value="position" <?php echo set_select('position', 'lstMaster'); ?>>Position</option>
-											<option value="absent" <?php echo set_select('position', 'lstMaster'); ?>>Absent</option>
-										</select>										
-									</div>									
+											<select class="select2_category form-control" data-placeholder="- Choose Master -" name="lstMaster" required autofocus>
+												<option value="">- Choose Master -</option>
+												<option value="blood" <?php echo set_select('blood', 'lstMaster'); ?>>Blood</option>
+												<option value="marriage" <?php echo set_select('marriage', 'lstMaster'); ?>>Marriage</option>
+												<option value="religion" <?php echo set_select('religion', 'lstMaster'); ?>>Religion</option>
+												<option value="education" <?php echo set_select('education', 'lstMaster'); ?>>Education</option>
+												<option value="relation" <?php echo set_select('relation', 'lstMaster'); ?>>Relation</option>
+												<option value="status" <?php echo set_select('status', 'lstMaster'); ?>>Status</option>
+												<option value="deparment" <?php echo set_select('deparment', 'lstMaster'); ?>>Department</option>
+												<option value="position" <?php echo set_select('position', 'lstMaster'); ?>>Position</option>
+												<option value="absent" <?php echo set_select('position', 'lstMaster'); ?>>Absent</option>
+											</select>										
+										</div>									
+									</div>
 								</div>
 								<div class="form-actions">
 									<div class="row">

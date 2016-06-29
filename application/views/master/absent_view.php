@@ -12,7 +12,7 @@
             confirmButtonText: 'Yes',
             cancelButtonText: 'No',
             closeOnConfirm: true
-        }, function() {            
+        }, function() {
             window.location.href="<?php echo site_url('master/absent/deletedata'); ?>"+"/"+id
         });
     }

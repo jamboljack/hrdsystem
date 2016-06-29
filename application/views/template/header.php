@@ -45,6 +45,10 @@ if (empty($uri) && empty($uri2)) {
 	$report      = '';
 	$list1		 = '';
 	$listmaster  = '';
+	$list2		 = '';	
+	$listemployee= '';
+	$listdetail  = '';
+	$list3		 = '';	
 } elseif ($uri=='blood') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -88,6 +92,10 @@ if (empty($uri) && empty($uri2)) {
 	$report      = '';
 	$list1		 = '';
 	$listmaster  = '';
+	$list2		 = '';	
+	$listemployee= '';
+	$listdetail  = '';
+	$list3		 = '';	
 } elseif ($uri=='marriage') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -131,6 +139,10 @@ if (empty($uri) && empty($uri2)) {
 	$report      = '';
 	$list1		 = '';
 	$listmaster  = '';
+	$list2		 = '';	
+	$listemployee= '';
+	$listdetail  = '';
+	$list3		 = '';	
 } elseif ($uri=='religion') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -174,6 +186,10 @@ if (empty($uri) && empty($uri2)) {
 	$report      = '';
 	$list1		 = '';
 	$listmaster  = '';
+	$list2		 = '';	
+	$listemployee= '';
+	$listdetail  = '';
+	$list3		 = '';	
 } elseif ($uri=='education') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -217,6 +233,10 @@ if (empty($uri) && empty($uri2)) {
 	$report      = '';
 	$list1		 = '';
 	$listmaster  = '';
+	$list2		 = '';	
+	$listemployee= '';
+	$listdetail  = '';
+	$list3		 = '';	
 } elseif ($uri=='relation') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -260,6 +280,10 @@ if (empty($uri) && empty($uri2)) {
 	$report      = '';
 	$list1		 = '';
 	$listmaster  = '';
+	$list2		 = '';	
+	$listemployee= '';
+	$listdetail  = '';
+	$list3		 = '';	
 } elseif ($uri=='status') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -303,6 +327,10 @@ if (empty($uri) && empty($uri2)) {
 	$report      = '';
 	$list1		 = '';
 	$listmaster  = '';
+	$list2		 = '';	
+	$listemployee= '';
+	$listdetail  = '';
+	$list3		 = '';	
 } elseif ($uri=='department') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -346,6 +374,10 @@ if (empty($uri) && empty($uri2)) {
 	$report      = '';
 	$list1		 = '';
 	$listmaster  = '';
+	$list2		 = '';	
+	$listemployee= '';
+	$listdetail  = '';
+	$list3		 = '';	
 } elseif ($uri=='position') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -389,6 +421,10 @@ if (empty($uri) && empty($uri2)) {
 	$report      = '';
 	$list1		 = '';
 	$listmaster  = '';
+	$list2		 = '';	
+	$listemployee= '';
+	$listdetail  = '';
+	$list3		 = '';	
 } elseif ($uri=='absent') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -432,6 +468,10 @@ if (empty($uri) && empty($uri2)) {
 	$report      = '';
 	$list1		 = '';
 	$listmaster  = '';
+	$list2		 = '';	
+	$listemployee= '';
+	$listdetail  = '';
+	$list3		 = '';	
 } elseif ($uri=='employee') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -475,6 +515,10 @@ if (empty($uri) && empty($uri2)) {
 	$report      = '';
 	$list1		 = '';
 	$listmaster  = '';
+	$list2		 = '';	
+	$listemployee= '';
+	$listdetail  = '';
+	$list3		 = '';	
 } elseif ($uri=='record') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -518,6 +562,10 @@ if (empty($uri) && empty($uri2)) {
 	$report      = '';
 	$list1		 = '';
 	$listmaster  = '';
+	$list2		 = '';	
+	$listemployee= '';
+	$listdetail  = '';
+	$list3		 = '';	
 } elseif ($uri=='healthy_insurance') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -561,6 +609,10 @@ if (empty($uri) && empty($uri2)) {
 	$report      = '';
 	$list1		 = '';
 	$listmaster  = '';
+	$list2		 = '';	
+	$listemployee= '';
+	$listdetail  = '';
+	$list3		 = '';	
 } elseif ($uri=='employment_insurance') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -604,6 +656,10 @@ if (empty($uri) && empty($uri2)) {
 	$report      = '';
 	$list1		 = '';
 	$listmaster  = '';
+	$list2		 = '';	
+	$listemployee= '';
+	$listdetail  = '';
+	$list3		 = '';	
 } elseif ($uri=='reward') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -647,6 +703,10 @@ if (empty($uri) && empty($uri2)) {
 	$report      = '';
 	$list1		 = '';
 	$listmaster  = '';
+	$list2		 = '';	
+	$listemployee= '';
+	$listdetail  = '';
+	$list3		 = '';	
 } elseif ($uri=='transaction_reward') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -690,6 +750,10 @@ if (empty($uri) && empty($uri2)) {
 	$report      = '';
 	$list1		 = '';
 	$listmaster  = '';
+	$list2		 = '';	
+	$listemployee= '';
+	$listdetail  = '';	
+	$list3		 = '';
 } elseif ($uri=='punishment') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -733,6 +797,10 @@ if (empty($uri) && empty($uri2)) {
 	$report      = '';
 	$list1		 = '';
 	$listmaster  = '';
+	$list2		 = '';	
+	$listemployee= '';
+	$listdetail  = '';
+	$list3		 = '';	
 } elseif ($uri=='transaction_punishment') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -776,6 +844,10 @@ if (empty($uri) && empty($uri2)) {
 	$report      = '';
 	$list1		 = '';
 	$listmaster  = '';
+	$list2		 = '';	
+	$listemployee= '';
+	$listdetail  = '';
+	$list3		 = '';	
 } elseif ($uri=='mutation') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -819,6 +891,10 @@ if (empty($uri) && empty($uri2)) {
 	$report      = '';
 	$list1		 = '';
 	$listmaster  = '';
+	$list2		 = '';	
+	$listemployee= '';
+	$listdetail  = '';
+	$list3		 = '';	
 } elseif ($uri=='resign') {
 	$dashboard   = '';
 	$menu_1      = 'active';
@@ -862,6 +938,10 @@ if (empty($uri) && empty($uri2)) {
 	$report      = '';
 	$list1		 = '';
 	$listmaster  = '';
+	$list2		 = '';	
+	$listemployee= '';
+	$listdetail  = '';
+	$list3		 = '';	
 } elseif ($uri=='company') {
 	$dashboard   = '';
 	$menu_1      = '';
@@ -905,6 +985,10 @@ if (empty($uri) && empty($uri2)) {
 	$report      = '';
 	$list1		 = '';
 	$listmaster  = '';
+	$list2		 = '';	
+	$listemployee= '';
+	$listdetail  = '';
+	$list3		 = '';	
 } elseif ($uri=='inbox') {
 	$dashboard   = '';
 	$menu_1      = '';
@@ -948,6 +1032,10 @@ if (empty($uri) && empty($uri2)) {
 	$report      = '';
 	$list1		 = '';
 	$listmaster  = '';
+	$list2		 = '';	
+	$listemployee= '';
+	$listdetail  = '';
+	$list3		 = '';	
 } elseif ($uri=='outbox') {
 	$dashboard   = '';
 	$menu_1      = '';
@@ -991,6 +1079,10 @@ if (empty($uri) && empty($uri2)) {
 	$report      = '';
 	$list1		 = '';
 	$listmaster  = '';
+	$list2		 = '';	
+	$listemployee= '';
+	$listdetail  = '';
+	$list3		 = '';	
 } elseif ($uri=='decree') {
 	$dashboard   = '';
 	$menu_1      = '';
@@ -1034,6 +1126,10 @@ if (empty($uri) && empty($uri2)) {
 	$report      = '';
 	$list1		 = '';
 	$listmaster  = '';
+	$list2		 = '';	
+	$listemployee= '';
+	$listdetail  = '';
+	$list3		 = '';	
 } elseif ($uri=='memo') {
 	$dashboard   = '';
 	$menu_1      = '';
@@ -1077,6 +1173,10 @@ if (empty($uri) && empty($uri2)) {
 	$report      = '';
 	$list1		 = '';
 	$listmaster  = '';
+	$list2		 = '';	
+	$listemployee= '';
+	$listdetail  = '';
+	$list3		 = '';	
 } elseif ($uri=='school') {
 	$dashboard   = '';
 	$menu_1      = '';
@@ -1120,6 +1220,10 @@ if (empty($uri) && empty($uri2)) {
 	$report      = '';
 	$list1		 = '';
 	$listmaster  = '';
+	$list2		 = '';	
+	$listemployee= '';
+	$listdetail  = '';
+	$list3		 = '';	
 } elseif ($uri=='proposal') {
 	$dashboard   = '';
 	$menu_1      = '';
@@ -1163,6 +1267,10 @@ if (empty($uri) && empty($uri2)) {
 	$report      = '';
 	$list1		 = '';
 	$listmaster  = '';
+	$list2		 = '';	
+	$listemployee= '';
+	$listdetail  = '';
+	$list3		 = '';	
 } elseif ($uri=='student') {
 	$dashboard   = '';
 	$menu_1      = '';
@@ -1206,6 +1314,10 @@ if (empty($uri) && empty($uri2)) {
 	$report      = '';
 	$list1		 = '';
 	$listmaster  = '';
+	$list2		 = '';
+	$listemployee= '';
+	$listdetail  = '';
+	$list3		 = '';	
 } elseif ($uri == 'users') {
 	$dashboard   = '';
 	$menu_1      = '';
@@ -1249,6 +1361,10 @@ if (empty($uri) && empty($uri2)) {
 	$report      = '';
 	$list1		 = '';
 	$listmaster  = '';
+	$list2		 = '';	
+	$listemployee= '';
+	$listdetail  = '';
+	$list3		 = '';	
 } elseif ($uri == 'event') {
 	$dashboard   = '';
 	$menu_1      = '';
@@ -1292,6 +1408,10 @@ if (empty($uri) && empty($uri2)) {
 	$report      = '';
 	$list1		 = '';
 	$listmaster  = '';
+	$list2		 = '';	
+	$listemployee= '';
+	$listdetail  = '';
+	$list3		 = '';	
 } elseif ($uri == 'listmaster') {
 	$dashboard   = '';
 	$menu_1      = '';
@@ -1335,6 +1455,104 @@ if (empty($uri) && empty($uri2)) {
 	$report      = 'active';
 	$list1		 = 'active';
 	$listmaster  = 'active';
+	$list2		 = '';	
+	$listemployee= '';
+	$list3		 = '';
+	$listdetail  = '';
+} elseif ($uri == 'listemployee') {
+	$dashboard   = '';
+	$menu_1      = '';
+	$master      = '';
+	$blood       = '';
+	$marriage    = '';
+	$religion    = '';
+	$education   = '';
+	$relation    = '';
+	$status      = '';
+	$department  = '';
+	$position    = '';
+	$absent      = '';
+	$data        = '';
+	$employee    = '';
+	$record      = '';
+	$kesehatan   = '';
+	$tenaga      = '';
+	$rewpun      = '';
+	$rewtype     = '';
+	$rewtran     = '';
+	$puntype     = '';
+	$puntran     = '';
+	$mutation    = '';
+	$resign      = '';
+	$mail        = '';
+	$mail_inbox  = '';
+	$company      = '';
+	$inbox       = '';
+	$outbox      = '';
+	$intern_mail = '';
+	$decree      = '';
+	$memo        = '';
+	$practice    = '';
+	$school      = '';
+	$proposal    = '';
+	$student     = '';
+	$system      = '';
+	$users       = '';
+	$event       = '';
+	$report      = 'active';
+	$list1		 = 'active';
+	$listmaster  = '';
+	$list2		 = 'active';	
+	$listemployee= 'active';
+	$listdetail  = '';	
+	$list3		 = '';	
+} elseif ($uri == 'listemployeedetail') {
+	$dashboard   = '';
+	$menu_1      = '';
+	$master      = '';
+	$blood       = '';
+	$marriage    = '';
+	$religion    = '';
+	$education   = '';
+	$relation    = '';
+	$status      = '';
+	$department  = '';
+	$position    = '';
+	$absent      = '';
+	$data        = '';
+	$employee    = '';
+	$record      = '';
+	$kesehatan   = '';
+	$tenaga      = '';
+	$rewpun      = '';
+	$rewtype     = '';
+	$rewtran     = '';
+	$puntype     = '';
+	$puntran     = '';
+	$mutation    = '';
+	$resign      = '';
+	$mail        = '';
+	$mail_inbox  = '';
+	$company      = '';
+	$inbox       = '';
+	$outbox      = '';
+	$intern_mail = '';
+	$decree      = '';
+	$memo        = '';
+	$practice    = '';
+	$school      = '';
+	$proposal    = '';
+	$student     = '';
+	$system      = '';
+	$users       = '';
+	$event       = '';
+	$report      = 'active';
+	$list1		 = 'active';
+	$listmaster  = '';
+	$list2		 = 'active';	
+	$listemployee= '';
+	$listdetail  = 'active';
+	$list3		 = '';	
 } else {
 	$dashboard   = 'active';
 	$menu_1      = '';
@@ -1378,6 +1596,10 @@ if (empty($uri) && empty($uri2)) {
 	$report      = '';
 	$list1		 = '';
 	$listmaster  = '';
+	$list2		 = '';	
+	$listemployee= '';
+	$listdetail  = '';
+	$list3		 = '';	
 }
 ?>
 <div class="page-header">
@@ -1688,16 +1910,16 @@ if (empty($uri) && empty($uri2)) {
 										<i class="icon-notebook"></i>
 										Master </a>
 									</li>
-									<li class=" dropdown-submenu">
+									<li class="<?php echo $list2; ?> dropdown-submenu">
 										<a href="#">
 										<i class="icon-notebook"></i>
 										Data Employee </a>
 										<ul class="dropdown-menu">
-											<li class=" ">
+											<li class="<?php echo $listemployee; ?>">
 												<a href="<?php echo site_url('report/listemployee'); ?>">
 												Employee List</a>
 											</li>
-											<li class=" ">
+											<li class="<?php echo $listdetail; ?>">
 												<a href="<?php echo site_url('report/listemployeedetail'); ?>">
 												Detail Employee </a>
 											</li>
@@ -1707,7 +1929,7 @@ if (empty($uri) && empty($uri2)) {
 											</li>											
 										</ul>
 									</li>
-									<li class=" dropdown-submenu">
+									<li class="<?php echo $list3; ?> dropdown-submenu">
 										<a href="#">
 										<i class="icon-notebook"></i>
 										Reward & Punishment </a>

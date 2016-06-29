@@ -6,7 +6,7 @@
 <title>Print Master</title>
 <style type="text/css">
 	table {
-    	border: 1px solid black;    	
+    	border: 1px solid #ccccb3;    	
     	width: 80%;
 	}
 	th {

@@ -23,10 +23,18 @@
 
 <!-- BEGIN PAGE LEVEL STYLES DATATABLES -->
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/global/plugins/select2/select2.css"/>
+<?php 
+$mn   = $this->uri->segment(3);
+$rp   = $this->uri->segment(1);
+if (empty($mn) && $rp <> 'report') { 
+?>
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/global/plugins/datatables/extensions/ColReorder/css/dataTables.colReorder.min.css"/>
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css"/>
+<?php } ?>
+
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/datepicker/css/datepicker.css" />
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/datepicker/css/daterangepicker-bs3.css">
+
 <!-- END PAGE LEVEL STYLES -->
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/bootstrap-fileupload/bootstrap-fileupload.css" />
 
@@ -81,16 +89,13 @@
 <script src="<?php echo base_url(); ?>assets/global/plugins/jquery.cokie.min.js" type="text/javascript"></script>
 <script src="<?php echo base_url(); ?>assets/global/plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script>
 <!-- END CORE PLUGINS -->
-
-<!--<script src="<?php echo base_url(); ?>assets/global/plugins/jquery.sparkline.min.js" type="text/javascript"></script> -->
-<!-- END PAGE LEVEL PLUGINS -->
-
 <!-- BEGIN PAGE LEVEL PLUGINS -->
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/global/plugins/select2/select2.min.js"></script>
 
 <?php 
 $mn 	= $this->uri->segment(3);
-if (empty($mn)) { 
+$rp   = $this->uri->segment(1);
+if (empty($mn) && $rp <> 'report') { 
 ?>
    <script type="text/javascript" src="<?php echo base_url(); ?>assets/global/plugins/datatables/media/js/jquery.dataTables.min.js"></script>
    <script type="text/javascript" src="<?php echo base_url(); ?>assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js"></script>
@@ -100,31 +105,25 @@ if (empty($mn)) {
 
 <!-- CKEditor -->
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/ckeditor/ckeditor.js" charset="utf-8"></script>
-
+<!-- FileUpload -->
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/bootstrap-fileupload/bootstrap-fileupload.js"></script>
 <!-- END PAGE LEVEL PLUGINS -->
 
 <?php 
 $mn = $this->uri->segment(3);
 $isi = substr($mn, 0,3);
-if ($isi == 'add' || $isi == 'edi' || $isi == 'sav') { 
+$rp = $this->uri->segment(1);
+if ($isi == 'add' || $isi == 'edi' || $isi == 'sav' || $rp == 'report') {
 ?>
-   <script type="text/javascript" src="<?php echo base_url(); ?>assets/datepicker/js/bootstrap-datepicker.js"></script>
-   <script type="text/javascript" src="<?php echo base_url(); ?>assets/datepicker/js/moment.min.js"></script>
-   <script type="text/javascript" src="<?php echo base_url(); ?>assets/datepicker/js/daterangepicker.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/datepicker/js/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/datepicker/js/moment.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/datepicker/js/daterangepicker.js"></script>
+<script src="<?php echo base_url(); ?>js/advanced-form-components.js"></script>
 <?php } ?>
 
 <script src="<?php echo base_url(); ?>assets/admin/pages/scripts/components-pickers.js"></script>
 <script src="<?php echo base_url(); ?>assets/admin/pages/scripts/table-advanced.js"></script>
 <script src="<?php echo base_url(); ?>assets/admin/pages/scripts/form-samples.js"></script>
-
-<!-- CHART -->
-<script src="<?php echo base_url(); ?>assets/global/plugins/amcharts/amcharts/amcharts.js" type="text/javascript"></script>
-<script src="<?php echo base_url(); ?>assets/global/plugins/amcharts/amcharts/pie.js" type="text/javascript"></script>
-
-<script src="<?php echo base_url(); ?>assets/global/plugins/moment.min.js"></script>
-<script src="<?php echo base_url(); ?>assets/global/plugins/jquery-ui.custom.min.js"></script>
-<script src="<?php echo base_url(); ?>assets/global/plugins/fullcalendar/fullcalendar.min.js"></script>
 
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/global/plugins/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
 
@@ -154,6 +153,13 @@ jQuery(document).ready(function() {
 });
 </script>
 <!-- END JAVASCRIPTS -->
+
+<?php if ($this->uri->segment(1) == 'home') { ?>
+<script src="<?php echo base_url(); ?>assets/global/plugins/amcharts/amcharts/amcharts.js" type="text/javascript"></script>
+<script src="<?php echo base_url(); ?>assets/global/plugins/amcharts/amcharts/pie.js" type="text/javascript"></script>
+<script src="<?php echo base_url(); ?>assets/global/plugins/moment.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/global/plugins/jquery-ui.custom.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/global/plugins/fullcalendar/fullcalendar.min.js"></script>
 
 <script>
 /* Gender */
@@ -304,6 +310,7 @@ $('#calendar').fullCalendar({
       events: <?php echo $render_event; ?>
 });
 </script>
+<?php } ?>
 
 </body>
 <!-- END BODY -->

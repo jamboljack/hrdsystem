@@ -50,7 +50,7 @@
 							</div>
 						</div>
 						<a href="<?php echo site_url('report/listmaster/'); ?>/print_report/<?php echo $Report['Master']; ?>" class="btn btn-primary" target="_blank"><span class="glyphicon glyphicon-print"></span> Print Preview</a>
-						<a href="<?php echo site_url('report/listmaster/'); ?>/print_report_pdf/<?php echo $Report['Master']; ?>" class="btn btn-warning" target="_blank"><span class="glyphicon glyphicon-download-alt"></span> PDF</a>
+						<a href="<?php echo site_url('report/listmaster/'); ?>/print_report_pdf/<?php echo $Report['Master']; ?>" class="btn btn-danger" target="_blank"><span class="glyphicon glyphicon-download-alt"></span> PDF</a>
 						<a href="<?php echo site_url('report/listmaster'); ?>" class="btn btn-default"><span class="glyphicon glyphicon-chevron-left"></span> Back</a>
 						<div class="portlet-body">
 							<table class="table table-hover">

@@ -62,12 +62,10 @@ class Home extends CI_Controller{
 			    $render_event[] = array(
 			        "title" 	=> $row->event_name,
 			        "start" 	=> $row->event_start_date.'T'.$row->event_start_time,
-			        "end" 		=> $row->event_end_date.'T'.$row->event_end_time,
-			        "backgroundColor" => "Metronic.getBrandColor('".$row->event_color."')"			        
+			        "end" 		=> $row->event_end_date.'T'.$row->event_end_time			        
 				);
 			}
 			$data['render_event'] = json_encode($render_event);
-
 
 			$this->template->display('home_view', $data);
 		} else {
