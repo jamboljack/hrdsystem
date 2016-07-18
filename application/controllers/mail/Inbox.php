@@ -6,6 +6,7 @@ class Inbox extends CI_Controller {
 		parent::__construct();
 		if(!$this->session->userdata('logged_in_hrd')) redirect(base_url());
 		$this->load->library('template');		
+		$this->load->model('home_model');
 		$this->load->model('mail/inbox_model');	
 	}
 

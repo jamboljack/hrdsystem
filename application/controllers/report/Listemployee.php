@@ -5,7 +5,8 @@ class Listemployee extends CI_Controller{
 	function __construct(){
 		parent::__construct();
 		if(!$this->session->userdata('logged_in_hrd')) redirect(base_url());
-		$this->load->library('template');		
+		$this->load->library('template');
+		$this->load->model('home_model');		
 		$this->load->model('report/listemployee_model');	
 	}
 	
@@ -161,7 +162,7 @@ class Listemployee extends CI_Controller{
 			}
 
 			$this->load->library('pdf');
-			$param = '"en-GB-x","A4-L","","",10,10,10,10,6,3';			
+			$param = '"en-GB-x","A4","","",10,10,10,10,6,3,"L"'; // Landscape		
 			$pdf = $this->pdf->load($param);
 			$pdf->SetHeader(''); 
 			$pdf->SetFooter('');

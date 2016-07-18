@@ -6,10 +6,11 @@ class Employee_model extends CI_Model {
 	}
 		
 	function select_all() {
-		$this->db->select('e.*, d.department_name, p.position_name');
+		$this->db->select('e.*, d.department_name, p.position_name, s.status_name');
 		$this->db->from('hrd_employee e');
 		$this->db->join('hrd_department d', 'e.department_id = d.department_id');
 		$this->db->join('hrd_position p', 'e.position_id = p.position_id');
+		$this->db->join('hrd_status s', 'e.status_id = s.status_id');
 		$this->db->order_by('e.emp_name','asc');
 		
 		return $this->db->get();

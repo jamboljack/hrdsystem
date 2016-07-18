@@ -437,7 +437,7 @@
   <table align="center">
   <tr>
     <th width="5%">No</th>
-    <th width="20%">Information</th>                
+    <th width="30%">Information</th>                
     <th width="10%">Date</th>               
     <th>Desctiption</th>             
   </tr>

@@ -31,7 +31,7 @@
 					<i class="fa fa-circle"></i>
 				</li>				
 				<li class="active">
-					Detail Employee
+					Employee Details
 				</li>
 			</ul>
 			<!-- END PAGE BREADCRUMB -->
@@ -44,10 +44,8 @@
 						<div class="portlet-title">
 							<div class="caption">
 								<i class="fa fa-book font-blue-sharp"></i>
-								<span class="caption-subject font-blue-sharp bold uppercase">Report Employee Detail List</span>
+								<span class="caption-subject font-blue-sharp bold uppercase">Report Employee Details</span>
 							</div>							
-							<div class="tools">
-							</div>
 						</div>
 						<div class="portlet-body">
 							<table class="table table-hover">

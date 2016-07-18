@@ -97,5 +97,15 @@ class Home_model extends CI_Model {
 		
 		return $this->db->get();
 	}
+
+	function select_birthday() {
+		$bulan = date('m');		
+		$this->db->select('*');
+		$this->db->from('hrd_employee');		
+		$this->db->where('MONTH(emp_birthdate)', $bulan);
+		$this->db->order_by('emp_birthdate', 'asc');
+		
+		return $this->db->get();
+	}
 }
 /* Location: ./application/model/Home_model.php */

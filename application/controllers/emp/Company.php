@@ -5,7 +5,8 @@ class Company extends CI_Controller {
 	function __construct() {
 		parent::__construct();
 		if(!$this->session->userdata('logged_in_hrd')) redirect(base_url());
-		$this->load->model('emp/company_model');	
+		$this->load->model('home_model');
+		$this->load->model('emp/company_model');
 	}
 
 	public function index()

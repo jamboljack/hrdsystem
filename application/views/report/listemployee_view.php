@@ -35,7 +35,7 @@
 					<i class="fa fa-circle"></i>
 				</li>				
 				<li class="active">
-					Employee List
+					List of Employee
 				</li>
 			</ul>
 			<!-- END PAGE BREADCRUMB -->
@@ -46,15 +46,10 @@
 					<div class="portlet box red">
 						<div class="portlet-title">
 							<div class="caption">
-								<i class="fa fa-book"></i> Report Employee List
+								<i class="fa fa-book"></i> Report List of Employee
 							</div>
 							<div class="tools">
-								<a href="javascript:;" class="collapse">
-								</a>								
-								<a href="javascript:;" class="reload">
-								</a>
-								<a href="javascript:;" class="remove">
-								</a>
+								<a href="javascript:;" class="collapse"></a>
 							</div>
 						</div>
 						<?php 

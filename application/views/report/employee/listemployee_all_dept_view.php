@@ -31,7 +31,7 @@
 					<i class="fa fa-circle"></i>
 				</li>				
 				<li class="active">
-					<a href="<?php echo site_url('report/listemployee'); ?>">Report Employee List</a>
+					<a href="<?php echo site_url('report/listemployee'); ?>">Report List of Employee</a>
 					<i class="fa fa-circle"></i>
 				</li>
 				<li class="active">

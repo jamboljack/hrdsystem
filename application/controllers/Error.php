@@ -4,6 +4,7 @@ class Error extends CI_Controller {
 	function __construct(){ 
 		parent::__construct();
 		$this->load->library('template');
+		$this->load->model('home_model');
 	} 
 		
 	public function index() { 

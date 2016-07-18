@@ -153,7 +153,7 @@ function myMail() {
 									<div class="form-group">
 										<label class="control-label col-md-3">Description</label>
 										<div class="col-md-9 has-error">
-											<textarea class="form-control ckeditor" name="desc" rows="6"><?php echo $detail->record_desc; ?></textarea>
+											<textarea class="form-control" name="desc" rows="6"><?php echo $detail->record_desc; ?></textarea>
 										</div>										
 									</div>
 								</div>

@@ -48,6 +48,7 @@ if (empty($uri) && empty($uri2)) {
 	$list2		 = '';	
 	$listemployee= '';
 	$listdetail  = '';
+	$liststatus  = '';
 	$list3		 = '';	
 } elseif ($uri=='blood') {
 	$dashboard   = '';
@@ -95,6 +96,7 @@ if (empty($uri) && empty($uri2)) {
 	$list2		 = '';	
 	$listemployee= '';
 	$listdetail  = '';
+	$liststatus  = '';
 	$list3		 = '';	
 } elseif ($uri=='marriage') {
 	$dashboard   = '';
@@ -140,8 +142,9 @@ if (empty($uri) && empty($uri2)) {
 	$list1		 = '';
 	$listmaster  = '';
 	$list2		 = '';	
-	$listemployee= '';
+	$listemployee= '';	
 	$listdetail  = '';
+	$liststatus  = '';
 	$list3		 = '';	
 } elseif ($uri=='religion') {
 	$dashboard   = '';
@@ -189,6 +192,7 @@ if (empty($uri) && empty($uri2)) {
 	$list2		 = '';	
 	$listemployee= '';
 	$listdetail  = '';
+	$liststatus  = '';
 	$list3		 = '';	
 } elseif ($uri=='education') {
 	$dashboard   = '';
@@ -236,6 +240,7 @@ if (empty($uri) && empty($uri2)) {
 	$list2		 = '';	
 	$listemployee= '';
 	$listdetail  = '';
+	$liststatus  = '';
 	$list3		 = '';	
 } elseif ($uri=='relation') {
 	$dashboard   = '';
@@ -283,6 +288,7 @@ if (empty($uri) && empty($uri2)) {
 	$list2		 = '';	
 	$listemployee= '';
 	$listdetail  = '';
+	$liststatus  = '';
 	$list3		 = '';	
 } elseif ($uri=='status') {
 	$dashboard   = '';
@@ -330,6 +336,7 @@ if (empty($uri) && empty($uri2)) {
 	$list2		 = '';	
 	$listemployee= '';
 	$listdetail  = '';
+	$liststatus  = '';
 	$list3		 = '';	
 } elseif ($uri=='department') {
 	$dashboard   = '';
@@ -377,6 +384,7 @@ if (empty($uri) && empty($uri2)) {
 	$list2		 = '';	
 	$listemployee= '';
 	$listdetail  = '';
+	$liststatus  = '';
 	$list3		 = '';	
 } elseif ($uri=='position') {
 	$dashboard   = '';
@@ -424,6 +432,7 @@ if (empty($uri) && empty($uri2)) {
 	$list2		 = '';	
 	$listemployee= '';
 	$listdetail  = '';
+	$liststatus  = '';
 	$list3		 = '';	
 } elseif ($uri=='absent') {
 	$dashboard   = '';
@@ -471,6 +480,7 @@ if (empty($uri) && empty($uri2)) {
 	$list2		 = '';	
 	$listemployee= '';
 	$listdetail  = '';
+	$liststatus  = '';
 	$list3		 = '';	
 } elseif ($uri=='employee') {
 	$dashboard   = '';
@@ -518,6 +528,7 @@ if (empty($uri) && empty($uri2)) {
 	$list2		 = '';	
 	$listemployee= '';
 	$listdetail  = '';
+	$liststatus  = '';
 	$list3		 = '';	
 } elseif ($uri=='record') {
 	$dashboard   = '';
@@ -565,6 +576,7 @@ if (empty($uri) && empty($uri2)) {
 	$list2		 = '';	
 	$listemployee= '';
 	$listdetail  = '';
+	$liststatus  = '';
 	$list3		 = '';	
 } elseif ($uri=='healthy_insurance') {
 	$dashboard   = '';
@@ -612,6 +624,7 @@ if (empty($uri) && empty($uri2)) {
 	$list2		 = '';	
 	$listemployee= '';
 	$listdetail  = '';
+	$liststatus  = '';
 	$list3		 = '';	
 } elseif ($uri=='employment_insurance') {
 	$dashboard   = '';
@@ -659,6 +672,7 @@ if (empty($uri) && empty($uri2)) {
 	$list2		 = '';	
 	$listemployee= '';
 	$listdetail  = '';
+	$liststatus  = '';
 	$list3		 = '';	
 } elseif ($uri=='reward') {
 	$dashboard   = '';
@@ -706,6 +720,7 @@ if (empty($uri) && empty($uri2)) {
 	$list2		 = '';	
 	$listemployee= '';
 	$listdetail  = '';
+	$liststatus  = '';
 	$list3		 = '';	
 } elseif ($uri=='transaction_reward') {
 	$dashboard   = '';
@@ -752,7 +767,8 @@ if (empty($uri) && empty($uri2)) {
 	$listmaster  = '';
 	$list2		 = '';	
 	$listemployee= '';
-	$listdetail  = '';	
+	$listdetail  = '';
+	$liststatus  = '';	
 	$list3		 = '';
 } elseif ($uri=='punishment') {
 	$dashboard   = '';
@@ -800,6 +816,7 @@ if (empty($uri) && empty($uri2)) {
 	$list2		 = '';	
 	$listemployee= '';
 	$listdetail  = '';
+	$liststatus  = '';
 	$list3		 = '';	
 } elseif ($uri=='transaction_punishment') {
 	$dashboard   = '';
@@ -847,6 +864,7 @@ if (empty($uri) && empty($uri2)) {
 	$list2		 = '';	
 	$listemployee= '';
 	$listdetail  = '';
+	$liststatus  = '';
 	$list3		 = '';	
 } elseif ($uri=='mutation') {
 	$dashboard   = '';
@@ -894,6 +912,7 @@ if (empty($uri) && empty($uri2)) {
 	$list2		 = '';	
 	$listemployee= '';
 	$listdetail  = '';
+	$liststatus  = '';
 	$list3		 = '';	
 } elseif ($uri=='resign') {
 	$dashboard   = '';
@@ -941,6 +960,7 @@ if (empty($uri) && empty($uri2)) {
 	$list2		 = '';	
 	$listemployee= '';
 	$listdetail  = '';
+	$liststatus  = '';
 	$list3		 = '';	
 } elseif ($uri=='company') {
 	$dashboard   = '';
@@ -988,6 +1008,7 @@ if (empty($uri) && empty($uri2)) {
 	$list2		 = '';	
 	$listemployee= '';
 	$listdetail  = '';
+	$liststatus  = '';
 	$list3		 = '';	
 } elseif ($uri=='inbox') {
 	$dashboard   = '';
@@ -1035,6 +1056,7 @@ if (empty($uri) && empty($uri2)) {
 	$list2		 = '';	
 	$listemployee= '';
 	$listdetail  = '';
+	$liststatus  = '';
 	$list3		 = '';	
 } elseif ($uri=='outbox') {
 	$dashboard   = '';
@@ -1082,6 +1104,7 @@ if (empty($uri) && empty($uri2)) {
 	$list2		 = '';	
 	$listemployee= '';
 	$listdetail  = '';
+	$liststatus  = '';
 	$list3		 = '';	
 } elseif ($uri=='decree') {
 	$dashboard   = '';
@@ -1129,6 +1152,7 @@ if (empty($uri) && empty($uri2)) {
 	$list2		 = '';	
 	$listemployee= '';
 	$listdetail  = '';
+	$liststatus  = '';
 	$list3		 = '';	
 } elseif ($uri=='memo') {
 	$dashboard   = '';
@@ -1176,6 +1200,7 @@ if (empty($uri) && empty($uri2)) {
 	$list2		 = '';	
 	$listemployee= '';
 	$listdetail  = '';
+	$liststatus  = '';
 	$list3		 = '';	
 } elseif ($uri=='school') {
 	$dashboard   = '';
@@ -1223,6 +1248,7 @@ if (empty($uri) && empty($uri2)) {
 	$list2		 = '';	
 	$listemployee= '';
 	$listdetail  = '';
+	$liststatus  = '';
 	$list3		 = '';	
 } elseif ($uri=='proposal') {
 	$dashboard   = '';
@@ -1270,6 +1296,7 @@ if (empty($uri) && empty($uri2)) {
 	$list2		 = '';	
 	$listemployee= '';
 	$listdetail  = '';
+	$liststatus  = '';
 	$list3		 = '';	
 } elseif ($uri=='student') {
 	$dashboard   = '';
@@ -1317,6 +1344,7 @@ if (empty($uri) && empty($uri2)) {
 	$list2		 = '';
 	$listemployee= '';
 	$listdetail  = '';
+	$liststatus  = '';
 	$list3		 = '';	
 } elseif ($uri == 'users') {
 	$dashboard   = '';
@@ -1364,6 +1392,7 @@ if (empty($uri) && empty($uri2)) {
 	$list2		 = '';	
 	$listemployee= '';
 	$listdetail  = '';
+	$liststatus  = '';
 	$list3		 = '';	
 } elseif ($uri == 'event') {
 	$dashboard   = '';
@@ -1411,6 +1440,7 @@ if (empty($uri) && empty($uri2)) {
 	$list2		 = '';	
 	$listemployee= '';
 	$listdetail  = '';
+	$liststatus  = '';
 	$list3		 = '';	
 } elseif ($uri == 'listmaster') {
 	$dashboard   = '';
@@ -1456,9 +1486,10 @@ if (empty($uri) && empty($uri2)) {
 	$list1		 = 'active';
 	$listmaster  = 'active';
 	$list2		 = '';	
-	$listemployee= '';
-	$list3		 = '';
+	$listemployee= '';	
 	$listdetail  = '';
+	$liststatus  = '';
+	$list3		 = '';
 } elseif ($uri == 'listemployee') {
 	$dashboard   = '';
 	$menu_1      = '';
@@ -1504,7 +1535,8 @@ if (empty($uri) && empty($uri2)) {
 	$listmaster  = '';
 	$list2		 = 'active';	
 	$listemployee= 'active';
-	$listdetail  = '';	
+	$listdetail  = '';
+	$liststatus	 = '';
 	$list3		 = '';	
 } elseif ($uri == 'listemployeedetail') {
 	$dashboard   = '';
@@ -1552,7 +1584,56 @@ if (empty($uri) && empty($uri2)) {
 	$list2		 = 'active';	
 	$listemployee= '';
 	$listdetail  = 'active';
-	$list3		 = '';	
+	$liststatus	 = '';
+	$list3		 = '';
+} elseif ($uri == 'listemployeestatus') {
+	$dashboard   = '';
+	$menu_1      = '';
+	$master      = '';
+	$blood       = '';
+	$marriage    = '';
+	$religion    = '';
+	$education   = '';
+	$relation    = '';
+	$status      = '';
+	$department  = '';
+	$position    = '';
+	$absent      = '';
+	$data        = '';
+	$employee    = '';
+	$record      = '';
+	$kesehatan   = '';
+	$tenaga      = '';
+	$rewpun      = '';
+	$rewtype     = '';
+	$rewtran     = '';
+	$puntype     = '';
+	$puntran     = '';
+	$mutation    = '';
+	$resign      = '';
+	$mail        = '';
+	$mail_inbox  = '';
+	$company      = '';
+	$inbox       = '';
+	$outbox      = '';
+	$intern_mail = '';
+	$decree      = '';
+	$memo        = '';
+	$practice    = '';
+	$school      = '';
+	$proposal    = '';
+	$student     = '';
+	$system      = '';
+	$users       = '';
+	$event       = '';
+	$report      = 'active';
+	$list1		 = 'active';
+	$listmaster  = '';
+	$list2		 = 'active';	
+	$listemployee= '';
+	$listdetail  = '';
+	$liststatus	 = 'active';
+	$list3		 = '';
 } else {
 	$dashboard   = 'active';
 	$menu_1      = '';
@@ -1599,6 +1680,7 @@ if (empty($uri) && empty($uri2)) {
 	$list2		 = '';	
 	$listemployee= '';
 	$listdetail  = '';
+	$liststatus	 = '';
 	$list3		 = '';	
 }
 ?>
@@ -1620,26 +1702,36 @@ if (empty($uri) && empty($uri2)) {
 				<ul class="nav navbar-nav pull-right">
 					<li class="dropdown dropdown-extended dropdown-notification dropdown-dark" id="header_notification_bar">
 						<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+							<?php		                        
+		                        $dataultah = $this->home_model->select_birthday()->result();
+		                        $jumlah = count($dataultah);
+	                        ?>
 	                    	<i class="icon-present"></i>
-							<span class="badge badge-default">7</span>
+							<span class="badge badge-default"><?php echo $jumlah; ?></span>
 	                    </a>
 	                    <ul class="dropdown-menu">
-	                    	<li class="external">
+	                    	<li class="external">	                    		
 	                        	<h3>You have
-	                            <strong>1 Employee</strong> Birthday</h3>
-	                            <a href="<?php echo site_url('emp/birthday'); ?>">view all</a>
+	                            <strong><?php echo $jumlah; ?> Employee</strong> Birthday</h3>
+	                            <!-- <a href="<?php echo site_url('emp/birthday'); ?>">view all</a>-->	
 							</li>
 	                        <li>
 	                        	<ul class="dropdown-menu-list scroller" style="height: 250px;" data-handle-color="#637283">
+	                            	<?php 
+	                            	foreach($dataultah as $r) {
+	                            	?>
 	                            	<li>
 	                                	<a href="javascript:;">
-	                                    	<span class="time">just now</span>
+	                                    	<span class="time"><?php echo $r->emp_birthdate; ?></span>
 	                                        <span class="details">
 	                                        <span class="label label-sm label-icon label-success">
-	                                        <i class="fa fa-plus"></i>
-	                                        </span> New user registered. </span>
+	                                        <i class="fa fa-user"></i>
+	                                        </span> <?php echo $r->emp_name; ?></span>
 										</a>
-									</li>                                
+									</li>
+									<?php 
+									}
+									?>
 	                            </ul>
 	                        </li>
 	                    </ul>
@@ -1657,25 +1749,12 @@ if (empty($uri) && empty($uri2)) {
 							</li>							
 							<li class="divider">
 							</li>
-							<!--
-							<li>
-								<a href="<?php // echo site_url('lock_system'); ?>">
-								<i class="icon-lock"></i> Lock Screen </a>
-							</li>
-							-->
 							<li>
 								<a href="<?php echo site_url('login/logout'); ?>">
 								<i class="icon-key"></i> Log Out </a>
 							</li>
 						</ul>
-					</li>
-					<!-- END USER LOGIN DROPDOWN -->
-					<!-- BEGIN USER LOGIN DROPDOWN -->
-					<!--<li class="dropdown dropdown-extended quick-sidebar-toggler">
-	                    <span class="sr-only">Toggle Quick Sidebar</span>
-	                    <i class="icon-logout"></i>
-	                </li> -->
-					<!-- END USER LOGIN DROPDOWN -->
+					</li>					
 				</ul>
 			</div>
 			<!-- END TOP NAVIGATION MENU -->
@@ -1917,15 +1996,19 @@ if (empty($uri) && empty($uri2)) {
 										<ul class="dropdown-menu">
 											<li class="<?php echo $listemployee; ?>">
 												<a href="<?php echo site_url('report/listemployee'); ?>">
-												Employee List</a>
+												List of Employee</a>
 											</li>
 											<li class="<?php echo $listdetail; ?>">
 												<a href="<?php echo site_url('report/listemployeedetail'); ?>">
-												Detail Employee </a>
+												Employee Details</a>
+											</li>
+											<li class="<?php echo $liststatus; ?>">
+												<a href="<?php echo site_url('report/listemployeestatus'); ?>">
+												List of Status Employee</a>
 											</li>
 											<li class=" ">
 												<a href="<?php echo site_url('report/listinsurance'); ?>">
-												Insurance </a>
+												List of Insurance </a>
 											</li>											
 										</ul>
 									</li>
@@ -1936,11 +2019,11 @@ if (empty($uri) && empty($uri2)) {
 										<ul class="dropdown-menu">
 											<li class=" ">
 												<a href="<?php echo site_url('report/listreward'); ?>">
-												Reward List</a>
+												List of Reward</a>
 											</li>
 											<li class=" ">
 												<a href="<?php echo site_url('report/listpunishment'); ?>">
-												Punishment List</a>
+												 List of Punishment</a>
 											</li>											
 										</ul>
 									</li>

@@ -1,11 +1,3 @@
-<style>	
-	#external-events .fc-event {
-		margin: 5px 0;
-		height: 10pt;		
-		cursor: pointer;
-	} 
-</style>
-
 <div class="page-container">
 	<!-- BEGIN PAGE HEAD -->
 	<div class="page-head">

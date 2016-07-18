@@ -6,6 +6,7 @@ class Record extends CI_Controller {
 		parent::__construct();
 		if(!$this->session->userdata('logged_in_hrd')) redirect(base_url());
 		$this->load->library('template');
+		$this->load->model('home_model');
 		$this->load->model('emp/record_model');	
 	}
 
@@ -30,8 +31,7 @@ class Record extends CI_Controller {
 	public function savedata() {
 		$this->form_validation->set_rules('lstEmployee','<b>Employee</b>','trim|required');
 		$this->form_validation->set_rules('date_record','<b>Date</b>','trim|required');
-		$this->form_validation->set_rules('lstInfo','<b>Information</b>','trim|required');
-		$this->form_validation->set_rules('desc','<b>Description</b>','trim|required');
+		$this->form_validation->set_rules('lstInfo','<b>Information</b>','trim|required');		
 
 		if ($this->form_validation->run() == FALSE) {
 			$data['employeelist'] 	= $this->record_model->select_employee()->result();
