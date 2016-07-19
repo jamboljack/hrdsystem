@@ -42,8 +42,7 @@ class Login extends CI_Controller {
 			if ($num_user == 0) 
 			{ // Username Tidak Terdaftar
 				$this->session->set_flashdata('notification','Username Anda tidak Terdaftar, Hubungi Administrator !');
-				redirect(site_url('login'));
-				echo '1';
+				redirect(site_url('login'));				
 			} elseif ($num_user > 0) 
 			{ // Username Terdaftar				
 				$temp_account = $this->login_model->check_user_account($username, sha1($password))->row();
