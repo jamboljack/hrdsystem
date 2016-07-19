@@ -100,7 +100,13 @@
 								<td><?php echo age($r->emp_start_join); ?></td>
 								<td><?php echo $r->department_name; ?></td>
 								<td><?php echo $r->position_name; ?></td>
-								<td><?php echo $r->status_name; ?></td>
+								<td>
+									<?php if ($r->emp_status == 'ACTIVE') { ?>
+										<span class="label label-sm label-warning"><?php echo $r->emp_status; ?></span>
+									<?php } else { ?>
+										<span class="label label-sm label-danger"><?php echo $r->emp_status; ?></span>
+									<?php } ?>
+								</td>
 								<td>
 									<a href="<?php echo site_url('emp/employee/editdata/'.$r->emp_id); ?>"><button class="btn btn-primary btn-xs" title="Edit Data"><i class="icon-pencil"></i> Edit</button></a>
 	                        		<a onclick="hapusData(<?php echo $emp_id; ?>)"><button class="btn btn-danger btn-xs" title="Delete Data"><i class="icon-trash"></i> Delete</button></a>
