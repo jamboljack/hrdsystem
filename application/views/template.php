@@ -136,7 +136,6 @@ if ($isi == 'add' || $isi == 'edi' || $isi == 'sav' || $rp == 'report') {
 <script src="<?php echo base_url(); ?>assets/admin/pages/scripts/profile.js" type="text/javascript"></script>
 <!-- END PAGE LEVEL SCRIPTS -->
 
-
 <script>
 jQuery(document).ready(function() {    
    Metronic.init(); // init metronic core componets

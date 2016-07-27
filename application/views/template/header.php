@@ -1738,7 +1738,7 @@ if (empty($uri) && empty($uri2)) {
 					</li>
 					<!-- BEGIN USER LOGIN DROPDOWN -->
 					<li class="dropdown dropdown-user dropdown-dark">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">						
 						<img alt="" class="img-circle" src="<?php echo base_url(); ?>icon/<?php echo $this->session->userdata('avatar'); ?>">
 						<span class="username username-hide-mobile"><?php echo $this->session->userdata('nama'); ?></span>
 						</a>
