@@ -46,12 +46,7 @@
 								<i class="fa fa-plus-circle"></i>Form Add Employee
 							</div>
 							<div class="tools">
-								<a href="javascript:;" class="collapse">
-								</a>								
-								<a href="javascript:;" class="reload">
-								</a>
-								<a href="javascript:;" class="remove">
-								</a>
+								<a href="javascript:;" class="collapse"></a>
 							</div>
 						</div>
 						<div class="portlet-body form">						
